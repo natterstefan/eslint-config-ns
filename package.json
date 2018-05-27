@@ -3,17 +3,9 @@
   "version": "0.0.1",
   "private": true,
   "description": "eslint config ready to be used in multiple projects",
-  "keywords": [
-    "eslint",
-    "eslint-config",
-    "prettier",
-    "prettier-config"
-  ],
+  "keywords": ["eslint", "eslint-config", "prettier", "prettier-config"],
   "main": "index.js",
-  "files": [
-    "index.js",
-    "prettier.config.js"
-  ],
+  "files": ["index.js", "prettier.config.js", "stylelint.js", "stylelint.config.js"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/natterstefan/eslint-config-ns.git"
@@ -30,7 +22,9 @@
   "peerDependencies": {
     "babel-eslint": "8.2.3",
     "eslint": "4.19.1",
-    "prettier": "1.12.1"
+    "prettier": "1.12.1",
+    "stylelint": "9.2.0",
+    "stylelint-config-sass-guidelines": "5.0.0"
   },
   "dependencies": {
     "babel-eslint": "8.2.3",
@@ -42,6 +36,8 @@
     "eslint-plugin-jsx-a11y": "6.0.3",
     "eslint-plugin-prettier": "2.6.0",
     "eslint-plugin-react": "7.8.2",
-    "prettier": "1.12.1"
+    "prettier": "1.12.1",
+    "stylelint": "9.2.0",
+    "stylelint-config-sass-guidelines": "5.0.0"
   }
 }
