@@ -4,7 +4,7 @@
 
 * [Eslint shareable config](https://eslint.org/docs/developer-guide/shareable-configs)
 
-## Installation
+## eslint Installation
 
 Add the following to your `package.json`
 
@@ -33,6 +33,16 @@ or to the `.eslintrc`:
 ```json
 {
   "extends": "@natterstefan/eslint-config-ns"
+}
+```
+
+## stylelint Installation
+
+Add the following to your `styelint.config.js` config:
+
+```
+module.exports = {
+  extends: '@natterstefan/eslint-config-ns/stylelint',
 }
 ```
 
