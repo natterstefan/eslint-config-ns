@@ -6,6 +6,18 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased][1]
 
+### Added
+
+- [`import/order`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md)
+  (works with [`import/first`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/first.md))
+- [`sort-keys`](https://eslint.org/docs/rules/sort-keys)
+
+### Deprecated
+
+- deprecated [`sort-imports`](https://eslint.org/docs/rules/sort-imports), because
+  it does not work properly with [`import/order`](https://github.com/benmosher/eslint-plugin-import/blob/master/docs/rules/order.md),
+  see the [#389 issue](https://github.com/benmosher/eslint-plugin-import/issues/389).
+
 ## 2018/08/25 [0.2.0][6]
 
 ### Removed

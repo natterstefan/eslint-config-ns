@@ -36,11 +36,13 @@ or to the `.eslintrc` or `.eslintrc.js`:
 
 ## Assumptions
 
+- esLint based on https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb
+  - Alternative: https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base
 - React environment (but can be used on a eg. node-server environment as well)
-- `jest` us used as the test-suite
-- `env`: Browser and/or node environment
+- Usage of jest as the test-suite
+- `env`: Browser and Node environment
 - `globals`: added some related jest variables
-- `parser`: babel-eslint
+- `parser`: usage of babel (used babel-eslint parser)
 
 Note: you can still overwrite the `env`, `globals` and `parser` in your local
 `.eslintrc.js`.

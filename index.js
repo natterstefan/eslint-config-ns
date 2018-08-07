@@ -5,7 +5,7 @@ module.exports = {
   env: {
     browser: true,
     es6: true,
-    node: false,
+    node: true,
     jest: true,
   },
   parserOptions: {
@@ -32,6 +32,7 @@ module.exports = {
     window: true,
   },
   rules: {
+    'import/order': ['error', { 'newlines-between': 'always' }],
     'import/prefer-default-export': 0,
     'no-case-declarations': 0,
     'no-plusplus': 0,
@@ -49,6 +50,8 @@ module.exports = {
     'react/jsx-curly-brace-presence': 'never', // use '' when passing a strint as a property
     'react/jsx-filename-extension': 0, // we assume we do not use *.jsx files
     'react/sort-comp': 2,
+    'sort-imports': 'off',
+    'sort-keys': ['error', 'asc', { caseSensitive: true, natural: true }],
   },
   overrides: [
     {
