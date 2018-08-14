@@ -7,6 +7,7 @@ module.exports = {
     es6: true,
     node: true,
     jest: true,
+    'shared-node-browser': true,
   },
   parserOptions: {
     ecmaVersion: 6,
@@ -16,21 +17,6 @@ module.exports = {
       spread: true,
     },
   },
-  globals: {
-    jest: true,
-    afterAll: true,
-    afterEach: true,
-    beforeAll: true,
-    beforeEach: true,
-    context: true,
-    describe: true,
-    expect: true,
-    global: true,
-    it: true,
-    test: true,
-    module: true,
-    window: true,
-  },
   rules: {
     'import/order': ['error', { 'newlines-between': 'always' }],
     'import/prefer-default-export': 0,
@@ -39,9 +25,9 @@ module.exports = {
     'prettier/prettier': [
       'error',
       {
-        // keep this in sync with .prettierrc
+        // keep this in sync with .prettier.config.js (or .prettierrc)
         bracketSpacing: true,
-        printWidth: 100,
+        printWidth: 80,
         semi: false,
         singleQuote: true,
         trailingComma: 'all',
@@ -55,7 +41,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['src/**/*.test.js'],
+      files: ['./**/*.test.js', './**/*.spec.js'],
       rules: {
         'no-console': 0,
         'global-require': 0,
