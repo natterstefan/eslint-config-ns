@@ -69,7 +69,7 @@ module.exports = {
   },
   overrides: [
     {
-      files: ['./**/*.test.js', './**/*.spec.js'],
+      files: ['./src/**/*.test.js', './src/**/*.spec.js'],
       rules: {
         'no-console': 0,
         'global-require': 0,
