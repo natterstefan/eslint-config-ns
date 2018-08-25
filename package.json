@@ -1,10 +1,20 @@
 {
   "name": "@natterstefan/eslint-config-ns",
-  "version": "0.1.0",
+  "version": "0.1.1",
   "description": "eslint config ready to be used in multiple projects",
-  "keywords": ["eslint", "eslint-config", "prettier", "prettier-config", "stylelint"],
+  "keywords": [
+    "eslint",
+    "eslint-config",
+    "prettier",
+    "prettier-config",
+    "stylelint"
+  ],
   "main": "index.js",
-  "files": ["index.js", "prettier.js", "stylelint.js"],
+  "files": [
+    "index.js",
+    "prettier.js",
+    "stylelint.js"
+  ],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/natterstefan/eslint-config-ns.git"
