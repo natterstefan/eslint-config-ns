@@ -13,7 +13,9 @@
   "files": [
     "index.js",
     "prettier.js",
-    "stylelint.js"
+    "prettier.config.js",
+    "stylelint.js",
+    "stylelint.config.js"
   ],
   "repository": {
     "type": "git",
