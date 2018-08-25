@@ -1,4 +1,4 @@
-# eslint-config-ns
+# @natterstefan/eslint-config-ns
 
 ## Documentation Shareable Configs
 
@@ -40,18 +40,22 @@ or to the `.eslintrc`:
 
 Add the following to your `styelint.config.js` config:
 
-```
+```js
 module.exports = {
   extends: '@natterstefan/eslint-config-ns/stylelint',
 }
 ```
 
+Note: stylelint will be removed from this package and published in another
+repository in the future.
+
 ## Assumptions
 
 * React environment (but can be used on a eg. node-server environment as well)
-* Usage of jest as the test-suite
-* `env`: Browser and Node environment
+* `jest` us used as the test-suite
+* `env`: Browser and/or node environment
 * `globals`: added some related jest variables
-* `parser`: usage of babel (used babel-eslint parser)
+* `parser`: babel-eslint
 
-Note: you can still overwrite the `env`, `globals` and `parser` in your local `.eslintrc.js`.
+Note: you can still overwrite the `env`, `globals` and `parser` in your local
+`.eslintrc.js`.
