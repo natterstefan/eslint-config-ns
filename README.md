@@ -4,19 +4,17 @@
 
 - [Eslint shareable config](https://eslint.org/docs/developer-guide/shareable-configs)
 
-## eslint Installation
+## Installation
 
-Add the following to your `package.json`
+Install the package with
 
-```bash
-git+https://github.com/natterstefan/eslint-config-ns.git#master
-```
+`npm install eslint-config-ns --save-dev`
 
-then run
+or
 
-```js
-$ npm install // or yarn
-```
+`yarn add eslint-config-ns -D`
+
+## eslint Setup
 
 Now add the config to either the `package.json`:
 
@@ -28,26 +26,13 @@ Now add the config to either the `package.json`:
 }
 ```
 
-or to the `.eslintrc`:
+or to the `.eslintrc` or `.eslintrc.js`:
 
 ```json
 {
   "extends": "eslint-config-ns"
 }
 ```
-
-## stylelint Installation
-
-Add the following to your `styelint.config.js` config:
-
-```js
-module.exports = {
-  extends: 'eslint-config-ns/stylelint',
-}
-```
-
-Note: stylelint will be removed from this package and published in another
-repository in the future.
 
 ## Assumptions
 

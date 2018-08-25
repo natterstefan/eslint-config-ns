@@ -6,6 +6,12 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased][1]
 
+## 2018/08/25 [0.2.0][6]
+
+### Removed
+
+- removed stylelint and moved into own package: https://github.com/natterstefan/stylelint-config-ns
+
 ## 2018/08/25 [0.1.3][5]
 
 ### Fix
@@ -30,8 +36,9 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 - Initial setup with prettier, esLint and stylelint
 
-[1]: https://github.com/natterstefan/eslint-config-ns/compare/v0.1.0...HEAD
 [2]: https://github.com/natterstefan/eslint-config-ns/releases/tag/v0.1.0
 [3]: https://github.com/natterstefan/eslint-config-ns/releases/tag/v0.1.1
 [4]: https://github.com/natterstefan/eslint-config-ns/releases/tag/v0.1.2
 [5]: https://github.com/natterstefan/eslint-config-ns/releases/tag/v0.1.3
+[6]: https://github.com/natterstefan/eslint-config-ns/releases/tag/v0.2.0
+[1]: https://github.com/natterstefan/eslint-config-ns/compare/v0.2.0...HEAD
