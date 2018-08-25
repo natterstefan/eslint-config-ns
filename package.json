@@ -1,5 +1,5 @@
 {
-  "name": "@natterstefan/eslint-config-ns",
+  "name": "eslint-config-ns",
   "version": "0.1.1",
   "description": "eslint config ready to be used in multiple projects",
   "keywords": [
