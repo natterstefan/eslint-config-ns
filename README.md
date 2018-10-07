@@ -34,13 +34,44 @@ or to the `.eslintrc` or `.eslintrc.js`:
 }
 ```
 
+## ESLint and Prettier
+
+- This ESLint configuration can work together with prettier, thanks to [eslint-plugin-prettier](prettier.io/docs/en/eslint.html#use-eslint-to-run-prettier)
+
 ## Assumptions
 
+- the ESLint rules are based on the great work of [airbnb's eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb)
+  - they also have a smaller more compact one: [eslint-config-airbnb-base](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base)
 - React environment (but can be used on a eg. node-server environment as well)
-- `jest` us used as the test-suite
-- `env`: Browser and/or node environment
+- Usage of jest as the test-suite
+- `env`: Browser and Node environment
 - `globals`: added some related jest variables
-- `parser`: babel-eslint
+- `parser`: usage of babel (used babel-eslint parser)
 
 Note: you can still overwrite the `env`, `globals` and `parser` in your local
 `.eslintrc.js`.
+
+## LICENCE
+
+[MIT](LICENCE)
+
+## Maintainers
+
+<table>
+  <tbody>
+    <tr>
+      <td align="center">
+        <a href="https://github.com/natterstefan">
+          <img width="150" height="150" src="https://github.com/natterstefan.png?v=3&s=150">
+          </br>
+          Stefan Natter
+        </a>
+        <div>
+          <a href="https://twitter.com/natterstefan">
+            <img src="https://img.shields.io/twitter/follow/natterstefan.svg?style=social&label=Follow" />
+          </a>
+        </div>
+      </td>
+    </tr>
+  <tbody>
+</table>
