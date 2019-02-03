@@ -2,45 +2,36 @@
   "name": "eslint-config-ns",
   "version": "0.2.0",
   "description": "eslint config ready to be used in multiple projects",
-  "keywords": [
-    "eslint",
-    "eslint-config",
-    "prettier",
-    "prettier-config"
-  ],
+  "keywords": ["eslint", "eslint-config", "prettier", "prettier-config"],
   "main": "index.js",
-  "files": [
-    "index.js",
-    "prettier.js",
-    "prettier.config.js"
-  ],
+  "files": ["index.js", "prettier.js", "prettier.config.js"],
   "repository": {
     "type": "git",
     "url": "git+https://github.com/natterstefan/eslint-config-ns.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "(cd example && npm run lint && npm t)"
   },
-  "author": "Stefan Natter <stefan@natter.at>",
+  "author": "Stefan Natter",
   "license": "MIT",
   "bugs": {
     "url": "https://github.com/natterstefan/eslint-config-ns/issues"
   },
   "homepage": "https://github.com/natterstefan/eslint-config-ns#readme",
   "peerDependencies": {
-    "eslint": "^5.3.0",
-    "prettier": "^1.14.2"
+    "eslint": "^5.13.0",
+    "prettier": "^1.16.4"
   },
   "dependencies": {
-    "babel-eslint": "8.2.6",
-    "eslint": "5.3.0",
-    "eslint-config-airbnb": "17.1.0",
-    "eslint-config-prettier": "3.0.1",
-    "eslint-plugin-import": "2.14.0",
-    "eslint-plugin-jest": "21.21.0",
-    "eslint-plugin-jsx-a11y": "6.1.1",
-    "eslint-plugin-prettier": "2.6.2",
-    "eslint-plugin-react": "7.11.1",
-    "prettier": "1.14.2"
+    "babel-eslint": "^10.0.1",
+    "eslint": "^5.13.0",
+    "eslint-config-airbnb": "^17.1.0",
+    "eslint-config-prettier": "^4.0.0",
+    "eslint-plugin-import": "^2.16.0",
+    "eslint-plugin-jest": "^22.2.2",
+    "eslint-plugin-jsx-a11y": "^6.2.0",
+    "eslint-plugin-prettier": "^3.0.1",
+    "eslint-plugin-react": "^7.12.4",
+    "prettier": "^1.16.4"
   }
 }

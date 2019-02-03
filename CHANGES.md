@@ -15,6 +15,8 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 ### Changed
 
 - changed prettier's `printWidth` from 100 back to 80
+- upgraded all dependencies to latest version (updated example as well)
+- upgraded node version (via `.nvmrc`) from 8 to 10
 
 ### Deprecated
 
