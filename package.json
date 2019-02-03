@@ -10,7 +10,7 @@
     "url": "git+https://github.com/natterstefan/eslint-config-ns.git"
   },
   "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+    "test": "(cd example && npm run lint && npm t)"
   },
   "author": "Stefan Natter",
   "license": "MIT",
