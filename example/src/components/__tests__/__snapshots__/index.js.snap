@@ -3,8 +3,12 @@
 exports[`App renders 1`] = `
 <Fragment>
   <h1>
-    Some headline
+    Hello eslint-config-ns
   </h1>
   <Text />
+  <p>
+    State Counter: 
+    0
+  </p>
 </Fragment>
 `;
