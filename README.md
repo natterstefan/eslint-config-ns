@@ -8,12 +8,12 @@ In August 2018, I published an article with the title
 on [Medium](http://nttr.st/1REplMW). One of the results of the article, is this
 shareable eslint-config (and the one for [stylelint](https://nttr.st/2OUpTQP)).
 
-It lints your javascript projects with ease, based on the popular [Javascrippt
+It lints your javascript projects with ease, based on the popular [javascript
 code style from Airbnb](https://www.npmjs.com/package/eslint-config-airbnb).
 
 ## Features
 
-- based on the the popular [Javascrippt
+- based on the the popular [javascript
 code style from Airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
 - easy switchable to their smaller set of rules [eslint-config-airbnb-base](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base)
 - with prettier support, thanks to [eslint-plugin-prettier](prettier.io/docs/en/eslint.html#use-eslint-to-run-prettier)
