@@ -1,7 +1,7 @@
 module.exports = {
   parser: 'babel-eslint',
   extends: ['airbnb', 'prettier', 'prettier/react'],
-  plugins: ['jest', 'prettier'], // alternative: https://github.com/prettier/prettier-eslint
+  plugins: ['jest', 'prettier', 'react-hooks'], // alternative: https://github.com/prettier/prettier-eslint
   env: {
     browser: true,
     es6: true,
@@ -33,8 +33,8 @@ module.exports = {
     'jest/consistent-test-it': [
       'error',
       {
-        fn: 'test',
-        withinDescribe: 'test',
+        fn: 'it',
+        withinDescribe: 'it',
       },
     ],
     'jest/expect-expect': 'error',
@@ -61,6 +61,10 @@ module.exports = {
         trailingComma: 'all',
       },
     ],
+
+    // https://www.npmjs.com/package/eslint-plugin-react-hooks
+    'react-hooks/rules-of-hooks': 'error',
+    'react-hooks/exhaustive-deps': 'warn',
 
     // rules for https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb
     'react/jsx-curly-brace-presence': 'never', // use '' when passing a strint as a property
