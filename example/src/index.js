@@ -1,26 +1,7 @@
-import React, { Component } from 'react'
+import React from 'react'
+import ReactDOM from 'react-dom'
 
-import { Text } from './components/text'
+import { App } from './components/app'
 
-class App extends Component {
-  constructor(props) {
-    super(props)
-
-    this.state = {
-      headline: 'Some headline',
-    }
-  }
-
-  render() {
-    const { headline } = this.state
-
-    return (
-      <React.Fragment>
-        <h1>{headline}</h1>
-        <Text />
-      </React.Fragment>
-    )
-  }
-}
-
-export { App }
+const ROOT_NODE = document.getElementById('app')
+ReactDOM.render(<App />, ROOT_NODE)

@@ -6,6 +6,15 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 ## [Unreleased][1]
 
+### Added
+
+- [eslint-plugin-react-hooks](https://www.npmjs.com/package/eslint-plugin-react-hooks)
+
+### Changed
+
+- upgraded all dependencies to latest version (updated example as well)
+- changeed all `dependencies` to `peerDependencies`
+
 ## 2019/02/03 [0.3.0][7]
 
 ### Added

@@ -1,22 +1,59 @@
 # eslint-config-ns
 
-## Documentation Shareable Configs
+[![npm version](https://badge.fury.io/js/eslint-config-ns.svg)](https://badge.fury.io/js/eslint-config-ns)
+[![GitHub license](https://img.shields.io/github/license/natterstefan/eslint-config-ns.svg)](https://github.com/natterstefan/eslint-config-ns/blob/master/LICENCE)
 
-- [Eslint shareable config](https://eslint.org/docs/developer-guide/shareable-configs)
+In August 2018, I published an article with the title
+["How to create your own shared esLint, prettier and stylelint configuration"](https://nttr.st/2MOAAGc)
+on [Medium](http://nttr.st/1REplMW). One of the results of the article, is this
+shareable eslint-config (and the one for [stylelint](https://nttr.st/2OUpTQP)).
+
+It lints your javascript projects with ease, based on the popular [Javascrippt
+code style from Airbnb](https://www.npmjs.com/package/eslint-config-airbnb).
+
+## Features
+
+- based on the the popular [Javascrippt
+code style from Airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
+- easy switchable to their smaller set of rules [eslint-config-airbnb-base](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base)
+- with prettier support, thanks to [eslint-plugin-prettier](prettier.io/docs/en/eslint.html#use-eslint-to-run-prettier)
+- with [react](https://reactjs.org/), [react-hooks](https://reactjs.org/docs/hooks-intro.html)
+  and [jest](https://jestjs.io/) support
 
 ## Installation
 
+The default export contains all default Airbnb ESLint rules, including
+ECMAScript 6+, and the ones listed below. It requires some peerDependencies as
+well.
+
 Install the package with
 
-`npm install eslint-config-ns --save-dev`
+ ```sh
+npm install eslint-config-ns --save-dev
 
-or
+# or
+yarn add eslint-config-ns -D
+```
 
-`yarn add eslint-config-ns -D`
+Then install the correct versions of each peerDependency package, which are
+listed by the command:
 
-## eslint Setup
+```sh
+npm info "eslint-config-ns@latest" peerDependencies
+```
 
-Now add the config to either the `package.json`:
+If using npm 5+, use this shortcut:
+
+```sh
+npx install-peerdeps --dev eslint-config-ns
+
+# or
+yarn add eslint-config-ns -D --peer
+```
+
+## Usage
+
+Now add the config to either your `package.json`:
 
 ```json
 {
@@ -26,7 +63,7 @@ Now add the config to either the `package.json`:
 }
 ```
 
-or to the `.eslintrc` or `.eslintrc.js`:
+to your `.eslintrc`:
 
 ```json
 {
@@ -34,22 +71,25 @@ or to the `.eslintrc` or `.eslintrc.js`:
 }
 ```
 
-## ESLint and Prettier
+ or `.eslintrc.js`:
 
-- This ESLint configuration can work together with prettier, thanks to [eslint-plugin-prettier](prettier.io/docs/en/eslint.html#use-eslint-to-run-prettier)
+```js
+module.exports ={
+  "extends": "eslint-config-ns"
+}
+```
 
 ## Assumptions
 
-- the ESLint rules are based on the great work of [airbnb's eslint-config-airbnb](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb)
-  - they also have a smaller more compact one: [eslint-config-airbnb-base](https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base)
-- React environment (but can be used on a eg. node-server environment as well)
-- Usage of jest as the test-suite
-- `env`: Browser and Node environment
-- `globals`: added some related jest variables
-- `parser`: usage of babel (used babel-eslint parser)
+This ESLint configuration comes with some fundamental assumptions:
 
-Note: you can still overwrite the `env`, `globals` and `parser` in your local
-`.eslintrc.js`.
+- react and/or node environment
+- jest as the selected test-suite
+- browser and/or node environment
+- parser: babel (used babel-eslint parser)
+
+Even though I made some assumptions, [you can easily overwrite, extend and unset
+rules and any other setting in your custom eslint config](https://eslint.org/docs/user-guide/configuring).
 
 ## LICENCE
 
