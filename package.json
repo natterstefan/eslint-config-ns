@@ -40,5 +40,20 @@
     "eslint-plugin-react": ">=7.14.2 <8",
     "eslint-plugin-react-hooks": ">=1.6.1 <2",
     "prettier": ">=1.18.2 <2"
+  },
+  "devDependencies": {
+    "commitizen": "^4.0.3",
+    "cz-conventional-changelog": "^3.0.1",
+    "husky": "^3.0.1"
+  },
+  "husky": {
+    "hooks": {
+      "prepare-commit-msg": "exec < /dev/tty && git cz --hook"
+    }
+  },
+  "config": {
+    "commitizen": {
+      "path": "./node_modules/cz-conventional-changelog"
+    }
   }
 }
