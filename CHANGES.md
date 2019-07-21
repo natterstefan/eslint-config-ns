@@ -4,6 +4,13 @@ All notable changes to this project will be documented here. The format is based
 on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project
 adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## 2019/07/21 [0.5.0][9]
+
+### Changed
+
+- feat: update peerDependencies' versions to latest supported version, but
+  without breaking ESLint change from 5.x to 6.x
+
 ## 2019/04/05 [0.4.0][8]
 
 ### Added
@@ -76,4 +83,5 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 [6]: https://github.com/natterstefan/eslint-config-ns/releases/tag/v0.2.0
 [7]: https://github.com/natterstefan/eslint-config-ns/releases/tag/v0.3.0
 [8]: https://github.com/natterstefan/eslint-config-ns/releases/tag/v0.4.0
-[1]: https://github.com/natterstefan/eslint-config-ns/compare/v0.3.0...HEAD
+[9]: https://github.com/natterstefan/eslint-config-ns/releases/tag/v0.5.0
+[1]: https://github.com/natterstefan/eslint-config-ns/compare/v0.5.0...HEAD
