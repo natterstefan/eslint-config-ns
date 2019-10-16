@@ -2,32 +2,32 @@
   "name": "eslint-config-ns",
   "version": "0.5.0",
   "description": "eslint config ready to be used in multiple projects",
+  "author": "Stefan Natter",
+  "license": "MIT",
   "keywords": [
     "eslint",
     "eslint-config",
     "prettier",
     "prettier-config"
   ],
+  "bugs": {
+    "url": "https://github.com/natterstefan/eslint-config-ns/issues"
+  },
+  "homepage": "https://github.com/natterstefan/eslint-config-ns#readme",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/natterstefan/eslint-config-ns"
+  },
   "main": "index.js",
   "files": [
     "index.js",
     "prettier.js",
     "prettier.config.js"
   ],
-  "repository": {
-    "type": "git",
-    "url": "https://github.com/natterstefan/eslint-config-ns"
-  },
   "scripts": {
     "start": "cd example && npm start",
     "test": "(cd example && npm run lint && npm t)"
   },
-  "author": "Stefan Natter",
-  "license": "MIT",
-  "bugs": {
-    "url": "https://github.com/natterstefan/eslint-config-ns/issues"
-  },
-  "homepage": "https://github.com/natterstefan/eslint-config-ns#readme",
   "husky": {
     "hooks": {
       "prepare-commit-msg": "exec < /dev/tty && git cz --hook"
