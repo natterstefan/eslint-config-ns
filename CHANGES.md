@@ -4,16 +4,20 @@ All notable changes to this project will be documented here. The format is based
 on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project
 adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
-## Unreleased
+## 2019/10/16 [1.0.0][10]
 
 ### Changed
 
+- **Breaking**: updated ESLint from `5.x` to `>=6.5.x`, `eslint-config-airbnb`
+  from `17.x` to `>=18.0.1`, `eslint-config-prettier` from `5.x` to `>=6.4.0`
+  and `eslint-plugin-react-hooks` from `1.6.x` to `>=2.1.2`
 - updated all ESLint dependencies (eg. plugins and configs) to latest (major)
   version
-- updated existing ESLint rules, according to new specs
-  - eg. `<>` is preferred over `React.Fragment`
-- Development: upgraded node version from `v10.14` to `v12.12`
+- updated existing ESLint rules
+  - Note: some rules changed, for instance: `<>` is preferred over
+    `React.Fragment`
 - updated example app's dependencies
+- Development: upgraded node version from `v10.14` to `v12.12`
 
 ## 2019/07/21 [0.5.0][9]
 
@@ -95,4 +99,5 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 [7]: https://github.com/natterstefan/eslint-config-ns/releases/tag/v0.3.0
 [8]: https://github.com/natterstefan/eslint-config-ns/releases/tag/v0.4.0
 [9]: https://github.com/natterstefan/eslint-config-ns/releases/tag/v0.5.0
-[1]: https://github.com/natterstefan/eslint-config-ns/compare/v0.5.0...HEAD
+[9]: https://github.com/natterstefan/eslint-config-ns/releases/tag/v1.0.0
+[1]: https://github.com/natterstefan/eslint-config-ns/compare/v1.0.0...HEAD
