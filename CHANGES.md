@@ -4,6 +4,17 @@ All notable changes to this project will be documented here. The format is based
 on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project
 adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## Unreleased
+
+### Changed
+
+- updated all ESLint dependencies (eg. plugins and configs) to latest (major)
+  version
+- updated existing ESLint rules, according to new specs
+  - eg. `<>` is preferred over `React.Fragment`
+- Development: upgraded node version from `v10.14` to `v12.12`
+- updated example app's dependencies
+
 ## 2019/07/21 [0.5.0][9]
 
 ### Changed
