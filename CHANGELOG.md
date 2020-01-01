@@ -106,4 +106,4 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 [7]: https://github.com/natterstefan/eslint-config-ns/releases/tag/v0.3.0
 [8]: https://github.com/natterstefan/eslint-config-ns/releases/tag/v0.4.0
 [9]: https://github.com/natterstefan/eslint-config-ns/releases/tag/v0.5.0
-[9]: https://github.com/natterstefan/eslint-config-ns/releases/tag/v1.0.0
+[10]: https://github.com/natterstefan/eslint-config-ns/releases/tag/v1.0.0
