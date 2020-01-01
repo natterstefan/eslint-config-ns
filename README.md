@@ -2,6 +2,7 @@
 
 [![npm version](https://badge.fury.io/js/eslint-config-ns.svg)](https://badge.fury.io/js/eslint-config-ns)
 [![GitHub license](https://img.shields.io/github/license/natterstefan/eslint-config-ns.svg)](https://github.com/natterstefan/eslint-config-ns/blob/master/LICENCE)
+[![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 In August 2018, I published an article with the title
 ["How to create your own shared esLint, prettier and stylelint configuration"](https://nttr.st/2MOAAGc)
@@ -97,6 +98,8 @@ rules and any other setting in your custom eslint config](https://eslint.org/doc
 
 ## Maintainers
 
+<!-- prettier-ignore-start -->
+<!-- markdownlint-disable -->
 <table>
   <tbody>
     <tr>
@@ -115,3 +118,5 @@ rules and any other setting in your custom eslint config](https://eslint.org/doc
     </tr>
   <tbody>
 </table>
+<!-- markdownlint-enable -->
+<!-- prettier-ignore-end -->
