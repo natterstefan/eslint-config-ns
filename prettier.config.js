@@ -4,6 +4,8 @@ module.exports = {
   semi: false,
   singleQuote: true,
   trailingComma: 'all',
+  tabWidth: 2,
+  useTabs: false,
   overrides: [
     {
       files: 'package*.json',
