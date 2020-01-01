@@ -4,6 +4,13 @@ All notable changes to this project will be documented here. The format is based
 on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project
 adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+## [1.1.0](https://github.com/natterstefan/eslint-config-ns/compare/v1.0.0...v1.1.0) (2020-01-01)
+
+### Features
+
+- optimise prettier config and plugin (settings and usage) ([e93032a](https://github.com/natterstefan/eslint-config-ns/commit/e93032aa6aeb06f0c83c1cf27ab1bbe6e8c18d32))
+- updated peerDependencies to latest version; and example app dependencies ([c80cc1c](https://github.com/natterstefan/eslint-config-ns/commit/c80cc1c14f164d61eaec644f8534d9c9a32bb354))
+
 ## 2019/10/16 [1.0.0][10]
 
 ### Changed
