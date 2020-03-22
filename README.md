@@ -92,9 +92,9 @@ This ESLint configuration comes with some fundamental assumptions:
 Even though I made some assumptions, [you can easily overwrite, extend and unset
 rules and any other setting in your custom eslint config](https://eslint.org/docs/user-guide/configuring).
 
-## LICENCE
+## LICENSE
 
-[MIT](LICENCE)
+[MIT](LICENSE)
 
 ## Maintainers
 
