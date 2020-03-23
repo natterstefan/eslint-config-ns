@@ -1,7 +1,7 @@
 # eslint-config-ns
 
 [![npm version](https://badge.fury.io/js/eslint-config-ns.svg)](https://badge.fury.io/js/eslint-config-ns)
-[![GitHub license](https://img.shields.io/github/license/natterstefan/eslint-config-ns.svg)](https://github.com/natterstefan/eslint-config-ns/blob/master/LICENCE)
+[![GitHub license](https://img.shields.io/github/license/natterstefan/eslint-config-ns.svg)](https://github.com/natterstefan/eslint-config-ns/blob/master/LICENSE)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
 
 In August 2018, I published an article with the title
