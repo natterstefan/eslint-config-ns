@@ -1,8 +1,32 @@
 module.exports = {
   parser: 'babel-eslint',
-  // prettier alternative: https://github.com/prettier/prettier-eslint
-  extends: ['airbnb', 'plugin:prettier/recommended', 'prettier/react'],
-  plugins: ['jest', 'react-hooks'],
+  extends: [
+    // https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb
+    'airbnb',
+    'airbnb/hooks',
+    // https://www.npmjs.com/package/eslint-plugin-jest
+    'plugin:jest/recommended',
+    'plugin:jest/style',
+    // https://www.npmjs.com/package/eslint-plugin-jsx-a11y
+    'plugin:jsx-a11y/recommended',
+    // https://www.npmjs.com/package/eslint-plugin-import
+    'plugin:import/errors',
+    'plugin:import/warnings',
+    // https://www.npmjs.com/package/eslint-plugin-react
+    'plugin:react/recommended',
+    // https://www.npmjs.com/package/eslint-plugin-react-hooks
+    'plugin:react-hooks/recommended',
+    /**
+     * Make sure to put prettier last, so it gets the chance to override other
+     * configs.
+     *
+     * @see https://github.com/prettier/eslint-config-prettier
+     *
+     * prettier alternative: https://github.com/prettier/prettier-eslint
+     */
+    'plugin:prettier/recommended',
+    'prettier/react',
+  ],
   env: {
     browser: true,
     es6: true,
@@ -22,10 +46,10 @@ module.exports = {
   rules: {
     // general ESLint rules
     'no-case-declarations': 0,
-    'no-plusplus': 0,
     'no-confusing-arrow': ['error', { allowParens: false }],
+    'no-plusplus': 0,
+    'sort-keys': 0,
     'sort-imports': 'off',
-    'sort-keys': ['error', 'asc', { caseSensitive: true, natural: true }],
 
     // rules for https://github.com/benmosher/eslint-plugin-import
     'import/order': ['error', { 'newlines-between': 'always' }],
@@ -45,7 +69,7 @@ module.exports = {
     'jest/no-identical-title': 'error',
     'jest/no-jest-import': 'error',
     'jest/no-large-snapshots': ['warn', { maxSize: 300 }],
-    'jest/prefer-strict-equal': 'warn',
+    'jest/prefer-strict-equal': 'error',
     'jest/prefer-to-be-null': 'error',
     'jest/prefer-to-be-undefined': 'error',
     'jest/prefer-to-have-length': 'error',
@@ -55,12 +79,13 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'warn',
 
-    // rules for https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb
+    // overwrite https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb
+    // rules
     'react/jsx-curly-brace-presence': [
       2,
       { props: 'never', children: 'never' },
     ], // use "" when passing a string as a property
-    'react/jsx-filename-extension': 0, // we assume we do not use *.jsx files
+    'react/jsx-filename-extension': 0, // jsx is also allowed in .js files
     'react/sort-comp': 2,
   },
   overrides: [
@@ -70,8 +95,9 @@ module.exports = {
         React: true,
       },
       rules: {
-        'no-console': 0,
         'global-require': 0,
+        'import/no-extraneous-dependencies': 0,
+        'no-console': 0,
       },
     },
   ],
