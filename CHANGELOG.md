@@ -4,6 +4,15 @@ All notable changes to this project will be documented here. The format is based
 on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project
 adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
+
+## [1.2.0](https://github.com/natterstefan/eslint-config-ns/compare/v1.1.0...v1.2.0) (2020-05-24)
+
+
+### Features
+
+* applied recommended presets & changed rules ([8a91880](https://github.com/natterstefan/eslint-config-ns/commit/8a91880c395c89a631dde7fb9b249197f6f75190))
+* ESLint (base, babel, configs and plugins) and Prettier updated ([3a07e5d](https://github.com/natterstefan/eslint-config-ns/commit/3a07e5df9676f619d873e001ba384e85f75aa168))
+
 ## [1.1.0](https://github.com/natterstefan/eslint-config-ns/compare/v1.0.0...v1.1.0) (2020-01-01)
 
 ### Features
