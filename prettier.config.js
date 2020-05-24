@@ -25,5 +25,11 @@ module.exports = {
         printWidth: 1000,
       },
     },
+    {
+      files: '*.yml',
+      options: {
+        singleQuote: false,
+      },
+    },
   ],
 }

@@ -52,6 +52,7 @@ module.exports = {
     'sort-imports': 'off',
 
     // rules for https://github.com/benmosher/eslint-plugin-import
+    'import/extensions': 0,
     'import/order': ['error', { 'newlines-between': 'always' }],
     'import/prefer-default-export': 0,
 
