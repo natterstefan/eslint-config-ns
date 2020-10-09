@@ -5,6 +5,14 @@ on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project
 adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+## [1.3.0](https://github.com/natterstefan/eslint-config-ns/compare/v1.2.0...v1.3.0) (2020-10-09)
+
+
+### Features
+
+* added yml overwrite rule for prettier; deactivate import/extensions ([847d205](https://github.com/natterstefan/eslint-config-ns/commit/847d205bbaa0d82dbaa39e8bf9fcf0bf062e4db9))
+* updated peer- and devDependencies ([8aa7797](https://github.com/natterstefan/eslint-config-ns/commit/8aa779741f0be034edec40be694802068c054dd8))
+
 ## [1.2.0](https://github.com/natterstefan/eslint-config-ns/compare/v1.1.0...v1.2.0) (2020-05-24)
 
 
