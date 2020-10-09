@@ -80,6 +80,16 @@ module.exports = {
 }
 ```
 
+### Prettier Config
+
+This is how you use or extend the `eslint-config-ns` prettier config in your
+app:
+
+```js
+// prettier.config.js
+module.exports = require('eslint-config-ns/prettier')
+```
+
 ## Assumptions
 
 This ESLint configuration comes with some fundamental assumptions:
