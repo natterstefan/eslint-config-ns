@@ -5,6 +5,13 @@ on [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project
 adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 
+### [1.4.1](https://github.com/natterstefan/eslint-config-ns/compare/v1.4.0...v1.4.1) (2020-10-27)
+
+
+### Fixes
+
+* removed prettier.js file ([24c766d](https://github.com/natterstefan/eslint-config-ns/commit/24c766d4cbf50a3107b487049a627283125495b2))
+
 ## [1.4.0](https://github.com/natterstefan/eslint-config-ns/compare/v1.3.0...v1.4.0) (2020-10-27)
 
 
