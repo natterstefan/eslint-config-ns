@@ -27,6 +27,9 @@ module.exports = {
     'plugin:prettier/recommended',
     'prettier/react',
   ],
+  globals: {
+    __DEV__: true,
+  },
   env: {
     browser: true,
     es6: true,
@@ -46,8 +49,10 @@ module.exports = {
   rules: {
     // general ESLint rules
     'no-case-declarations': 0,
+    'class-methods-use-this': 0,
     'no-confusing-arrow': ['error', { allowParens: false }],
     'no-plusplus': 0,
+    'no-underscore-dangle': 0, // e.g. __DEV__
     'sort-keys': 0,
     'sort-imports': 'off',
 
@@ -78,7 +83,7 @@ module.exports = {
 
     // https://www.npmjs.com/package/eslint-plugin-react-hooks
     'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'warn',
+    'react-hooks/exhaustive-deps': 'error',
 
     // overwrite https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb
     // rules
@@ -98,8 +103,21 @@ module.exports = {
       rules: {
         'global-require': 0,
         'import/no-extraneous-dependencies': 0,
+        'max-classes-per-file': 0,
         'no-console': 0,
       },
     },
   ],
+  settings: {
+    'import/resolver': {
+      node: {
+        extensions: ['.js', '.jsx'],
+      },
+    },
+    react: {
+      // Tells eslint-plugin-react to automatically detect the version of React
+      // to use
+      version: 'detect',
+    },
+  },
 }
