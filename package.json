@@ -25,8 +25,8 @@
     "release-major": "HUSKY_SKIP_HOOKS=1 standard-version --release-as major",
     "release-minor": "HUSKY_SKIP_HOOKS=1 standard-version --release-as minor",
     "release-patch": "HUSKY_SKIP_HOOKS=1 standard-version --release-as patch",
-    "test": "FORCE_COLOR=1 lerna run test --stream",
-    "test-app": "FORCE_COLOR=1 lerna run test --scope example-app* --stream"
+    "test": "FORCE_COLOR=1 lerna exec --stream -- yarn test",
+    "test-app": "FORCE_COLOR=1 lerna exec --stream --scope example-app* -- yarn test"
   },
   "workspaces": {
     "packages": [
@@ -34,7 +34,6 @@
     ]
   },
   "devDependencies": {
-    "babel-eslint": "^10.1.0",
     "commitizen": "4.2.3",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "^7.21.0",
