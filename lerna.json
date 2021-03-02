@@ -7,7 +7,7 @@
       "license": "MIT"
     },
     "version": {
-      "allowBranch": "master",
+      "allowBranch": ["main", "next"],
       "conventionalCommits": true,
       "message": "chore(release): %s"
     }
