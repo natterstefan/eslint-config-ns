@@ -15,7 +15,7 @@
   },
   "scripts": {
     "lint": "FORCE_COLOR=1 lerna exec --stream -- yarn lint",
-    "prepublishOnly": "copyfiles README.md LICENSE packages/eslint-config-ns/",
+    "prepublishOnly": "copyfiles CHANGELOG.md README.md LICENSE packages/eslint-config-ns/",
     "release": "HUSKY_SKIP_HOOKS=1 standard-version",
     "release-major": "HUSKY_SKIP_HOOKS=1 standard-version --release-as major",
     "release-minor": "HUSKY_SKIP_HOOKS=1 standard-version --release-as minor",
