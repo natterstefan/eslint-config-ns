@@ -13,6 +13,10 @@ module.exports = {
    */
   endOfLine: 'auto',
   printWidth: 80,
+  /**
+   * Wrap prose if it exceeds the print width.
+   */
+  proseWrap: 'always',
   semi: false,
   singleQuote: true,
   trailingComma: 'all',
