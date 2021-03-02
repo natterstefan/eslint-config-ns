@@ -24,13 +24,13 @@
     "prettier.config.js"
   ],
   "scripts": {
-    "lint": "(cd example && npm run lint)",
+    "lint": "(cd example && yarn lint)",
     "release": "HUSKY_SKIP_HOOKS=1 standard-version",
     "release-major": "HUSKY_SKIP_HOOKS=1 standard-version --release-as major",
     "release-minor": "HUSKY_SKIP_HOOKS=1 standard-version --release-as minor",
     "release-patch": "HUSKY_SKIP_HOOKS=1 standard-version --release-as patch",
     "start": "(cd example && npm start)",
-    "test": "(cd example && npm run lint && npm t)"
+    "test": "(cd example && yarn run lint && yarn test)"
   },
   "peerDependencies": {
     "babel-eslint": "^10.1.0",

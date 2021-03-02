@@ -7,8 +7,8 @@ than an extensive example.
 ## Start
 
 ```sh
-npm i
-npm start
+yarn
+yarn start
 ```
 
 ## LICENCE
