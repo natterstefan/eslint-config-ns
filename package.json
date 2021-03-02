@@ -5,12 +5,6 @@
   "description": "eslint config ready to be used in multiple projects",
   "author": "Stefan Natter",
   "license": "MIT",
-  "keywords": [
-    "eslint",
-    "eslint-config",
-    "prettier",
-    "prettier-config"
-  ],
   "bugs": {
     "url": "https://github.com/natterstefan/eslint-config-ns/issues"
   },
@@ -21,6 +15,7 @@
   },
   "scripts": {
     "lint": "FORCE_COLOR=1 lerna exec --stream -- yarn lint",
+    "prepublishOnly": "copyfiles README.md LICENSE packages/eslint-config-ns/",
     "release": "HUSKY_SKIP_HOOKS=1 standard-version",
     "release-major": "HUSKY_SKIP_HOOKS=1 standard-version --release-as major",
     "release-minor": "HUSKY_SKIP_HOOKS=1 standard-version --release-as minor",
@@ -35,6 +30,7 @@
   },
   "devDependencies": {
     "commitizen": "4.2.3",
+    "copyfiles": "^2.4.1",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "^7.21.0",
     "eslint-config-airbnb": "^18.2.1",
