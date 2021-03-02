@@ -25,7 +25,6 @@ module.exports = {
      * prettier alternative: https://github.com/prettier/prettier-eslint
      */
     'plugin:prettier/recommended',
-    'prettier/react',
   ],
   globals: {
     __DEV__: true,
