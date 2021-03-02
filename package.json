@@ -1,6 +1,7 @@
 {
-  "name": "eslint-config-ns",
+  "name": "eslint-config-ns-lerna",
   "version": "1.4.1",
+  "private": true,
   "description": "eslint config ready to be used in multiple projects",
   "author": "Stefan Natter",
   "license": "MIT",
@@ -18,32 +19,19 @@
     "type": "git",
     "url": "https://github.com/natterstefan/eslint-config-ns"
   },
-  "main": "index.js",
-  "files": [
-    "index.js",
-    "prettier.config.js"
-  ],
   "scripts": {
-    "lint": "(cd example && yarn lint)",
+    "lint": "FORCE_COLOR=1 lerna exec --stream -- yarn lint",
     "release": "HUSKY_SKIP_HOOKS=1 standard-version",
     "release-major": "HUSKY_SKIP_HOOKS=1 standard-version --release-as major",
     "release-minor": "HUSKY_SKIP_HOOKS=1 standard-version --release-as minor",
     "release-patch": "HUSKY_SKIP_HOOKS=1 standard-version --release-as patch",
-    "start": "(cd example && npm start)",
-    "test": "(cd example && yarn run lint && yarn test)"
+    "test": "FORCE_COLOR=1 lerna run test --stream",
+    "test-app": "FORCE_COLOR=1 lerna run test --scope example-app* --stream"
   },
-  "peerDependencies": {
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.21.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jest": "^24.1.5",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-react": "^7.22.0",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "prettier": "^2.2.1"
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
   },
   "devDependencies": {
     "babel-eslint": "^10.1.0",
@@ -59,8 +47,9 @@
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "4.3.0",
+    "lerna": "^4.0.0",
     "prettier": "^2.2.1",
-    "standard-version": "9.0.0"
+    "standard-version": "9.1.1"
   },
   "husky": {
     "hooks": {

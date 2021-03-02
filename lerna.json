@@ -1,0 +1,18 @@
+{
+  "npmClient": "yarn",
+  "packages": ["packages/*"],
+  "command": {
+    "create": {
+      "author": "Stefan Natter",
+      "license": "MIT"
+    },
+    "version": {
+      "allowBranch": "master",
+      "conventionalCommits": true,
+      "message": "chore(release): %s"
+    }
+  },
+  "ignoreChanges": ["**/__tests__/**", "**/*.md"],
+  "useWorkspaces": true,
+  "version": "1.4.1"
+}
