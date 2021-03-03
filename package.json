@@ -1,5 +1,5 @@
 {
-  "name": "eslint-config-ns-lerna",
+  "name": "eslint-config-ns",
   "version": "1.4.1",
   "private": true,
   "description": "eslint config ready to be used in multiple projects",
@@ -15,13 +15,10 @@
   },
   "scripts": {
     "lint": "FORCE_COLOR=1 lerna exec --stream -- yarn lint",
-    "prepublishOnly": "copyfiles CHANGELOG.md README.md LICENSE packages/eslint-config-ns/",
-    "release": "HUSKY_SKIP_HOOKS=1 standard-version",
-    "release-major": "HUSKY_SKIP_HOOKS=1 standard-version --release-as major",
-    "release-minor": "HUSKY_SKIP_HOOKS=1 standard-version --release-as minor",
-    "release-patch": "HUSKY_SKIP_HOOKS=1 standard-version --release-as patch",
+    "prelerna:version": "copyfiles README.md LICENSE packages/eslint-config-ns/",
     "test": "FORCE_COLOR=1 lerna exec --stream -- yarn test",
-    "test-app": "FORCE_COLOR=1 lerna exec --stream --scope example-app* -- yarn test"
+    "test-app": "FORCE_COLOR=1 lerna exec --stream --scope example-app* -- yarn test",
+    "lerna:version": "lerna version --no-commit-hooks --no-changelog --no-push --no-git-tag-version --allow-branch \"feature/*\""
   },
   "workspaces": {
     "packages": [
@@ -43,8 +40,8 @@
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "4.3.0",
     "lerna": "^4.0.0",
-    "prettier": "^2.2.1",
-    "standard-version": "9.1.1"
+    "lerna-changelog": "^1.0.1",
+    "prettier": "^2.2.1"
   },
   "husky": {
     "hooks": {
@@ -56,41 +53,8 @@
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "standard-version": {
-    "changelogHeader": "# eslint-config-ns Changelog\n\nAll notable changes to this project will be documented here. The format is based\non [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project\nadheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).\n\n",
-    "types": [
-      {
-        "type": "feat",
-        "section": "Features"
-      },
-      {
-        "type": "fix",
-        "section": "Fixes"
-      },
-      {
-        "type": "chore",
-        "hidden": true
-      },
-      {
-        "type": "docs",
-        "hidden": true
-      },
-      {
-        "type": "style",
-        "hidden": true
-      },
-      {
-        "type": "refactor",
-        "hidden": true
-      },
-      {
-        "type": "perf",
-        "hidden": true
-      },
-      {
-        "type": "test",
-        "hidden": true
-      }
-    ]
+  "changelog": {
+    "repo": "natterstefan/eslint-config-ns",
+    "cacheDir": ".changelog"
   }
 }
