@@ -1,6 +1,14 @@
 {
   "npmClient": "yarn",
   "packages": ["packages/*"],
+  "changelog": {
+    "ignoreCommitters": ["allcontributors", "dependabot"],
+    "labels": {
+      "enhancement": ":rocket: New Feature",
+      "bug": ":bug: Bug Fix"
+    },
+    "nextVersion": "Unreleased"
+  },
   "command": {
     "version": {
       "allowBranch": ["main", "next"],
