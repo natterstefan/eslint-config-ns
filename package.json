@@ -1,15 +1,10 @@
 {
   "name": "eslint-config-ns",
   "version": "1.4.1",
+  "private": true,
   "description": "eslint config ready to be used in multiple projects",
   "author": "Stefan Natter",
   "license": "MIT",
-  "keywords": [
-    "eslint",
-    "eslint-config",
-    "prettier",
-    "prettier-config"
-  ],
   "bugs": {
     "url": "https://github.com/natterstefan/eslint-config-ns/issues"
   },
@@ -18,36 +13,21 @@
     "type": "git",
     "url": "https://github.com/natterstefan/eslint-config-ns"
   },
-  "main": "index.js",
-  "files": [
-    "index.js",
-    "prettier.config.js"
-  ],
   "scripts": {
-    "lint": "(cd example && yarn lint)",
-    "release": "HUSKY_SKIP_HOOKS=1 standard-version",
-    "release-major": "HUSKY_SKIP_HOOKS=1 standard-version --release-as major",
-    "release-minor": "HUSKY_SKIP_HOOKS=1 standard-version --release-as minor",
-    "release-patch": "HUSKY_SKIP_HOOKS=1 standard-version --release-as patch",
-    "start": "(cd example && npm start)",
-    "test": "(cd example && yarn run lint && yarn test)"
+    "lint": "FORCE_COLOR=1 lerna exec --stream -- yarn lint",
+    "prelerna:version": "copyfiles README.md LICENSE packages/eslint-config-ns/",
+    "test": "FORCE_COLOR=1 lerna exec --stream -- yarn test",
+    "test-app": "FORCE_COLOR=1 lerna exec --stream --scope example-app* -- yarn test",
+    "lerna:version": "lerna version --no-commit-hooks --no-changelog --no-push --no-git-tag-version --allow-branch \"feature/*\""
   },
-  "peerDependencies": {
-    "babel-eslint": "^10.1.0",
-    "eslint": "^7.21.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jest": "^24.1.5",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-react": "^7.22.0",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "prettier": "^2.2.1"
+  "workspaces": {
+    "packages": [
+      "packages/*"
+    ]
   },
   "devDependencies": {
-    "babel-eslint": "^10.1.0",
     "commitizen": "4.2.3",
+    "copyfiles": "^2.4.1",
     "cz-conventional-changelog": "3.3.0",
     "eslint": "^7.21.0",
     "eslint-config-airbnb": "^18.2.1",
@@ -59,8 +39,9 @@
     "eslint-plugin-react": "^7.22.0",
     "eslint-plugin-react-hooks": "^4.2.0",
     "husky": "4.3.0",
-    "prettier": "^2.2.1",
-    "standard-version": "9.0.0"
+    "lerna": "^4.0.0",
+    "lerna-changelog": "^1.0.1",
+    "prettier": "^2.2.1"
   },
   "husky": {
     "hooks": {
@@ -71,42 +52,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "standard-version": {
-    "changelogHeader": "# eslint-config-ns Changelog\n\nAll notable changes to this project will be documented here. The format is based\non [Keep a Changelog](http://keepachangelog.com/en/1.0.0/) and this project\nadheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).\n\n",
-    "types": [
-      {
-        "type": "feat",
-        "section": "Features"
-      },
-      {
-        "type": "fix",
-        "section": "Fixes"
-      },
-      {
-        "type": "chore",
-        "hidden": true
-      },
-      {
-        "type": "docs",
-        "hidden": true
-      },
-      {
-        "type": "style",
-        "hidden": true
-      },
-      {
-        "type": "refactor",
-        "hidden": true
-      },
-      {
-        "type": "perf",
-        "hidden": true
-      },
-      {
-        "type": "test",
-        "hidden": true
-      }
-    ]
   }
 }
