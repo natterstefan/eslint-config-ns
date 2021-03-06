@@ -52,9 +52,5 @@
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  },
-  "changelog": {
-    "repo": "natterstefan/eslint-config-ns",
-    "cacheDir": ".changelog"
   }
 }
