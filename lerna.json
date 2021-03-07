@@ -1,8 +1,13 @@
 {
   "npmClient": "yarn",
-  "packages": ["packages/*"],
+  "packages": [
+    "packages/*"
+  ],
   "changelog": {
-    "ignoreCommitters": ["allcontributors", "dependabot"],
+    "ignoreCommitters": [
+      "allcontributors",
+      "dependabot"
+    ],
     "labels": {
       "enhancement": ":rocket: New Feature",
       "bug": ":bug: Bug Fix"
@@ -11,15 +16,26 @@
   },
   "command": {
     "version": {
-      "allowBranch": ["master", "next"]
+      "allowBranch": [
+        "master",
+        "next"
+      ]
     },
     "publish": {
-      "allowBranch": ["master", "next"],
+      "allowBranch": [
+        "master",
+        "next"
+      ],
       "conventionalCommits": true,
       "message": "chore(release): %s"
     }
   },
-  "ignoreChanges": ["*.md", "*.txt", "__test__/**", "**/__tests__/**"],
+  "ignoreChanges": [
+    "*.md",
+    "*.txt",
+    "__test__/**",
+    "**/__tests__/**"
+  ],
   "useWorkspaces": true,
-  "version": "1.4.1"
+  "version": "1.5.0-alpha.0"
 }
