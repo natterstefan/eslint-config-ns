@@ -61,7 +61,7 @@ jobs:
       - run: yarn install
       - run: yarn prelerna:version
       - run:
-          yarn HUSKY_SKIP_HOOKS=1 lerna version ${{ github.event.inputs.version
+          HUSKY_SKIP_HOOKS=1 yarn lerna version ${{ github.event.inputs.version
           }} --no-commit-hooks --no-changelog
 
   npm-release:
