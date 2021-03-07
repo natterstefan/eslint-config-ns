@@ -12,6 +12,26 @@ on:
     tags: ["v*"]
 
 jobs:
+  npm-release:
+    name: Lint, Test and Publish
+    runs-on: ubuntu-latest
+    environment: npm
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Lint
+        run: npm run lint
+
+      - name: Test
+        run: npm run test
+
+      - name: Publish to npm
+        run: npm run lerna:publish --yes
+        env:
+          YARN_NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
   github-release:
     name: Create GitHub release draft
     runs-on: ubuntu-latest
@@ -79,6 +99,6 @@ jobs:
           git -c user.name="natterstefan Bot" -c user.email="natterstefan-bot@users.noreply.github.com" \
             commit -m "Add ${{ needs.github-release.outputs.version }} to CHANGELOG.md [skip ci]" --no-verify --quiet
 
-      # - name: Push to GitHub
-      #   run: |
-      #     git push "https://natterstefan-bot:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" HEAD:master --follow-tags
+      - name: Push to GitHub
+        run: |
+          git push "https://natterstefan-bot:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" HEAD:master --follow-tags
