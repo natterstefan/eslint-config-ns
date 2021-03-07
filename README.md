@@ -102,6 +102,19 @@ This ESLint configuration comes with some fundamental assumptions:
 Even though I made some assumptions, [you can easily overwrite, extend and unset
 rules and any other setting in your custom eslint config](https://eslint.org/docs/user-guide/configuring).
 
+## How to release
+
+This repository uses GitHub Actions ([debug locally](https://github.com/nektos/act))
+to create a release and update the [CHANGELOG](CHANGELOG.md). The implementation
+is inspired and based on [github.com/babel/actions](https://github.com/babel/actions/tree/bb571b895aa20aaa3ee4ef58adcde364416acc9a).
+
+```bash
+yarn lerna:version
+```
+
+Once the release was created, all you need to do is to publish the packages
+manually to npm.
+
 ## LICENSE
 
 [MIT](LICENSE)

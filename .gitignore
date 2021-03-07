@@ -1,6 +1,8 @@
 .changelog
 .DS_Store
+.env
 .eslintcache
+.secrets
 .vscode
 *.log
 *.tgz

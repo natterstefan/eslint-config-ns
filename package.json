@@ -1,6 +1,5 @@
 {
   "name": "eslint-config-ns",
-  "version": "1.4.1",
   "private": true,
   "description": "eslint config ready to be used in multiple projects",
   "author": "Stefan Natter",
@@ -18,7 +17,8 @@
     "prelerna:version": "copyfiles README.md LICENSE packages/eslint-config-ns/",
     "test": "FORCE_COLOR=1 lerna exec --stream -- yarn test",
     "test-app": "FORCE_COLOR=1 lerna exec --stream --scope example-app* -- yarn test",
-    "lerna:version": "HUSKY_SKIP_HOOKS=1 lerna version --no-commit-hooks --no-changelog --no-push"
+    "lerna:version": "HUSKY_SKIP_HOOKS=1 lerna version --no-commit-hooks --no-changelog",
+    "lerna:publish": "lerna publish from-package"
   },
   "workspaces": {
     "packages": [
