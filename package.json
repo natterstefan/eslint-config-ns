@@ -18,7 +18,7 @@
     "prelerna:version": "copyfiles README.md LICENSE packages/eslint-config-ns/",
     "test": "FORCE_COLOR=1 lerna exec --stream -- yarn test",
     "test-app": "FORCE_COLOR=1 lerna exec --stream --scope example-app* -- yarn test",
-    "lerna:version": "lerna version --no-commit-hooks --no-changelog --no-push --no-git-tag-version --allow-branch \"feature/*\""
+    "lerna:version": "lerna version --no-commit-hooks --no-changelog --no-push --no-git-tag-version --allow-branch \"next/*\""
   },
   "workspaces": {
     "packages": [
