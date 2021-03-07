@@ -10,8 +10,11 @@
     "nextVersion": "Unreleased"
   },
   "command": {
+    "version": {
+      "allowBranch": ["master", "next"]
+    },
     "publish": {
-      "allowBranch": ["main", "next"],
+      "allowBranch": ["master", "next"],
       "conventionalCommits": true,
       "message": "chore(release): %s"
     }
