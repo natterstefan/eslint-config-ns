@@ -58,8 +58,6 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 14
-
-      - name: Create and prepare version
       - run: yarn install
       - run: yarn prelerna:version
       - run:
