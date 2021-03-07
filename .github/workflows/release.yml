@@ -55,11 +55,14 @@ jobs:
           git config user.name "natterstefan Bot"
           git config user.email "natterstefan-bot@users.noreply.github.com"
 
-      - name: Prepare version
-        run: yarn prelerna:version
+      - uses: actions/setup-node@v2
+        with:
+          node-version: 14
 
-      - name: Create new version
-        run:
+      - name: Create and prepare version
+      - run: yarn install
+      - run: yarn prelerna:version
+      - run:
           yarn HUSKY_SKIP_HOOKS=1 lerna version ${{ github.event.inputs.version
           }} --no-commit-hooks --no-changelog
 
