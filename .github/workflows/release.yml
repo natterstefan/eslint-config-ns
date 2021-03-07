@@ -10,11 +10,63 @@ name: Release
 on:
   push:
     tags: ["v*"]
+  workflow_dispatch:
+    inputs:
+      version:
+        description:
+          ⚠️ This workflow can only automatically release versions. Check out
+          https://github.com/lerna/lerna/tree/main/commands/version#semver-bump
+          for more details.
+        required: true
+        default: patch
 
 jobs:
+  log-updates:
+    name: Log packages to publish
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout the new tag
+        uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: This release will publish the following packages
+        run: |
+          if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
+            echo ${{ github.event.inputs.version }}
+          else
+            git diff --name-only HEAD^..HEAD
+          fi;
+
+  git-version:
+    name: Create git tag and commit when workflow was manually dispatched
+    runs-on: ubuntu-latest
+    needs: log-updates
+    if: github.event_name == 'workflow_dispatch'
+    outputs:
+      branch: ${{ steps.push.outputs.branch }}
+    steps:
+      - uses: actions/checkout@v2
+        with:
+          fetch-depth: 0
+
+      - name: Set @natterstefan-bot as committer
+        run: |
+          git config user.name "natterstefan Bot"
+          git config user.email "natterstefan-bot@users.noreply.github.com"
+
+      - name: Prepare version
+        run: yarn prelerna:version
+
+      - name: Create new version
+        run:
+          yarn HUSKY_SKIP_HOOKS=1 lerna version ${{ github.event.inputs.version
+          }} --no-commit-hooks --no-changelog
+
   npm-release:
     name: Lint, Test and Publish
     runs-on: ubuntu-latest
+    needs: git-version
     environment: npm
     steps:
       - uses: actions/checkout@v2
@@ -35,6 +87,7 @@ jobs:
   github-release:
     name: Create GitHub release draft
     runs-on: ubuntu-latest
+    needs: git-version
     outputs:
       is-master: ${{ steps.is-master.outputs.result == 1 }}
       changelog: ${{ steps.changelog.outputs.changelog }}
