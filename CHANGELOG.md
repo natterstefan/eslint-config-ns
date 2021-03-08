@@ -13,13 +13,7 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
   * [#28](https://github.com/natterstefan/eslint-config-ns/pull/28) feat: lerna setup ([@natterstefan](https://github.com/natterstefan))
 * Other
   * [#27](https://github.com/natterstefan/eslint-config-ns/pull/27) feat: updated several devDependencies ([@natterstefan](https://github.com/natterstefan))
-## v1.5.0-alpha.0 (2021-03-07)
 
-#### :rocket: New Feature
-* `eslint-config-ns`, `example-app`
-  * [#28](https://github.com/natterstefan/eslint-config-ns/pull/28) feat: lerna setup ([@natterstefan](https://github.com/natterstefan))
-* Other
-  * [#27](https://github.com/natterstefan/eslint-config-ns/pull/27) feat: updated several devDependencies ([@natterstefan](https://github.com/natterstefan))
 ## [1.4.1](https://github.com/natterstefan/eslint-config-ns/compare/v1.4.0...v1.4.1) (2020-10-27)
 
 
