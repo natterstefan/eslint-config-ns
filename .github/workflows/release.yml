@@ -62,7 +62,7 @@ jobs:
       - run: yarn prelerna:version
       - run:
           HUSKY_SKIP_HOOKS=1 yarn lerna version ${{ github.event.inputs.version
-          }} --no-commit-hooks --no-changelog
+          }} --no-commit-hooks --no-changelog --yes
 
   npm-release:
     name: Lint, Test and Publish
