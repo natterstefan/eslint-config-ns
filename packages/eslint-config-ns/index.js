@@ -1,5 +1,4 @@
 module.exports = {
-  parser: 'babel-eslint',
   extends: [
     // https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb
     'airbnb',
@@ -26,6 +25,7 @@ module.exports = {
      */
     'plugin:prettier/recommended',
   ],
+  parser: 'babel-eslint',
   globals: {
     __DEV__: true,
   },
@@ -47,17 +47,36 @@ module.exports = {
   },
   rules: {
     // general ESLint rules
-    'no-case-declarations': 0,
     'class-methods-use-this': 0,
+    'no-case-declarations': 0,
     'no-confusing-arrow': ['error', { allowParens: false }],
     'no-plusplus': 0,
     'no-underscore-dangle': 0, // e.g. __DEV__
-    'sort-keys': 0,
+    'no-unused-expressions': [
+      2,
+      {
+        // allow short circuit evaluations in your expressions
+        allowShortCircuit: true,
+      },
+    ],
     'sort-imports': 'off',
+    'sort-keys': 0,
 
     // rules for https://github.com/benmosher/eslint-plugin-import
     'import/extensions': 0,
-    'import/order': ['error', { 'newlines-between': 'always' }],
+    'import/order': [
+      'error',
+      {
+        'newlines-between': 'always',
+        pathGroups: [
+          {
+            pattern: '@/**',
+            group: 'external',
+            position: 'after',
+          },
+        ],
+      },
+    ],
     'import/prefer-default-export': 0,
 
     // rules for https://www.npmjs.com/package/eslint-plugin-jest
@@ -84,8 +103,8 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
 
-    // overwrite https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb
-    // rules
+    // overwrite settings of base-config
+    // https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb
     'react/jsx-curly-brace-presence': [
       2,
       { props: 'never', children: 'never' },
@@ -93,20 +112,6 @@ module.exports = {
     'react/jsx-filename-extension': 0, // jsx is also allowed in .js files
     'react/sort-comp': 2,
   },
-  overrides: [
-    {
-      files: ['./src/**/*.test.js', './src/**/*.spec.js'],
-      globals: {
-        React: true,
-      },
-      rules: {
-        'global-require': 0,
-        'import/no-extraneous-dependencies': 0,
-        'max-classes-per-file': 0,
-        'no-console': 0,
-      },
-    },
-  ],
   settings: {
     'import/resolver': {
       node: {
