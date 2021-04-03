@@ -14,9 +14,9 @@
   },
   "scripts": {
     "lint": "FORCE_COLOR=1 lerna exec --stream -- yarn lint",
-    "prelerna:version": "copyfiles README.md LICENSE packages/eslint-config-ns/",
+    "prelerna:version": "copyfiles LICENSE packages/eslint-config-ns/ && copyfiles LICENSE packages/eslint-config-ns-ts/",
     "test": "FORCE_COLOR=1 lerna exec --stream -- yarn test",
-    "test-app": "FORCE_COLOR=1 lerna exec --stream --scope example-app* -- yarn test",
+    "test:app": "FORCE_COLOR=1 lerna exec --stream --scope example-app* -- yarn test",
     "lerna:version": "HUSKY_SKIP_HOOKS=1 lerna version --no-commit-hooks --no-changelog",
     "lerna:publish": "lerna publish from-package"
   },
