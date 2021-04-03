@@ -1,17 +1,10 @@
 module.exports = {
-  collectCoverageFrom: [
-    'src/**/*.{ts,tsx}?',
-    '!src/__mocks__/*.{ts,tsx}',
-    '!src/__stories__/*.{ts,tsx}',
-  ],
-  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
-  snapshotSerializers: ['enzyme-to-json/serializer'],
-  testPathIgnorePatterns: [
-    '<rootDir>/(build|dist|es|esm|lib|node_modules)/',
-    '<rootDir>/src/*/(build|dist|es|esm|lib|node_modules)/',
-  ],
-  transform: {
-    '^.+\\.tsx?$': 'ts-jest',
+  preset: 'jest-preset-ns/presets/react',
+  globals: {
+    // @see https://github.com/natterstefan/jest-preset-ns/issues/4#issuecomment-765416205
+    'ts-jest': {
+      tsconfig: 'tsconfig.test.json',
+    },
   },
-  testMatch: ['/**/__tests__/*.test.ts', '/**/__tests__/*.test.tsx'],
+  setupFilesAfterEnv: ['<rootDir>/jest.setup.ts'],
 }
