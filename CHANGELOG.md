@@ -6,6 +6,11 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- DO NOT CHANGE THESE COMMENTS - See .github/actions/release.yml -->
 <!-- insert-new-changelog-here -->
+## v1.6.0 (2021-04-03)
+
+#### :rocket: New Feature
+* `eslint-config-ns`, `eslint-config-ns-ts`
+  * [8d921a8](https://github.com/natterstefan/eslint-config-ns/commit/8d921a863cbe3bc0cd60e7e04b12c2860c29d903) feat: added react/jsx-props-no-spreading setting ([@natterstefan](https://github.com/natterstefan))
 
 ## v1.5.0 (2021-04-03)
 

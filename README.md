@@ -17,12 +17,18 @@ This repository uses GitHub Actions ([debug locally](https://github.com/nektos/a
 to create a release and update the [CHANGELOG](CHANGELOG.md). The implementation
 is inspired and based on [github.com/babel/actions](https://github.com/babel/actions/tree/bb571b895aa20aaa3ee4ef58adcde364416acc9a).
 
+Either push the tags after running this command to origin, or run the release
+workflow manually on GitHub.
+
 ```bash
 yarn lerna:version
 ```
 
 Once the release was created with GitHub Actions, you need publish the packages
-manually to npm.
+manually to npm with `yarn lerna publish`.
+
+Attention: make sure the Pull Requests have labels _before_ you merge them.
+The label (e.g. `enhancement` and `bug`) will be used to create the CHANGELOG.
 
 ## LICENSE
 
