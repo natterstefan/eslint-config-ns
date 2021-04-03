@@ -5,7 +5,7 @@
   "description": "Example code for eslint-config-ns",
   "main": "src/index.js",
   "scripts": {
-    "lint": "eslint \"./**/*.js\" && prettier \"./src/**/*.js\" --check",
+    "lint": "eslint \"./**/*.{js,jsx}\" && prettier \"./src/**/*.{js,jsx}\" --check",
     "test": "jest ./src"
   },
   "author": "Stefan Natter",

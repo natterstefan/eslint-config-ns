@@ -103,13 +103,16 @@ module.exports = {
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
 
-    // overwrite settings of base-config
-    // https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb
+    // https://www.npmjs.com/package/eslint-plugin-react
     'react/jsx-curly-brace-presence': [
       2,
       { props: 'never', children: 'never' },
-    ], // use "" when passing a string as a property
-    'react/jsx-filename-extension': 0, // jsx is also allowed in .js files
+    ],
+    // jsx is also allowed in non .jsx files
+    'react/jsx-filename-extension': 0,
+    // Allowed but we should be aware to not overuse this.
+    'react/jsx-props-no-spreading': 0,
+    // use "" when passing a string as a property
     'react/sort-comp': 2,
   },
   settings: {
