@@ -2,8 +2,8 @@
 .DS_Store
 .env
 .eslintcache
+.jest-cache
 .secrets
-.vscode
 *.log
 *.tgz
 node_modules
