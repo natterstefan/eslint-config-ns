@@ -19,8 +19,10 @@
     "lint": "echo \"OK\" && exit 0",
     "test": "echo \"OK\" && exit 0"
   },
+  "dependencies": {
+    "babel-eslint": "^10.1.0"
+  },
   "peerDependencies": {
-    "babel-eslint": "^10.1.0",
     "eslint": "^7.23.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-prettier": "^8.1.0",

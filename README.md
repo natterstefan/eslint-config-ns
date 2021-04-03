@@ -21,7 +21,7 @@ is inspired and based on [github.com/babel/actions](https://github.com/babel/act
 yarn lerna:version
 ```
 
-Once the release was created with GitHub Actions,  you need publish the packages
+Once the release was created with GitHub Actions, you need publish the packages
 manually to npm.
 
 ## LICENSE
