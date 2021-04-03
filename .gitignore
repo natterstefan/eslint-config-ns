@@ -8,3 +8,5 @@
 *.tgz
 node_modules
 tmp
+
+packages/*/LICENSE
