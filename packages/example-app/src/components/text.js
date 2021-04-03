@@ -1,5 +1,10 @@
 import React from 'react'
+import PropTypes from 'prop-types'
 
-const Text = () => <div>Hello World</div>
+const Text = ({ text }) => <div>{text}</div>
+
+Text.propTypes = {
+  text: PropTypes.string.isRequired,
+}
 
 export { Text }

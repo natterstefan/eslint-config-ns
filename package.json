@@ -26,6 +26,7 @@
     ]
   },
   "devDependencies": {
+    "babel-eslint": "^10.1.0",
     "commitizen": "4.2.3",
     "copyfiles": "^2.4.1",
     "cz-conventional-changelog": "3.3.0",
