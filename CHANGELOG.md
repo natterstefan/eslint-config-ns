@@ -6,6 +6,13 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- DO NOT CHANGE THESE COMMENTS - See .github/actions/release.yml -->
 <!-- insert-new-changelog-here -->
+## v1.5.0 (2021-04-03)
+
+#### :rocket: New Feature
+* `eslint-config-ns`, `eslint-config-ns-ts`
+  * [#30](https://github.com/natterstefan/eslint-config-ns/pull/30) feat: updated eslint (js and ts) config based on latest used settings ([@natterstefan](https://github.com/natterstefan))
+  * [#29](https://github.com/natterstefan/eslint-config-ns/pull/29) feat: added eslint-config-ns-ts (merge) ([@natterstefan](https://github.com/natterstefan))
+
 ## v1.5.0-alpha.0 (2021-03-07)
 
 #### :rocket: New Feature

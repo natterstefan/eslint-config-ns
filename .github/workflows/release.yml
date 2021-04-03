@@ -162,6 +162,7 @@ jobs:
 
       - name: Commit CHANGELOG.md
         run: |
+          git pull
           git add CHANGELOG.md
           git -c user.name="natterstefan Bot" -c user.email="natterstefan-bot@users.noreply.github.com" \
             commit -m "Add ${{ needs.github-release.outputs.version }} to CHANGELOG.md [skip ci]" --no-verify --quiet
