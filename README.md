@@ -1,7 +1,13 @@
 # eslint-config
 
-[![GitHub license](https://img.shields.io/github/license/natterstefan/eslint-config-ns.svg)](https://github.com/natterstefan/eslint-config-ns/blob/master/LICENSE)
+
+
+[![GitHub issues](https://img.shields.io/github/issues/natterstefan/eslint-config-ns)](https://github.com/natterstefan/eslint-config-ns/issues)
+[![GitHub stars](https://img.shields.io/github/stars/natterstefan/eslint-config-ns)](https://github.com/natterstefan/eslint-config-ns/stargazers)
+[![GitHub license](https://img.shields.io/github/license/natterstefan/eslint-config-ns)](https://github.com/natterstefan/eslint-config-ns/blob/main/LICENSE)
 [![Commitizen friendly](https://img.shields.io/badge/commitizen-friendly-brightgreen.svg)](http://commitizen.github.io/cz-cli/)
+
+![natterstefan/eslint-config-ns](./assets/github.png)
 
 ## Packages
 
@@ -20,12 +26,22 @@ is inspired and based on [github.com/babel/actions](https://github.com/babel/act
 Either push the tags after running this command to origin, or run the release
 workflow manually on GitHub.
 
+### Manually trigger release
+
 ```bash
 yarn lerna:version
+git push --follow-tags
+# wait until GitHub Action finishes and then run
+yarn lerna:publish
 ```
 
-Once the release was created with GitHub Actions, you need publish the packages
-manually to npm with `yarn lerna publish`.
+### Automatically with GitHub Actions
+
+Manually invoke the [GitHub Action release](https://github.com/natterstefan/eslint-config-ns/actions/workflows/release.yml)
+and wait until it finishes.
+
+Once the release was created with GitHub Actions, publish the packages manually
+to npm with `yarn lerna:publish`.
 
 Attention: make sure the Pull Requests have labels _before_ you merge them.
 The label (e.g. `enhancement` and `bug`) will be used to create the CHANGELOG.

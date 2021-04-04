@@ -6,6 +6,11 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- DO NOT CHANGE THESE COMMENTS - See .github/actions/release.yml -->
 <!-- insert-new-changelog-here -->
+## v1.6.1 (2021-04-04)
+
+#### :bug: Bug Fix
+* `eslint-config-ns-ts`
+  * [#31](https://github.com/natterstefan/eslint-config-ns/pull/31) fix: added eslint-import-resolver-typescript (for path & baseUrl) ([@natterstefan](https://github.com/natterstefan))
 
 ## v1.6.0 (2021-04-03)
 
