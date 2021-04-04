@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ns-ts",
-  "version": "1.6.0",
+  "version": "1.6.1",
   "description": "eslint typescript config ready to be used in multiple projects",
   "author": "Stefan Natter",
   "license": "MIT",
