@@ -1,8 +1,10 @@
 module.exports = {
   extends: [
     'eslint-config-ns',
-    // add typescript specific linting rules and add prettier typescript support
+    // https://www.npmjs.com/package/@typescript-eslint/eslint-plugin
     'plugin:@typescript-eslint/recommended',
+    // https://www.npmjs.com/package/eslint-plugin-import
+    'plugin:import/typescript',
   ],
   parser: '@typescript-eslint/parser',
   rules: {
@@ -66,6 +68,19 @@ module.exports = {
       },
     ],
 
+    /**
+     * NOTE: disable both rules as they can report incorrect errors
+     *
+     * eg. assignment of let variable does not work properly with this rule
+     * ```tsx
+     * ;({ statusCode } = err)
+     * ```
+     *
+     * TODO: enable again once this issue is fixed!
+     */
+    'no-extra-semi': 0,
+    '@typescript-eslint/no-extra-semi': 0,
+
     // other typescript rules
     '@typescript-eslint/no-explicit-any': 0, // will be checked by tsconfig.js
     '@typescript-eslint/explicit-function-return-type': 0, // will be checked by tsconfig.js
@@ -75,12 +90,11 @@ module.exports = {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.d.ts'],
       },
+      /**
+       * enables using with typescript "baseUrl" and "paths" option
+       * @see https://github.com/benmosher/eslint-plugin-import/issues/1485#issuecomment-535351922
+       */
       typescript: {},
-    },
-    react: {
-      // Tells eslint-plugin-react to automatically detect the version of React
-      // to use
-      version: 'detect',
     },
   },
 }
