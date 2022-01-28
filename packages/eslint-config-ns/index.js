@@ -81,6 +81,10 @@ module.exports = {
     ],
     'import/prefer-default-export': 0,
 
+    // rules for https://github.com/jsx-eslint/eslint-plugin-jsx-a11y
+    // deprecated rule
+    'jsx-a11y/no-onchange': 0,
+
     // rules for https://www.npmjs.com/package/eslint-plugin-jest
     'jest/consistent-test-it': [
       'error',
@@ -98,6 +102,10 @@ module.exports = {
     'jest/prefer-strict-equal': 'error',
     'jest/prefer-to-have-length': 'error',
     'jest/valid-expect': 'error',
+
+    // deprecated rules
+    'jest/prefer-to-be-null': 0,
+    'jest/prefer-to-be-undefined': 0,
 
     // https://www.npmjs.com/package/eslint-plugin-react-hooks
     'react-hooks/rules-of-hooks': 'error',
@@ -120,8 +128,8 @@ module.exports = {
     'react/function-component-definition': [
       2,
       {
-        namedComponents: 'arrow-function',
-        unnamedComponents: 'arrow-function',
+        namedComponents: ['function-declaration', 'arrow-function'],
+        unnamedComponents: ['function-expression', 'arrow-function'],
       },
     ],
   },
