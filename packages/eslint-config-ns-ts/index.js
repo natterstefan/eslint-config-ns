@@ -1,3 +1,6 @@
+/**
+ * @type {import('eslint').ESLint.Options}
+ */
 module.exports = {
   extends: [
     'eslint-config-ns',
@@ -54,7 +57,8 @@ module.exports = {
     '@typescript-eslint/interface-name-prefix': 0,
 
     /**
-     * Configured in tsconfig.json instead
+     * Can be configured in the tsconfig.json instead
+     * @see https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/explicit-module-boundary-types.md
      */
     '@typescript-eslint/explicit-module-boundary-types': 0,
 

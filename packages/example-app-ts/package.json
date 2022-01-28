@@ -3,6 +3,9 @@
   "private": true,
   "version": "1.5.0",
   "description": "Example code for eslint-config-ns-ts",
+  "engines": {
+    "node": "^14.17 || ^16.x"
+  },
   "main": "src/index.js",
   "scripts": {
     "lint": "tsc && eslint \"./**/*.{ts,tsx}\" && prettier \"./src/**/*.{ts,tsx}\" --check",

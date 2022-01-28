@@ -4,6 +4,9 @@
   "description": "eslint config ready to be used in multiple projects",
   "author": "Stefan Natter",
   "license": "MIT",
+  "engines": {
+    "node": "^14.17 || ^16.x"
+  },
   "main": "index.js",
   "files": [
     "index.js",
@@ -20,19 +23,21 @@
     "test": "echo \"OK\" && exit 0"
   },
   "dependencies": {
-    "babel-eslint": "^10.1.0"
+    "@babel/core": "^7.16.12",
+    "@babel/eslint-parser": "^7.16.5",
+    "@babel/preset-react": "^7.16.7"
   },
   "peerDependencies": {
-    "eslint": "^7.23.0",
-    "eslint-config-airbnb": "^18.2.1",
-    "eslint-config-prettier": "^8.1.0",
-    "eslint-plugin-import": "^2.22.1",
-    "eslint-plugin-jest": "^24.3.3",
-    "eslint-plugin-jsx-a11y": "^6.4.1",
-    "eslint-plugin-prettier": "^3.3.1",
-    "eslint-plugin-react": "^7.23.1",
-    "eslint-plugin-react-hooks": "^4.2.0",
-    "prettier": "^2.2.1"
+    "eslint": "^8.7.0",
+    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-prettier": "^8.3.0",
+    "eslint-plugin-import": "^2.25.4",
+    "eslint-plugin-jest": "^26.0.0",
+    "eslint-plugin-jsx-a11y": "^6.5.1",
+    "eslint-plugin-prettier": "^4.0.0",
+    "eslint-plugin-react": "^7.28.0",
+    "eslint-plugin-react-hooks": "^4.3.0",
+    "prettier": "^2.5.1"
   },
   "bugs": {
     "url": "https://github.com/natterstefan/eslint-config-ns/issues"

@@ -9,16 +9,21 @@ on [Medium](http://nttr.st/1REplMW). One of the results of the article, is this
 shareable eslint-config (and the one for [stylelint](https://nttr.st/2OUpTQP)).
 
 `eslint-config-ns` lints your javascript projects with ease, based on the
-popular [javascript code style from Airbnb](https://www.npmjs.com/package/eslint-config-airbnb).
+popular
+[javascript code style from Airbnb](https://www.npmjs.com/package/eslint-config-airbnb).
 
-The config is built upon Airbnb's ESLint rules with additional
-rules and optimizations (see [assumptions](#assumptions)).
+The config is built upon Airbnb's ESLint rules with additional rules and
+optimizations (see [assumptions](#assumptions)).
 
 ## Features
 
-- based on the the popular [javascript
-  code style from Airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
-- with [react](https://reactjs.org/), [react-hooks](https://reactjs.org/docs/hooks-intro.html), [jest](https://jestjs.io/), and [prettier](https://prettier.io/docs/en/eslint.html#use-eslint-to-run-prettier) support
+- based on the the popular
+  [javascript code style from Airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
+- with [react](https://reactjs.org/),
+  [react-hooks](https://reactjs.org/docs/hooks-intro.html),
+  [jest](https://jestjs.io/), and
+  [prettier](https://prettier.io/docs/en/eslint.html#use-eslint-to-run-prettier)
+  support
 
 ## Installation
 
@@ -31,9 +36,9 @@ npm install eslint-config-ns --save-dev
 yarn add eslint-config-ns -D
 ```
 
-`eslint-config-ns` requires you to take care of it's `peerDependencies`.
-Install the correct version of each `peerDependencies` package, which are listed
-with the following command:
+`eslint-config-ns` requires you to take care of it's `peerDependencies`. Install
+the correct version of each `peerDependencies` package, which are listed with
+the following command:
 
 ```sh
 npm info "eslint-config-ns@latest" peerDependencies
@@ -95,8 +100,8 @@ module.exports = require('eslint-config-ns/prettier.config')
 - Jest as the selected test-suite
 - it uses the `babel-eslint` parser
 
-Even though I made some assumptions, [you can easily overwrite, extend and unset
-rules and any other setting in your custom eslint config](https://eslint.org/docs/user-guide/configuring).
+Even though I made some assumptions,
+[you can easily overwrite, extend and unset rules and any other setting in your custom eslint config](https://eslint.org/docs/user-guide/configuring).
 
 ## LICENSE
 

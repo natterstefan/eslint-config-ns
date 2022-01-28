@@ -1,3 +1,6 @@
+/**
+ * @type {import('eslint').ESLint.Options}
+ */
 module.exports = {
   extends: [
     // https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb
@@ -23,9 +26,16 @@ module.exports = {
      *
      * prettier alternative: https://github.com/prettier/prettier-eslint
      */
+    'prettier',
     'plugin:prettier/recommended',
   ],
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
+  parserOptions: {
+    requireConfigFile: false,
+    babelOptions: {
+      presets: ['@babel/preset-react'],
+    },
+  },
   globals: {
     __DEV__: true,
   },
@@ -36,14 +46,6 @@ module.exports = {
     jest: true,
     'jest/globals': true, // https://www.npmjs.com/package/eslint-plugin-jest#usage
     'shared-node-browser': true,
-  },
-  parserOptions: {
-    ecmaVersion: 6,
-    sourceType: 'module',
-    ecmaFeatures: {
-      defaultParams: true,
-      spread: true,
-    },
   },
   rules: {
     // general ESLint rules
@@ -79,6 +81,10 @@ module.exports = {
     ],
     'import/prefer-default-export': 0,
 
+    // rules for https://github.com/jsx-eslint/eslint-plugin-jsx-a11y
+    // deprecated rule
+    'jsx-a11y/no-onchange': 0,
+
     // rules for https://www.npmjs.com/package/eslint-plugin-jest
     'jest/consistent-test-it': [
       'error',
@@ -94,16 +100,19 @@ module.exports = {
     'jest/no-jest-import': 'error',
     'jest/no-large-snapshots': ['warn', { maxSize: 300 }],
     'jest/prefer-strict-equal': 'error',
-    'jest/prefer-to-be-null': 'error',
-    'jest/prefer-to-be-undefined': 'error',
     'jest/prefer-to-have-length': 'error',
     'jest/valid-expect': 'error',
+
+    // deprecated rules
+    'jest/prefer-to-be-null': 0,
+    'jest/prefer-to-be-undefined': 0,
 
     // https://www.npmjs.com/package/eslint-plugin-react-hooks
     'react-hooks/rules-of-hooks': 'error',
     'react-hooks/exhaustive-deps': 'error',
 
     // https://www.npmjs.com/package/eslint-plugin-react
+    // use "" when passing a string as a property
     'react/jsx-curly-brace-presence': [
       2,
       { props: 'never', children: 'never' },
@@ -112,8 +121,17 @@ module.exports = {
     'react/jsx-filename-extension': 0,
     // Allowed but we should be aware to not overuse this.
     'react/jsx-props-no-spreading': 0,
-    // use "" when passing a string as a property
+    // Enforce component methods order
     'react/sort-comp': 2,
+    // Enforce a specific function type for function components
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/function-component-definition.md
+    'react/function-component-definition': [
+      2,
+      {
+        namedComponents: ['function-declaration', 'arrow-function'],
+        unnamedComponents: ['function-expression', 'arrow-function'],
+      },
+    ],
   },
   settings: {
     'import/resolver': {

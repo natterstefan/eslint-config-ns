@@ -3,6 +3,9 @@
   "private": true,
   "version": "1.6.0",
   "description": "Example code for eslint-config-ns",
+  "engines": {
+    "node": "^14.17 || ^16.x"
+  },
   "main": "src/index.js",
   "scripts": {
     "lint": "eslint \"./**/*.{js,jsx}\" && prettier \"./src/**/*.{js,jsx}\" --check",
@@ -11,7 +14,7 @@
   "author": "Stefan Natter",
   "license": "MIT",
   "dependencies": {
-    "prop-types": "^15.7.2",
+    "prop-types": "^15.8.1",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },

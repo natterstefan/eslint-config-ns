@@ -8,14 +8,18 @@ existing JavaScript config [eslint-config-ns][1].
 
 ## Features
 
-- based on the the popular [javascript
-  code style from Airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
-- with [react](https://reactjs.org/), [react-hooks](https://reactjs.org/docs/hooks-intro.html), [jest](https://jestjs.io/), and [prettier](https://prettier.io/docs/en/eslint.html#use-eslint-to-run-prettier) support
+- based on the the popular
+  [javascript code style from Airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
+- with [react](https://reactjs.org/),
+  [react-hooks](https://reactjs.org/docs/hooks-intro.html),
+  [jest](https://jestjs.io/), and
+  [prettier](https://prettier.io/docs/en/eslint.html#use-eslint-to-run-prettier)
+  support
 - with TypeScript support
   - e.g. with support for `baseUrl` and `paths`
 
-The config is built upon Airbnb's ESLint rules with additional
-rules and optimizations (see [assumptions](#assumptions)).
+The config is built upon Airbnb's ESLint rules with additional rules and
+optimizations (see [assumptions](#assumptions)).
 
 ## Installation
 
