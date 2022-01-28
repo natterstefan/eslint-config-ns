@@ -13,7 +13,7 @@ describe('App', () => {
 
   it('increases counter every 1 second', () => {
     const wrapper = shallow(<App />)
-    expect(wrapper.text()).toStrictEqual(
+    expect(wrapper.text()).toBe(
       'Hello eslint-config-ns<Text />State Counter: 0',
     )
 

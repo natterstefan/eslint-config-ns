@@ -1,3 +1,6 @@
+/**
+ * @type {import('eslint').ESLint.Options}
+ */
 module.exports = {
   extends: [
     // https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb
@@ -23,9 +26,16 @@ module.exports = {
      *
      * prettier alternative: https://github.com/prettier/prettier-eslint
      */
+    'prettier',
     'plugin:prettier/recommended',
   ],
-  parser: 'babel-eslint',
+  parser: '@babel/eslint-parser',
+  parserOptions: {
+    requireConfigFile: false,
+    babelOptions: {
+      presets: ['@babel/preset-react'],
+    },
+  },
   globals: {
     __DEV__: true,
   },

@@ -1,5 +1,14 @@
+/**
+ * @type {import('eslint').ESLint.Options}
+ */
 module.exports = {
   extends: 'eslint-config-ns',
+  /**
+   * Overwrite or extend the default parserOptions
+   */
+  parserOptions: {
+    requireConfigFile: false,
+  },
   overrides: [
     {
       files: ['./src/**/__tests__/*.test.js', './src/**/__tests__/*.test.jsx'],

@@ -8,7 +8,7 @@ jest.useFakeTimers()
 describe('App', () => {
   it('renders', () => {
     const wrapper = shallow(<App />)
-    expect(wrapper.text()).toStrictEqual(
+    expect(wrapper.text()).toBe(
       'Hello eslint-config-ns-ts<Text />State Counter: 0',
     )
     expect(wrapper).toMatchSnapshot()
@@ -16,7 +16,7 @@ describe('App', () => {
 
   it('increases counter every 1 second', () => {
     const wrapper = shallow(<App />)
-    expect(wrapper.text()).toStrictEqual(
+    expect(wrapper.text()).toBe(
       'Hello eslint-config-ns-ts<Text />State Counter: 0',
     )
 
