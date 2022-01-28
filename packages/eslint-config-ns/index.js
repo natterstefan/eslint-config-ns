@@ -47,14 +47,6 @@ module.exports = {
     'jest/globals': true, // https://www.npmjs.com/package/eslint-plugin-jest#usage
     'shared-node-browser': true,
   },
-  parserOptions: {
-    ecmaVersion: 6,
-    sourceType: 'module',
-    ecmaFeatures: {
-      defaultParams: true,
-      spread: true,
-    },
-  },
   rules: {
     // general ESLint rules
     'class-methods-use-this': 0,
