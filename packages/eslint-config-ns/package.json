@@ -4,6 +4,9 @@
   "description": "eslint config ready to be used in multiple projects",
   "author": "Stefan Natter",
   "license": "MIT",
+  "engines": {
+    "node": "^14.17 || ^16.x"
+  },
   "main": "index.js",
   "files": [
     "index.js",
