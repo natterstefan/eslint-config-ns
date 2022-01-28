@@ -12,11 +12,6 @@
     "index.js",
     "prettier.config.js"
   ],
-  "exports": {
-    ".": "./index.js",
-    "./prettier-config": "./prettier.config.js",
-    "./package.json": "./package.json"
-  },
   "keywords": [
     "eslint",
     "eslint-config",
