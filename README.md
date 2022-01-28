@@ -1,7 +1,5 @@
 # eslint-config
 
-
-
 [![GitHub issues](https://img.shields.io/github/issues/natterstefan/eslint-config-ns)](https://github.com/natterstefan/eslint-config-ns/issues)
 [![GitHub stars](https://img.shields.io/github/stars/natterstefan/eslint-config-ns)](https://github.com/natterstefan/eslint-config-ns/stargazers)
 [![GitHub license](https://img.shields.io/github/license/natterstefan/eslint-config-ns)](https://github.com/natterstefan/eslint-config-ns/blob/main/LICENSE)
@@ -11,17 +9,18 @@
 
 ## Packages
 
-This monorepo contains multiple packages. Take a look at their READMEs for
-more details.
+This monorepo contains multiple packages. Take a look at their READMEs for more
+details.
 
 - [eslint-config-ns](./packages/eslint-config-ns/README.md)
 - [eslint-config-ns-ts](./packages/eslint-config-ns-ts/README.md)
 
 ## How to release
 
-This repository uses GitHub Actions ([debug locally](https://github.com/nektos/act))
-to create a release and update the [CHANGELOG](CHANGELOG.md). The implementation
-is inspired and based on [github.com/babel/actions](https://github.com/babel/actions/tree/bb571b895aa20aaa3ee4ef58adcde364416acc9a).
+This repository uses GitHub Actions
+([debug locally](https://github.com/nektos/act)) to create a release and update
+the [CHANGELOG](CHANGELOG.md). The implementation is inspired and based on
+[github.com/babel/actions](https://github.com/babel/actions/tree/bb571b895aa20aaa3ee4ef58adcde364416acc9a).
 
 Either push the tags after running this command to origin, or run the release
 workflow manually on GitHub.
@@ -35,16 +34,23 @@ git push --follow-tags
 yarn lerna:publish
 ```
 
+### Manually create Changelog entry
+
+```bash
+npx lerna-changelog --from <tag> --to <tag>
+```
+
 ### Automatically with GitHub Actions
 
-Manually invoke the [GitHub Action release](https://github.com/natterstefan/eslint-config-ns/actions/workflows/release.yml)
+Manually invoke the
+[GitHub Action release](https://github.com/natterstefan/eslint-config-ns/actions/workflows/release.yml)
 and wait until it finishes.
 
 Once the release was created with GitHub Actions, publish the packages manually
 to npm with `yarn lerna:publish`.
 
-Attention: make sure the Pull Requests have labels _before_ you merge them.
-The label (e.g. `enhancement` and `bug`) will be used to create the CHANGELOG.
+Attention: make sure the Pull Requests have labels _before_ you merge them. The
+label (e.g. `enhancement` and `bug`) will be used to create the CHANGELOG.
 
 ## LICENSE
 
