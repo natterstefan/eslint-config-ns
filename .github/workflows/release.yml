@@ -58,7 +58,13 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 14
-      - run: yarn install
+          cache: "yarn"
+
+      - uses: bahmutov/npm-install@37d870e488074d1a5810ffe9256ebdd81530ab72
+        with:
+          install-command:
+            yarn --prefer-offline --frozen-lockfile --no-progress --silent
+
       - run:
           HUSKY_SKIP_HOOKS=1 yarn lerna version ${{ github.event.inputs.version
           }} --no-commit-hooks --no-changelog --yes
@@ -81,7 +87,13 @@ jobs:
       - uses: actions/setup-node@v2
         with:
           node-version: 14
-      - run: yarn install
+          cache: "yarn"
+
+      - uses: bahmutov/npm-install@37d870e488074d1a5810ffe9256ebdd81530ab72
+        with:
+          install-command:
+            yarn --prefer-offline --frozen-lockfile --no-progress --silent
+
       - run: yarn lint
       - run: yarn test
       - run: npm run lerna:publish --yes
