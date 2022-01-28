@@ -104,8 +104,6 @@ module.exports = {
     'jest/no-jest-import': 'error',
     'jest/no-large-snapshots': ['warn', { maxSize: 300 }],
     'jest/prefer-strict-equal': 'error',
-    'jest/prefer-to-be-null': 'error',
-    'jest/prefer-to-be-undefined': 'error',
     'jest/prefer-to-have-length': 'error',
     'jest/valid-expect': 'error',
 
@@ -114,6 +112,7 @@ module.exports = {
     'react-hooks/exhaustive-deps': 'error',
 
     // https://www.npmjs.com/package/eslint-plugin-react
+    // use "" when passing a string as a property
     'react/jsx-curly-brace-presence': [
       2,
       { props: 'never', children: 'never' },
@@ -122,8 +121,17 @@ module.exports = {
     'react/jsx-filename-extension': 0,
     // Allowed but we should be aware to not overuse this.
     'react/jsx-props-no-spreading': 0,
-    // use "" when passing a string as a property
+    // Enforce component methods order
     'react/sort-comp': 2,
+    // Enforce a specific function type for function components
+    // https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/function-component-definition.md
+    'react/function-component-definition': [
+      2,
+      {
+        namedComponents: 'arrow-function',
+        unnamedComponents: 'arrow-function',
+      },
+    ],
   },
   settings: {
     'import/resolver': {
