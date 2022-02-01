@@ -1,7 +1,7 @@
 # eslint-config-ns
 
 [![npm version](https://badge.fury.io/js/eslint-config-ns.svg)](https://badge.fury.io/js/eslint-config-ns)
-[![GitHub license](https://img.shields.io/github/license/natterstefan/eslint-config-ns.svg)](https://github.com/natterstefan/eslint-config-ns/blob/master/LICENSE)
+[![GitHub license](https://img.shields.io/github/license/natterstefan/eslint-config-ns.svg)](https://github.com/natterstefan/eslint-config-ns/blob/main/LICENSE)
 
 In August 2018, I published an article with the title
 ["How to create your own shared esLint, prettier and stylelint configuration"](https://nttr.st/2MOAAGc)

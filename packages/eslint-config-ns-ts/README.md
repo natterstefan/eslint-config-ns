@@ -1,7 +1,7 @@
 # eslint-config-ns-ts
 
 [![npm version](https://badge.fury.io/js/eslint-config-ns-ts.svg)](https://badge.fury.io/js/eslint-config-ns-ts)
-[![GitHub license](https://img.shields.io/github/license/natterstefan/eslint-config-ns-ts.svg)](https://github.com/natterstefan/eslint-config-ns-ts/blob/master/LICENCE)
+[![GitHub license](https://img.shields.io/github/license/natterstefan/eslint-config-ns-ts.svg)](https://github.com/natterstefan/eslint-config-ns-ts/blob/main/LICENCE)
 
 Lint your TypeScript projects with ease. `eslint-config-ns-ts` extends my
 existing JavaScript config [eslint-config-ns][1].
