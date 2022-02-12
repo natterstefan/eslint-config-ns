@@ -8,9 +8,26 @@
     "node": "^14.17 || ^16.x"
   },
   "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./base": "./base.js",
+    "./jest": "./jest.js",
+    "./react": "./react.js",
+    "./rules/base": "./rules/base.js",
+    "./rules/jest": "./rules/jest.js",
+    "./rules/react": "./rules/react.js",
+    "./rules/react-a11y": "./rules/react-a11y.js",
+    "./package.json": "./package.json",
+    "./prettier.config": "./prettier.config.js",
+    "./prettier.config.js": "./prettier.config.js"
+  },
   "files": [
     "index.js",
-    "prettier.config.js"
+    "base.js",
+    "jest.js",
+    "react.js",
+    "prettier.config.js",
+    "rules"
   ],
   "keywords": [
     "eslint",
