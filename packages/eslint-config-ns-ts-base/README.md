@@ -8,16 +8,16 @@ existing JavaScript config [eslint-config-ns][1].
 
 ## Contents
 
-- [eslint-config-ns-ts-base](#eslint-config-ns-ts-base)
-  - [Contents](#contents)
-  - [Related Configs](#related-configs)
-  - [Features](#features)
-  - [Installation](#installation)
-  - [Usage](#usage)
-    - [Prettier Config](#prettier-config)
-  - [Assumptions](#assumptions)
-  - [LICENCE](#licence)
-  - [Maintainers](#maintainers)
+* [eslint-config-ns-ts-base](#eslint-config-ns-ts-base)
+  * [Contents](#contents)
+  * [Related Configs](#related-configs)
+  * [Features](#features)
+  * [Installation](#installation)
+  * [Usage](#usage)
+    * [Prettier Config](#prettier-config)
+  * [Assumptions](#assumptions)
+  * [LICENCE](#licence)
+  * [Maintainers](#maintainers)
 
 ## Related Configs
 
@@ -50,37 +50,37 @@ optimizations (see [assumptions](#assumptions)).
 Install the package with
 
 ```sh
-npm install eslint-config-ns-ts --save-dev
+npm install eslint-config-ns-ts-base --save-dev
 
 # or
-yarn add eslint-config-ns-ts -D
+yarn add eslint-config-ns-ts-base -D
 ```
 
-`eslint-config-ns-ts` requires you to take care of it's `peerDependencies`.
+`eslint-config-ns-ts-base` requires you to take care of it's `peerDependencies`.
 Install the correct version of each `peerDependencies` package, which are listed
 with the following command:
 
 ```sh
-npm info "eslint-config-ns-ts@latest" peerDependencies
+npm info "eslint-config-ns-ts-base@latest" peerDependencies
 ```
 
 If using npm 5+, use this shortcut:
 
 ```sh
-npx install-peerdeps --dev eslint-config-ns-ts
+npx install-peerdeps --dev eslint-config-ns-ts-base
 
 # or
-yarn add eslint-config-ns-ts -D --peer
+yarn add eslint-config-ns-ts-base -D --peer
 ```
 
 ## Usage
 
-Now add `eslint-config-ns-ts` to either your `package.json`:
+Now add `eslint-config-ns-ts-base` to either your `package.json`:
 
 ```json
 {
   "eslintConfig": {
-    "extends": "eslint-config-ns-ts"
+    "extends": "eslint-config-ns-ts-base"
   }
 }
 ```
@@ -89,7 +89,7 @@ to your `.eslintrc`:
 
 ```json
 {
-  "extends": "eslint-config-ns-ts"
+  "extends": "eslint-config-ns-ts-base"
 }
 ```
 
@@ -97,18 +97,18 @@ or `.eslintrc.js`:
 
 ```js
 module.exports = {
-  extends: 'eslint-config-ns-ts',
+  extends: 'eslint-config-ns-ts-base',
 }
 ```
 
 ### Prettier Config
 
-This is how you can use or extend the `eslint-config-ns-ts` prettier config in
-your app:
+This is how you can use or extend the `eslint-config-ns-ts-base` prettier config
+in your app:
 
 ```js
 // prettier.config.js
-module.exports = require('eslint-config-ns-ts/prettier.config')
+module.exports = require('eslint-config-ns-ts-base/prettier.config')
 ```
 
 ## Assumptions
