@@ -2,7 +2,7 @@
  * @type {import('eslint').ESLint.Options}
  */
 module.exports = {
-  extends: ['./base', './react'].map(require.resolve),
+  extends: ['./base', './jest', './react'].map(require.resolve),
   parser: '@typescript-eslint/parser',
   rules: {},
 }

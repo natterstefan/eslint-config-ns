@@ -3,22 +3,18 @@
  */
 module.exports = {
   extends: [
-    'airbnb/hooks',
     // https://www.npmjs.com/package/eslint-plugin-react
     'plugin:react/recommended',
-    // https://www.npmjs.com/package/eslint-plugin-react-hooks
-    'plugin:react-hooks/recommended',
   ],
   parserOptions: {
     ecmaFeatures: {
       jsx: true,
     },
   },
+  globals: {
+    __DEV__: true,
+  },
   rules: {
-    // https://www.npmjs.com/package/eslint-plugin-react-hooks
-    'react-hooks/rules-of-hooks': 'error',
-    'react-hooks/exhaustive-deps': 'error',
-
     // https://www.npmjs.com/package/eslint-plugin-react
     // use "" when passing a string as a property
     'react/jsx-curly-brace-presence': [

@@ -7,6 +7,11 @@ module.exports = {
     'plugin:jest/recommended',
     'plugin:jest/style',
   ],
+  env: {
+    jest: true,
+    // https://www.npmjs.com/package/eslint-plugin-jest#usage
+    'jest/globals': true,
+  },
   rules: {
     // rules for https://www.npmjs.com/package/eslint-plugin-jest
     'jest/consistent-test-it': [

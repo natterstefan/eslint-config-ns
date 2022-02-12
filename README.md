@@ -12,6 +12,7 @@
 This monorepo contains multiple packages. Take a look at their READMEs for more
 details.
 
+- [eslint-config-ns-base](./packages/eslint-config-ns-base/README.md)
 - [eslint-config-ns](./packages/eslint-config-ns/README.md)
 - [eslint-config-ns-ts](./packages/eslint-config-ns-ts/README.md)
 

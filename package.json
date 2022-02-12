@@ -17,7 +17,7 @@
   },
   "scripts": {
     "lint": "FORCE_COLOR=1 turbo run lint --parallel --no-cache",
-    "prelerna:publish": "copyfiles LICENSE packages/eslint-config-ns/ && copyfiles LICENSE packages/eslint-config-ns-ts/",
+    "prelerna:publish": "copyfiles LICENSE packages/eslint-config-ns-base/ && copyfiles LICENSE packages/eslint-config-ns/ && copyfiles LICENSE packages/eslint-config-ns-ts/",
     "prepare": "is-ci || husky install",
     "test": "FORCE_COLOR=1 turbo run test --parallel --no-cache",
     "test:app": "FORCE_COLOR=1 turbo run test --parallel --no-cache --scope=example-app*",

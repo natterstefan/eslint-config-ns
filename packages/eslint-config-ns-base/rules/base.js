@@ -19,6 +19,13 @@ module.exports = {
     'prettier',
     'plugin:prettier/recommended',
   ],
+  env: {
+    browser: true,
+    es6: true,
+    node: true,
+    // Globals common to both Node.js and Browser.
+    'shared-node-browser': true,
+  },
   rules: {
     // general ESLint rules
     'class-methods-use-this': 0,

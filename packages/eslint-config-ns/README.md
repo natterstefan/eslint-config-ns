@@ -3,26 +3,52 @@
 [![npm version](https://badge.fury.io/js/eslint-config-ns.svg)](https://badge.fury.io/js/eslint-config-ns)
 [![GitHub license](https://img.shields.io/github/license/natterstefan/eslint-config-ns.svg)](https://github.com/natterstefan/eslint-config-ns/blob/main/LICENSE)
 
+`eslint-config-ns` lints your JavaScript projects with ease, and is mainly based
+on the popular
+[JavaScript code style from Airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
+with further customizations derived on my own experience.
+
+## Contents
+
+* [eslint-config-ns](#eslint-config-ns)
+  * [Contents](#contents)
+  * [Related Configs](#related-configs)
+  * [Background Story](#background-story)
+  * [Features](#features)
+  * [Installation](#installation)
+  * [Usage](#usage)
+    * [Prettier Config](#prettier-config)
+  * [Assumptions](#assumptions)
+  * [LICENSE](#license)
+  * [Maintainers](#maintainers)
+
+## Related Configs
+
+- JavaScript project:
+  [eslint-config-ns](https://www.npmjs.com/package/eslint-config-ns)
+- JavaScript React project:
+  [eslint-config-ns-ts](https://www.npmjs.com/package/eslint-config-ns-ts)
+- TypeScript React project:
+  [eslint-config-ns-ts](https://www.npmjs.com/package/eslint-config-ns-ts)
+
+## Background Story
+
 In August 2018, I published an article with the title
 ["How to create your own shared esLint, prettier and stylelint configuration"](https://nttr.st/2MOAAGc)
 on [Medium](http://nttr.st/1REplMW). One of the results of the article, is this
-shareable eslint-config (and the one for [stylelint](https://nttr.st/2OUpTQP)).
+shareable eslint-config (and one for [stylelint](https://nttr.st/2OUpTQP)).
 
-`eslint-config-ns` lints your javascript projects with ease, based on the
-popular
-[javascript code style from Airbnb](https://www.npmjs.com/package/eslint-config-airbnb).
+## Features
 
 The config is built upon Airbnb's ESLint rules with additional rules and
 optimizations (see [assumptions](#assumptions)).
 
-## Features
-
 - based on the the popular
-  [javascript code style from Airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
-- with [react](https://reactjs.org/),
+  [JavaScript code style from Airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
+- with [React](https://reactjs.org/),
   [react-hooks](https://reactjs.org/docs/hooks-intro.html),
-  [jest](https://jestjs.io/), and
-  [prettier](https://prettier.io/docs/en/eslint.html#use-eslint-to-run-prettier)
+  [Jest](https://jestjs.io/), and
+  [Prettier](https://prettier.io/docs/en/eslint.html#use-eslint-to-run-prettier)
   support
 
 ## Installation
@@ -98,7 +124,7 @@ module.exports = require('eslint-config-ns/prettier.config')
 - React and/or Node.js environment
 - Browser and/or Node.js environment
 - Jest as the selected test-suite
-- it uses the `babel-eslint` parser
+- it uses the `@babel/eslint-parser` parser
 
 Even though I made some assumptions,
 [you can easily overwrite, extend and unset rules and any other setting in your custom eslint config](https://eslint.org/docs/user-guide/configuring).
