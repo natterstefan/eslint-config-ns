@@ -16,11 +16,11 @@
     "url": "https://github.com/natterstefan/eslint-config-ns"
   },
   "scripts": {
-    "lint": "FORCE_COLOR=1 lerna exec --stream -- yarn lint",
+    "lint": "FORCE_COLOR=1 turbo run lint --parallel --no-cache",
     "prelerna:publish": "copyfiles LICENSE packages/eslint-config-ns/ && copyfiles LICENSE packages/eslint-config-ns-ts/",
     "prepare": "is-ci || husky install",
-    "test": "FORCE_COLOR=1 lerna exec --stream -- yarn test",
-    "test:app": "FORCE_COLOR=1 lerna exec --stream --scope example-app* -- yarn test",
+    "test": "FORCE_COLOR=1 turbo run test --parallel --no-cache",
+    "test:app": "FORCE_COLOR=1 turbo run test --parallel --no-cache --scope=example-app*",
     "lerna:version": "HUSKY_SKIP_HOOKS=1 lerna version --no-commit-hooks --no-changelog",
     "lerna:publish": "lerna publish from-package"
   },
@@ -53,11 +53,13 @@
     "jest-preset-ns": "^1.1.0",
     "lerna": "^4.0.0",
     "lerna-changelog": "^2.2.0",
-    "prettier": "^2.5.1"
+    "prettier": "^2.5.1",
+    "turbo": "^1.1.2"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
-  }
+  },
+  "packageManager": "yarn@1.22.4"
 }
