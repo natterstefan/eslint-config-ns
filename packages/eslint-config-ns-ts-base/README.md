@@ -1,11 +1,14 @@
-# eslint-config-ns-base
+# eslint-config-ns-ts-base
 
-[![npm version](https://badge.fury.io/js/eslint-config-ns-base.svg)](https://badge.fury.io/js/eslint-config-ns-base)
-[![GitHub license](https://img.shields.io/github/license/natterstefan/eslint-config-ns.svg)](https://github.com/natterstefan/eslint-config-ns/blob/main/LICENSE)
+[![npm version](https://badge.fury.io/js/eslint-config-ns-ts-base.svg)](https://badge.fury.io/js/eslint-config-ns-ts)
+[![GitHub license](https://img.shields.io/github/license/natterstefan/eslint-config-ns-ts.svg)](https://github.com/natterstefan/eslint-config-ns-ts/blob/main/LICENCE)
+
+Lint your TypeScript projects with ease. `eslint-config-ns-ts-base` extends my
+existing JavaScript config [eslint-config-ns][1].
 
 ## Contents
 
-- [eslint-config-ns-base](#eslint-config-ns-base)
+- [eslint-config-ns-ts-base](#eslint-config-ns-ts-base)
   - [Contents](#contents)
   - [Related Configs](#related-configs)
   - [Features](#features)
@@ -13,7 +16,7 @@
   - [Usage](#usage)
     - [Prettier Config](#prettier-config)
   - [Assumptions](#assumptions)
-  - [LICENSE](#license)
+  - [LICENCE](#licence)
   - [Maintainers](#maintainers)
 
 ## Related Configs
@@ -29,51 +32,55 @@
 
 ## Features
 
+- based on the the popular
+  [javascript code style from Airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
+- with [react](https://reactjs.org/),
+  [react-hooks](https://reactjs.org/docs/hooks-intro.html),
+  [jest](https://jestjs.io/), and
+  [prettier](https://prettier.io/docs/en/eslint.html#use-eslint-to-run-prettier)
+  support
+- with TypeScript support
+  - e.g. with support for `baseUrl` and `paths`
+
 The config is built upon Airbnb's ESLint rules with additional rules and
 optimizations (see [assumptions](#assumptions)).
-
-- based on the the popular
-  [JavaScript code style from Airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
-- with [Jest](https://jestjs.io/), and
-  [Prettier](https://prettier.io/docs/en/eslint.html#use-eslint-to-run-prettier)
-  support
 
 ## Installation
 
 Install the package with
 
 ```sh
-npm install eslint-config-ns-base --save-dev
+npm install eslint-config-ns-ts --save-dev
 
 # or
-yarn add eslint-config-ns-base -D
+yarn add eslint-config-ns-ts -D
 ```
 
-`eslint-config-ns-base` requires you to take care of it's `peerDependencies`.
+`eslint-config-ns-ts` requires you to take care of it's `peerDependencies`.
 Install the correct version of each `peerDependencies` package, which are listed
 with the following command:
 
 ```sh
-npm info "eslint-config-ns-base@latest" peerDependencies
+npm info "eslint-config-ns-ts@latest" peerDependencies
 ```
 
 If using npm 5+, use this shortcut:
 
 ```sh
-npx install-peerdeps --dev eslint-config-ns-base
+npx install-peerdeps --dev eslint-config-ns-ts
 
 # or
-yarn add eslint-config-ns-base -D --peer
+yarn add eslint-config-ns-ts -D --peer
 ```
 
 ## Usage
 
-Now add `eslint-config-ns-base` to either your `package.json`:
+Now add `eslint-config-ns-ts` to either your `package.json`:
 
 ```json
 {
   "eslintConfig": {
-    "extends": "eslint-config-ns-base"
+    "extends": "eslint-config-ns-ts"
   }
 }
 ```
@@ -82,7 +89,7 @@ to your `.eslintrc`:
 
 ```json
 {
-  "extends": "eslint-config-ns-base"
+  "extends": "eslint-config-ns-ts"
 }
 ```
 
@@ -90,34 +97,31 @@ or `.eslintrc.js`:
 
 ```js
 module.exports = {
-  extends: 'eslint-config-ns-base',
+  extends: 'eslint-config-ns-ts',
 }
 ```
 
 ### Prettier Config
 
-This is how you can use or extend the `eslint-config-ns-base` prettier config in
+This is how you can use or extend the `eslint-config-ns-ts` prettier config in
 your app:
 
 ```js
 // prettier.config.js
-module.exports = require('eslint-config-ns-base/prettier.config')
+module.exports = require('eslint-config-ns-ts/prettier.config')
 ```
 
 ## Assumptions
 
-`eslint-config-ns-base` comes with some fundamental assumptions:
-
-- Browser and/or Node.js environment
-- Jest as the selected test-suite
-- it uses the `@babel/eslint-parser` parser
+This ESLint configuration comes with the same fundamental assumptions, as
+[eslint-config-ns](https://github.com/natterstefan/eslint-config-ns#assumptions).
 
 Even though I made some assumptions,
 [you can easily overwrite, extend and unset rules and any other setting in your custom eslint config](https://eslint.org/docs/user-guide/configuring).
 
-## LICENSE
+## LICENCE
 
-[MIT](LICENSE)
+[MIT](LICENCE)
 
 ## Maintainers
 
@@ -143,3 +147,5 @@ Even though I made some assumptions,
 </table>
 <!-- markdownlint-enable -->
 <!-- prettier-ignore-end -->
+
+[1]: https://github.com/natterstefan/eslint-config-ns

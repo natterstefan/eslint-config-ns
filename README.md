@@ -14,7 +14,17 @@ details.
 
 - [eslint-config-ns-base](./packages/eslint-config-ns-base/README.md)
 - [eslint-config-ns](./packages/eslint-config-ns/README.md)
+- [eslint-config-ns-ts-base](./packages/eslint-config-ns-ts-base/README.md)
 - [eslint-config-ns-ts](./packages/eslint-config-ns-ts/README.md)
+
+### How are they related to each other?
+
+- `eslint-config-ns-base` is the base package.
+- `eslint-config-ns` extends `eslint-config-ns-base` package.
+- `eslint-config-ns-ts-base` extends `eslint-config-ns` package and is the base
+  package for TypeScript projects.
+- `eslint-config-ns-ts` is the last one in the chain and extends
+  `eslint-config-ns-ts-base`.
 
 ## How to release
 

@@ -35,4 +35,6 @@ module.exports = {
     'jest/prefer-to-be-null': 0,
     'jest/prefer-to-be-undefined': 0,
   },
+  // TODO: if necessary, add https://www.npmjs.com/package/eslint-import-resolver-jest
+  // support as well
 }

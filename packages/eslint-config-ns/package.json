@@ -10,21 +10,21 @@
   "main": "index.js",
   "exports": {
     ".": "./index.js",
+    "./base": "./base.js",
     "./jest": "./jest.js",
     "./react": "./react.js",
-    "./rules/jest": "./rules/jest.js",
     "./rules/react": "./rules/react.js",
     "./rules/react-a11y": "./rules/react-a11y.js",
+    "./rules/react-hooks": "./rules/react-hooks.js",
     "./package.json": "./package.json",
-    "./prettier.config": "./prettier.config.js",
-    "./prettier.config.js": "./prettier.config.js"
+    "./prettier.config": "./prettier.config.js"
   },
   "files": [
-    "index.js",
     "base.js",
+    "index.js",
     "jest.js",
-    "react.js",
     "prettier.config.js",
+    "react.js",
     "rules"
   ],
   "keywords": [

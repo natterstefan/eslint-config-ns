@@ -8,24 +8,26 @@ existing JavaScript config [eslint-config-ns][1].
 
 ## Contents
 
-* [eslint-config-ns-ts](#eslint-config-ns-ts)
-  * [Contents](#contents)
-  * [Related Configs](#related-configs)
-  * [Features](#features)
-  * [Installation](#installation)
-  * [Usage](#usage)
-    * [Prettier Config](#prettier-config)
-  * [Assumptions](#assumptions)
-  * [LICENCE](#licence)
-  * [Maintainers](#maintainers)
+- [eslint-config-ns-ts](#eslint-config-ns-ts)
+  - [Contents](#contents)
+  - [Related Configs](#related-configs)
+  - [Features](#features)
+  - [Installation](#installation)
+  - [Usage](#usage)
+    - [Prettier Config](#prettier-config)
+  - [Assumptions](#assumptions)
+  - [LICENCE](#licence)
+  - [Maintainers](#maintainers)
 
 ## Related Configs
 
-- JavaScript project:
+- JavaScript:
   [eslint-config-ns-base](https://www.npmjs.com/package/eslint-config-ns-base)
-- JavaScript React project:
+- JavaScript React:
   [eslint-config-ns](https://www.npmjs.com/package/eslint-config-ns)
-- TypeScript React project:
+- TypeScript:
+  [eslint-config-ns-ts-base](https://www.npmjs.com/package/eslint-config-ns-ts-base)
+- TypeScript React:
   [eslint-config-ns-ts](https://www.npmjs.com/package/eslint-config-ns-ts)
 
 ## Features

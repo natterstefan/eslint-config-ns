@@ -10,25 +10,27 @@ with further customizations derived on my own experience.
 
 ## Contents
 
-* [eslint-config-ns](#eslint-config-ns)
-  * [Contents](#contents)
-  * [Related Configs](#related-configs)
-  * [Background Story](#background-story)
-  * [Features](#features)
-  * [Installation](#installation)
-  * [Usage](#usage)
-    * [Prettier Config](#prettier-config)
-  * [Assumptions](#assumptions)
-  * [LICENSE](#license)
-  * [Maintainers](#maintainers)
+- [eslint-config-ns](#eslint-config-ns)
+  - [Contents](#contents)
+  - [Related Configs](#related-configs)
+  - [Background Story](#background-story)
+  - [Features](#features)
+  - [Installation](#installation)
+  - [Usage](#usage)
+    - [Prettier Config](#prettier-config)
+  - [Assumptions](#assumptions)
+  - [LICENSE](#license)
+  - [Maintainers](#maintainers)
 
 ## Related Configs
 
-- JavaScript project:
+- JavaScript:
+  [eslint-config-ns-base](https://www.npmjs.com/package/eslint-config-ns-base)
+- JavaScript React:
   [eslint-config-ns](https://www.npmjs.com/package/eslint-config-ns)
-- JavaScript React project:
-  [eslint-config-ns-ts](https://www.npmjs.com/package/eslint-config-ns-ts)
-- TypeScript React project:
+- TypeScript:
+  [eslint-config-ns-ts-base](https://www.npmjs.com/package/eslint-config-ns-ts-base)
+- TypeScript React:
   [eslint-config-ns-ts](https://www.npmjs.com/package/eslint-config-ns-ts)
 
 ## Background Story

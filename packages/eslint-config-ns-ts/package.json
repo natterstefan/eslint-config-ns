@@ -11,16 +11,16 @@
   "exports": {
     ".": "./index.js",
     "./base": "./base.js",
+    "./jest": "./jest.js",
     "./react": "./react.js",
-    "./rules/base": "./rules/base.js",
     "./rules/react": "./rules/react.js",
     "./package.json": "./package.json",
-    "./prettier.config": "./prettier.config.js",
-    "./prettier.config.js": "./prettier.config.js"
+    "./prettier.config": "./prettier.config.js"
   },
   "files": [
     "index.js",
     "base.js",
+    "jest.js",
     "react.js",
     "prettier.config.js",
     "rules"
@@ -40,6 +40,7 @@
     "@typescript-eslint/eslint-plugin": "^5.11.0",
     "@typescript-eslint/parser": "^5.11.0",
     "eslint-config-ns": "^2.0.0",
+    "eslint-config-ns-ts-base": "^2.0.0",
     "eslint-import-resolver-typescript": "^2.5.0",
     "typescript": "^4.5.5"
   },
