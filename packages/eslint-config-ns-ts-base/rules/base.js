@@ -3,7 +3,8 @@
  */
 module.exports = {
   extends: [
-    'eslint-config-ns',
+    // extend from the JavaScript base config
+    'eslint-config-ns-base/rules/base',
     // https://www.npmjs.com/package/@typescript-eslint/eslint-plugin
     'plugin:@typescript-eslint/recommended',
     // https://www.npmjs.com/package/eslint-plugin-import
@@ -84,15 +85,24 @@ module.exports = {
     '@typescript-eslint/explicit-function-return-type': 0, // will be checked by tsconfig.js
   },
   settings: {
+    // as described here https://github.com/alexgorbatchev/eslint-import-resolver-typescript
+    // 'import/parsers': {
+    //   '@typescript-eslint/parser': ['.ts', '.tsx'],
+    // },
     'import/resolver': {
       node: {
         extensions: ['.js', '.jsx', '.ts', '.tsx', '.d.ts'],
       },
       /**
-       * enables using with typescript "baseUrl" and "paths" option
+       * enables using with typescript "baseUrl" and "paths" option by using
+       * <rootdir>/tsconfig.json in ESLint
        * @see https://github.com/benmosher/eslint-plugin-import/issues/1485#issuecomment-535351922
        */
-      typescript: {},
+      typescript: {
+        // always try to resolve types under `<root>@types` directory even it
+        // doesn't contain any source code, like `@types/unist`
+        alwaysTryTypes: true,
+      },
     },
   },
 }

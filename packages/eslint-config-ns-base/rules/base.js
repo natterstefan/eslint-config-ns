@@ -6,8 +6,7 @@ module.exports = {
     // https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb
     'airbnb',
     // https://www.npmjs.com/package/eslint-plugin-import
-    'plugin:import/errors',
-    'plugin:import/warnings',
+    'plugin:import/recommended',
     /**
      * Make sure to put prettier last, so it gets the chance to override other
      * configs.
@@ -51,6 +50,10 @@ module.exports = {
         'newlines-between': 'always',
         pathGroups: [
           {
+            /**
+             * This assumes, that the project is using local import aliases with
+             * the following structure: `@/**` which resolves to e.g. `src/**`.
+             */
             pattern: '@/**',
             group: 'external',
             position: 'after',
@@ -61,6 +64,7 @@ module.exports = {
     'import/prefer-default-export': 0,
   },
   settings: {
+    // settings for https://github.com/import-js/eslint-plugin-import
     'import/resolver': {
       node: {
         extensions: ['.js', '.jsx'],
