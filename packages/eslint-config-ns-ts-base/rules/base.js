@@ -3,8 +3,6 @@
  */
 module.exports = {
   extends: [
-    // extend from the JavaScript base config
-    'eslint-config-ns-base/rules/base',
     // https://www.npmjs.com/package/@typescript-eslint/eslint-plugin
     'plugin:@typescript-eslint/recommended',
     // https://www.npmjs.com/package/eslint-plugin-import

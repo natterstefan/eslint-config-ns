@@ -2,7 +2,6 @@
  * @type {import('eslint').ESLint.Options}
  */
 module.exports = {
-  extends: ['eslint-config-ns/rules/react'],
   rules: {
     // https://www.npmjs.com/package/eslint-plugin-react
     // WHY? Because we focus on interfaces and types instead
