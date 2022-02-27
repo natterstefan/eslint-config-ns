@@ -10,17 +10,17 @@ with further customizations derived on my own experience.
 
 ## Contents
 
-- [eslint-config-ns](#eslint-config-ns)
-  - [Contents](#contents)
-  - [Related Configs](#related-configs)
-  - [Background Story](#background-story)
-  - [Features](#features)
-  - [Installation](#installation)
-  - [Usage](#usage)
-    - [Prettier Config](#prettier-config)
-  - [Assumptions](#assumptions)
-  - [LICENSE](#license)
-  - [Maintainers](#maintainers)
+* [eslint-config-ns](#eslint-config-ns)
+  * [Contents](#contents)
+  * [Related Configs](#related-configs)
+  * [Background Story](#background-story)
+  * [Features](#features)
+  * [Installation](#installation)
+  * [Usage](#usage)
+    * [Prettier Config](#prettier-config)
+  * [Assumptions](#assumptions)
+  * [LICENSE](#license)
+  * [Maintainers](#maintainers)
 
 ## Related Configs
 

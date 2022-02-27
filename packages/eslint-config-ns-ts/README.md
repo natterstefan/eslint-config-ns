@@ -8,16 +8,16 @@ existing JavaScript config [eslint-config-ns][1].
 
 ## Contents
 
-- [eslint-config-ns-ts](#eslint-config-ns-ts)
-  - [Contents](#contents)
-  - [Related Configs](#related-configs)
-  - [Features](#features)
-  - [Installation](#installation)
-  - [Usage](#usage)
-    - [Prettier Config](#prettier-config)
-  - [Assumptions](#assumptions)
-  - [LICENCE](#licence)
-  - [Maintainers](#maintainers)
+* [eslint-config-ns-ts](#eslint-config-ns-ts)
+  * [Contents](#contents)
+  * [Related Configs](#related-configs)
+  * [Features](#features)
+  * [Installation](#installation)
+  * [Usage](#usage)
+    * [Prettier Config](#prettier-config)
+  * [Assumptions](#assumptions)
+  * [LICENCE](#licence)
+  * [Maintainers](#maintainers)
 
 ## Related Configs
 

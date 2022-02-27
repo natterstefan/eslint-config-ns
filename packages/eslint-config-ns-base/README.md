@@ -5,16 +5,16 @@
 
 ## Contents
 
-- [eslint-config-ns-base](#eslint-config-ns-base)
-  - [Contents](#contents)
-  - [Related Configs](#related-configs)
-  - [Features](#features)
-  - [Installation](#installation)
-  - [Usage](#usage)
-    - [Prettier Config](#prettier-config)
-  - [Assumptions](#assumptions)
-  - [LICENSE](#license)
-  - [Maintainers](#maintainers)
+* [eslint-config-ns-base](#eslint-config-ns-base)
+  * [Contents](#contents)
+  * [Related Configs](#related-configs)
+  * [Features](#features)
+  * [Installation](#installation)
+  * [Usage](#usage)
+    * [Prettier Config](#prettier-config)
+  * [Assumptions](#assumptions)
+  * [LICENSE](#license)
+  * [Maintainers](#maintainers)
 
 ## Related Configs
 
