@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ns",
-  "version": "2.0.0",
+  "version": "3.0.0",
   "description": "eslint config ready to be used in multiple projects",
   "author": "Stefan Natter",
   "license": "MIT",
@@ -41,7 +41,7 @@
     "@babel/core": "^7.17.5",
     "@babel/eslint-parser": "^7.17.0",
     "@babel/preset-react": "^7.16.7",
-    "eslint-config-ns-base": "^2.0.0"
+    "eslint-config-ns-base": "^3.0.0"
   },
   "peerDependencies": {
     "eslint": "^8.10.0",
