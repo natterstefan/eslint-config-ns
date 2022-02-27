@@ -1,19 +1,13 @@
-# eslint-config-ns
+# eslint-config-ns-base
 
-[![npm version](https://badge.fury.io/js/eslint-config-ns.svg)](https://badge.fury.io/js/eslint-config-ns)
+[![npm version](https://badge.fury.io/js/eslint-config-ns-base.svg)](https://badge.fury.io/js/eslint-config-ns-base)
 [![GitHub license](https://img.shields.io/github/license/natterstefan/eslint-config-ns.svg)](https://github.com/natterstefan/eslint-config-ns/blob/main/LICENSE)
-
-`eslint-config-ns` lints your JavaScript projects with ease, and is mainly based
-on the popular
-[JavaScript code style from Airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
-with further customizations derived on my own experience.
 
 ## Contents
 
-- [eslint-config-ns](#eslint-config-ns)
+- [eslint-config-ns-base](#eslint-config-ns-base)
   - [Contents](#contents)
   - [Related Configs](#related-configs)
-  - [Background Story](#background-story)
   - [Features](#features)
   - [Installation](#installation)
   - [Usage](#usage)
@@ -33,13 +27,6 @@ with further customizations derived on my own experience.
 - TypeScript React:
   [eslint-config-ns-ts](https://www.npmjs.com/package/eslint-config-ns-ts)
 
-## Background Story
-
-In August 2018, I published an article with the title
-["How to create your own shared esLint, prettier and stylelint configuration"](https://nttr.st/2MOAAGc)
-on [Medium](http://nttr.st/1REplMW). One of the results of the article, is this
-shareable eslint-config (and one for [stylelint](https://nttr.st/2OUpTQP)).
-
 ## Features
 
 The config is built upon Airbnb's ESLint rules with additional rules and
@@ -47,9 +34,7 @@ optimizations (see [assumptions](#assumptions)).
 
 - based on the the popular
   [JavaScript code style from Airbnb](https://www.npmjs.com/package/eslint-config-airbnb)
-- with [React](https://reactjs.org/),
-  [react-hooks](https://reactjs.org/docs/hooks-intro.html),
-  [Jest](https://jestjs.io/), and
+- with [Jest](https://jestjs.io/), and
   [Prettier](https://prettier.io/docs/en/eslint.html#use-eslint-to-run-prettier)
   support
 
@@ -58,37 +43,37 @@ optimizations (see [assumptions](#assumptions)).
 Install the package with
 
 ```sh
-npm install eslint-config-ns --save-dev
+npm install eslint-config-ns-base --save-dev
 
 # or
-yarn add eslint-config-ns -D
+yarn add eslint-config-ns-base -D
 ```
 
-`eslint-config-ns` requires you to take care of it's `peerDependencies`. Install
-the correct version of each `peerDependencies` package, which are listed with
-the following command:
+`eslint-config-ns-base` requires you to take care of it's `peerDependencies`.
+Install the correct version of each `peerDependencies` package, which are listed
+with the following command:
 
 ```sh
-npm info "eslint-config-ns@latest" peerDependencies
+npm info "eslint-config-ns-base@latest" peerDependencies
 ```
 
 If using npm 5+, use this shortcut:
 
 ```sh
-npx install-peerdeps --dev eslint-config-ns
+npx install-peerdeps --dev eslint-config-ns-base
 
 # or
-yarn add eslint-config-ns -D --peer
+yarn add eslint-config-ns-base -D --peer
 ```
 
 ## Usage
 
-Now add `eslint-config-ns` to either your `package.json`:
+Now add `eslint-config-ns-base` to either your `package.json`:
 
 ```json
 {
   "eslintConfig": {
-    "extends": "eslint-config-ns"
+    "extends": "eslint-config-ns-base"
   }
 }
 ```
@@ -97,7 +82,7 @@ to your `.eslintrc`:
 
 ```json
 {
-  "extends": "eslint-config-ns"
+  "extends": "eslint-config-ns-base"
 }
 ```
 
@@ -105,25 +90,24 @@ or `.eslintrc.js`:
 
 ```js
 module.exports = {
-  extends: 'eslint-config-ns',
+  extends: 'eslint-config-ns-base',
 }
 ```
 
 ### Prettier Config
 
-This is how you can use or extend the `eslint-config-ns` prettier config in your
-app:
+This is how you can use or extend the `eslint-config-ns-base` prettier config in
+your app:
 
 ```js
 // prettier.config.js
-module.exports = require('eslint-config-ns/prettier.config')
+module.exports = require('eslint-config-ns-base/prettier.config')
 ```
 
 ## Assumptions
 
-`eslint-config-ns` comes with some fundamental assumptions:
+`eslint-config-ns-base` comes with some fundamental assumptions:
 
-- React and/or Node.js environment
 - Browser and/or Node.js environment
 - Jest as the selected test-suite
 - it uses the `@babel/eslint-parser` parser

@@ -12,8 +12,25 @@
 This monorepo contains multiple packages. Take a look at their READMEs for more
 details.
 
+- [eslint-config-ns-base](./packages/eslint-config-ns-base/README.md)
 - [eslint-config-ns](./packages/eslint-config-ns/README.md)
+- [eslint-config-ns-ts-base](./packages/eslint-config-ns-ts-base/README.md)
 - [eslint-config-ns-ts](./packages/eslint-config-ns-ts/README.md)
+
+### How are they related to each other?
+
+### JavaScript
+
+- `eslint-config-ns-base` is the base package for JavaScript projects.
+- `eslint-config-ns` extends `eslint-config-ns-base` package and can be used in
+  React projects.
+
+### TypeScript
+
+- `eslint-config-ns-ts-base` extends `eslint-config-ns-base` package and is the
+  base package for TypeScript projects.
+- `eslint-config-ns-ts` is the last one in the chain and extends
+  `eslint-config-ns-ts-base` and is best used in React TypeScript projects.
 
 ## How to release
 

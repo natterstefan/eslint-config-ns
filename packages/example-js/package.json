@@ -1,0 +1,19 @@
+{
+  "name": "example-js",
+  "private": true,
+  "version": "2.0.0",
+  "description": "Example code for eslint-config-ns",
+  "engines": {
+    "node": "^14.17 || ^16.x"
+  },
+  "main": "src/index.js",
+  "scripts": {
+    "lint": "eslint \"./**/*.{js,jsx}\" && prettier \"./src/**/*.{js,jsx}\" --check",
+    "test": "jest ./src"
+  },
+  "author": "Stefan Natter",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint-config-ns-base": "^2.0.0"
+  }
+}

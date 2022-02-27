@@ -1,0 +1,21 @@
+{
+  "name": "example-ts",
+  "private": true,
+  "version": "2.0.0",
+  "description": "Example code for eslint-config-ns",
+  "engines": {
+    "node": "^14.17 || ^16.x"
+  },
+  "main": "src/index.ts",
+  "scripts": {
+    "lint": "eslint \"./**/*.{ts,tsx}\" && prettier \"./src/**/*.{ts,tsx}\" --check",
+    "test": "jest ./src"
+  },
+  "author": "Stefan Natter",
+  "license": "MIT",
+  "devDependencies": {
+    "eslint-config-ns-ts-base": "^2.0.0",
+    "ts-jest": "^27.1.3",
+    "typescript": "^4.5.5"
+  }
+}

@@ -8,9 +8,24 @@
     "node": "^14.17 || ^16.x"
   },
   "main": "index.js",
+  "exports": {
+    ".": "./index.js",
+    "./base": "./base.js",
+    "./jest": "./jest.js",
+    "./react": "./react.js",
+    "./rules/react": "./rules/react.js",
+    "./rules/react-a11y": "./rules/react-a11y.js",
+    "./rules/react-hooks": "./rules/react-hooks.js",
+    "./package.json": "./package.json",
+    "./prettier.config": "./prettier.config.js"
+  },
   "files": [
+    "base.js",
     "index.js",
-    "prettier.config.js"
+    "jest.js",
+    "prettier.config.js",
+    "react.js",
+    "rules"
   ],
   "keywords": [
     "eslint",
@@ -25,7 +40,8 @@
   "dependencies": {
     "@babel/core": "^7.17.2",
     "@babel/eslint-parser": "^7.17.0",
-    "@babel/preset-react": "^7.16.7"
+    "@babel/preset-react": "^7.16.7",
+    "eslint-config-ns-base": "^2.0.0"
   },
   "peerDependencies": {
     "eslint": "^8.8.0",
@@ -42,7 +58,7 @@
   "bugs": {
     "url": "https://github.com/natterstefan/eslint-config-ns/issues"
   },
-  "homepage": "https://github.com/natterstefan/eslint-config-ns#readme",
+  "homepage": "https://github.com/natterstefan/eslint-config-ns/packages/eslint-config-ns",
   "repository": {
     "type": "git",
     "url": "https://github.com/natterstefan/eslint-config-ns"
