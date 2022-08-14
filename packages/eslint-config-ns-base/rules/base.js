@@ -3,8 +3,8 @@
  */
 module.exports = {
   extends: [
-    // https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb
-    'airbnb',
+    // https://github.com/airbnb/javascript/tree/master/packages/eslint-config-airbnb-base
+    'eslint-config-airbnb-base',
     // https://www.npmjs.com/package/eslint-plugin-import
     'plugin:import/recommended',
     /**

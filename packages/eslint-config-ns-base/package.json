@@ -40,7 +40,7 @@
   },
   "peerDependencies": {
     "eslint": "^8.10.0",
-    "eslint-config-airbnb": "^19.0.4",
+    "eslint-config-airbnb-base": "^19.0.4",
     "eslint-config-prettier": "^8.4.0",
     "eslint-plugin-import": "^2.25.4",
     "eslint-plugin-jest": "^26.1.1",
@@ -50,7 +50,7 @@
   "bugs": {
     "url": "https://github.com/natterstefan/eslint-config-ns/issues"
   },
-  "homepage": "https://github.com/natterstefan/eslint-config-ns/packages/eslint-config-ns-base",
+  "homepage": "https://github.com/natterstefan/eslint-config-ns/tree/main/eslint-config-ns-base",
   "repository": {
     "type": "git",
     "url": "https://github.com/natterstefan/eslint-config-ns"
