@@ -1,4 +1,5 @@
 import React from 'react'
+import { act } from 'react-dom/test-utils'
 import { mount, shallow } from 'enzyme'
 
 import { App } from '../app'
@@ -17,10 +18,14 @@ describe('App', () => {
       'Hello eslint-config-nsHello WorldState Counter: 0',
     )
 
-    jest.advanceTimersByTime(1000)
+    act(() => {
+      jest.advanceTimersByTime(1000)
+    })
     expect(wrapper.text()).toContain('State Counter: 1')
 
-    jest.advanceTimersByTime(1000)
+    act(() => {
+      jest.advanceTimersByTime(1000)
+    })
     expect(wrapper.text()).toContain('State Counter: 2')
   })
 })

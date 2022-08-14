@@ -1,4 +1,5 @@
 import React from 'react'
+import { act } from 'react-dom/test-utils'
 import { render, screen } from '@testing-library/react'
 
 import { App } from '../app'
@@ -11,10 +12,15 @@ describe('App', () => {
     const elem = screen.getByTestId('counter')
     expect(elem.innerHTML).toBe('0')
 
-    jest.advanceTimersByTime(1000)
+    act(() => {
+      jest.advanceTimersByTime(1000)
+    })
+
     expect(elem.innerHTML).toBe('1')
 
-    jest.advanceTimersByTime(1000)
+    act(() => {
+      jest.advanceTimersByTime(1000)
+    })
     expect(elem.innerHTML).toBe('2')
   })
 })
