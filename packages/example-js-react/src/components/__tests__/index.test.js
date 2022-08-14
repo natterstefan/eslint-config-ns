@@ -1,5 +1,6 @@
 import React from 'react'
-import { shallow } from 'enzyme'
+import { act } from 'react-dom/test-utils'
+import { mount, shallow } from 'enzyme'
 
 import { App } from '../app'
 
@@ -12,15 +13,19 @@ describe('App', () => {
   })
 
   it('increases counter every 1 second', () => {
-    const wrapper = shallow(<App />)
+    const wrapper = mount(<App />)
     expect(wrapper.text()).toBe(
-      'Hello eslint-config-ns<Text />State Counter: 0',
+      'Hello eslint-config-nsHello WorldState Counter: 0',
     )
 
-    jest.advanceTimersByTime(1000)
+    act(() => {
+      jest.advanceTimersByTime(1000)
+    })
     expect(wrapper.text()).toContain('State Counter: 1')
 
-    jest.advanceTimersByTime(1000)
+    act(() => {
+      jest.advanceTimersByTime(1000)
+    })
     expect(wrapper.text()).toContain('State Counter: 2')
   })
 })
