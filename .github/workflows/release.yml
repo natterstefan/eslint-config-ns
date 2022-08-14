@@ -26,7 +26,7 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the new tag
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
@@ -46,7 +46,7 @@ jobs:
     outputs:
       branch: ${{ steps.push.outputs.branch }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
@@ -80,7 +80,7 @@ jobs:
       always() &&
       (needs.git-version.result == 'success' || needs.git-version.result == 'skipped')
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
@@ -114,7 +114,7 @@ jobs:
       changelog: ${{ steps.changelog.outputs.changelog }}
       version: ${{ steps.tags.outputs.new }}
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
@@ -157,7 +157,7 @@ jobs:
       needs.github-release.result == 'success' &&
       needs.github-release.outputs.is-main
     steps:
-      - uses: actions/checkout@v2
+      - uses: actions/checkout@v3
         with:
           fetch-depth: 0
 
