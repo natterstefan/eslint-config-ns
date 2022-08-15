@@ -24,6 +24,7 @@
     "base.js",
     "index.js",
     "jest.js",
+    "patch",
     "prettier.config.js",
     "react.js",
     "rules"

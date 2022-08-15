@@ -23,6 +23,7 @@
     "base.js",
     "jest.js",
     "react.js",
+    "patch",
     "prettier.config.js",
     "rules"
   ],
