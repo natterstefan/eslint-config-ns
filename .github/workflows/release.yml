@@ -55,7 +55,7 @@ jobs:
           git config user.name "natterstefan Bot"
           git config user.email "natterstefan-bot@users.noreply.github.com"
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
           node-version: 14
           cache: "yarn"
@@ -84,7 +84,7 @@ jobs:
         with:
           fetch-depth: 0
 
-      - uses: actions/setup-node@v2
+      - uses: actions/setup-node@v3
         with:
           node-version: 14
           cache: "yarn"
