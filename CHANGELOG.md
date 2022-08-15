@@ -6,6 +6,11 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- DO NOT CHANGE THESE COMMENTS - See .github/actions/release.yml -->
 <!-- insert-new-changelog-here -->
+## v3.3.0 (2022-08-15)
+
+#### :rocket: New Feature
+* `eslint-config-ns-ts-base`, `eslint-config-ns`
+  * [#68](https://github.com/natterstefan/eslint-config-ns/pull/68) feat: added missing dependencies to eslint-config-ns and eslint-config-ns-ts-base ([@natterstefan](https://github.com/natterstefan))
 
 ## v3.2.1 (2022-08-15)
 
