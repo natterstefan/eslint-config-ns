@@ -1,6 +1,3 @@
-// This is a workaround for https://github.com/eslint/eslint/issues/3458
-require('eslint-config-ns-ts/patch/modern-module-resolution')
-
 /**
  * @type {import('eslint').ESLint.Options}
  */
