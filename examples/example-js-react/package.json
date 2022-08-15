@@ -1,7 +1,7 @@
 {
   "name": "example-js-react",
   "private": true,
-  "version": "3.2.1",
+  "version": "3.3.0",
   "description": "Example code for eslint-config-ns",
   "engines": {
     "node": "^14.17 || ^16.x"
@@ -19,6 +19,6 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
-    "eslint-config-ns": "^3.2.1"
+    "eslint-config-ns": "^3.3.0"
   }
 }
