@@ -6,6 +6,15 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- DO NOT CHANGE THESE COMMENTS - See .github/actions/release.yml -->
 <!-- insert-new-changelog-here -->
+## v3.0.0 (2022-02-27)
+
+#### :rocket: New Feature
+* `eslint-config-ns-base`, `eslint-config-ns-ts-base`, `eslint-config-ns-ts`, `eslint-config-ns`, `example-ts-react`
+  * [#53](https://github.com/natterstefan/eslint-config-ns/pull/53) feat: updated dependencies and fixed extending rules in eslint-config-ns-ts-base ([@natterstefan](https://github.com/natterstefan))
+* `eslint-config-ns-base`, `eslint-config-ns-ts-base`, `eslint-config-ns-ts`, `eslint-config-ns`, `example-js-react`, `example-js`, `example-ts-react`, `example-ts`
+  * [#51](https://github.com/natterstefan/eslint-config-ns/pull/51) feat: created new base packages, including rules file for base, jest, and react settings ([@natterstefan](https://github.com/natterstefan))
+* `eslint-config-ns-ts`, `eslint-config-ns`
+  * [#49](https://github.com/natterstefan/eslint-config-ns/pull/49) feat: updated (peer)Dependencies of all configs ([@natterstefan](https://github.com/natterstefan))
 
 ## v3.0.0 (2022-02-27)
 
