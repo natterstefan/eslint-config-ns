@@ -22,6 +22,7 @@
     "prepare": "is-ci || husky install",
     "test": "FORCE_COLOR=1 turbo run test --parallel --no-cache",
     "test:app": "FORCE_COLOR=1 turbo run test --parallel --no-cache --scope=example-app*",
+    "test:root": "jest",
     "lerna:version": "HUSKY_SKIP_HOOKS=1 lerna version --no-commit-hooks --no-changelog",
     "lerna:publish": "lerna publish from-package"
   },
