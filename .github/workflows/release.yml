@@ -57,7 +57,7 @@ jobs:
 
       - uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 16
           cache: "yarn"
 
       - uses: bahmutov/npm-install@4f2c2de39846f27e0034cb0f2485a8212ed1edfa
@@ -65,9 +65,8 @@ jobs:
           install-command:
             yarn --prefer-offline --frozen-lockfile --no-progress --silent
 
-      - run:
-          HUSKY_SKIP_HOOKS=1 yarn lerna version ${{ github.event.inputs.version
-          }} --no-commit-hooks --no-changelog --yes
+      # prettier-ignore
+      - run: HUSKY_SKIP_HOOKS=1 yarn lerna version ${{ github.event.inputs.version }} --no-commit-hooks --no-changelog --yes --force-publish
 
       - name: Push to GitHub
         id: push
