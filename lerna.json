@@ -1,9 +1,15 @@
 {
   "$schema": "https://json.schemastore.org/lerna.json",
   "npmClient": "yarn",
-  "packages": ["examples/*", "packages/*"],
+  "packages": [
+    "examples/*",
+    "packages/*"
+  ],
   "changelog": {
-    "ignoreCommitters": ["allcontributors", "dependabot"],
+    "ignoreCommitters": [
+      "allcontributors",
+      "dependabot"
+    ],
     "labels": {
       "enhancement": ":rocket: New Feature",
       "bug": ":bug: Bug Fix"
@@ -12,15 +18,26 @@
   },
   "command": {
     "version": {
-      "allowBranch": ["main", "next"]
+      "allowBranch": [
+        "main",
+        "next"
+      ]
     },
     "publish": {
-      "allowBranch": ["main", "next"],
+      "allowBranch": [
+        "main",
+        "next"
+      ],
       "conventionalCommits": true,
       "message": "chore(release): %s"
     }
   },
-  "ignoreChanges": ["*.md", "*.txt", "__test__/**", "**/__tests__/**"],
+  "ignoreChanges": [
+    "*.md",
+    "*.txt",
+    "__test__/**",
+    "**/__tests__/**"
+  ],
   "useWorkspaces": true,
-  "version": "3.0.0"
+  "version": "3.1.0"
 }

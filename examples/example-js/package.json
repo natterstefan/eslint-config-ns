@@ -1,7 +1,7 @@
 {
   "name": "example-js",
   "private": true,
-  "version": "3.0.0",
+  "version": "3.1.0",
   "description": "Example code for eslint-config-ns",
   "engines": {
     "node": "^14.17 || ^16.x"
@@ -14,6 +14,6 @@
   "author": "Stefan Natter",
   "license": "MIT",
   "devDependencies": {
-    "eslint-config-ns-base": "^3.0.0"
+    "eslint-config-ns-base": "^3.1.0"
   }
 }
