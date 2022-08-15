@@ -53,7 +53,7 @@
   "bugs": {
     "url": "https://github.com/natterstefan/eslint-config-ns/issues"
   },
-  "homepage": "https://github.com/natterstefan/eslint-config-ns/tree/main/eslint-config-ns-base",
+  "homepage": "https://github.com/natterstefan/eslint-config-ns/tree/main/packages/eslint-config-ns-base",
   "repository": {
     "type": "git",
     "url": "https://github.com/natterstefan/eslint-config-ns"
