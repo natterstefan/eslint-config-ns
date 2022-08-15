@@ -1,10 +1,6 @@
 # inspired by
-# - https://github.com/babel/babel/blob/bdb207cb75ae7cde4f2cb03aa2a53eefe6506b18/.github/workflows/release.yml
-# - https://github.com/babel/actions/tree/bb571b895aa20aaa3ee4ef58adcde364416acc9a
-#
-# docs
-# - https://docs.github.com/en/actions/reference/context-and-expression-syntax-for-github-actions
-# - https://github.blog/changelog/2020-07-06-github-actions-manual-triggers-with-workflow_dispatch/
+# - https://github.com/babel/babel/blob/a32cf83f6b41f49202f2aec4189243da9ea0d895/.github/workflows/release.yml
+# - https://github.com/babel/actions/tree/03731d9c1d1b0d3e4609a78151679cf3de51f665
 name: Release
 
 on:
@@ -20,6 +16,9 @@ on:
         required: true
         default: patch
 
+permissions:
+  contents: read
+
 jobs:
   log-updates:
     name: Log packages to publish
@@ -29,7 +28,6 @@ jobs:
         uses: actions/checkout@v3
         with:
           fetch-depth: 0
-
       - name: This release will publish the following packages
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
@@ -39,6 +37,8 @@ jobs:
           fi;
 
   git-version:
+    permissions:
+      contents: write # for Git to git push
     name: Create git tag and commit when workflow was manually dispatched
     runs-on: ubuntu-latest
     needs: log-updates
@@ -69,13 +69,20 @@ jobs:
           HUSKY_SKIP_HOOKS=1 yarn lerna version ${{ github.event.inputs.version
           }} --no-commit-hooks --no-changelog --yes
 
+      - name: Push to GitHub
+        id: push
+        run: |
+          branch="release/temp/$(git describe --abbrev=0)"
+          echo $branch
+          echo "::set-output name=branch::$branch"
+          git push "https://natterstefan-bot:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" HEAD:"$branch" --follow-tags
+
   npm-release:
-    name: Lint, Test and Publish
+    name: Lint and Test
     runs-on: ubuntu-latest
     needs: git-version
-    environment:
-      npm
-      # The default condition is success(), but this is false when one of the previous jobs is skipped
+    environment: npm
+    # The default condition is success(), but this is false when one of the previous jobs is skipped
     if: |
       always() &&
       (needs.git-version.result == 'success' || needs.git-version.result == 'skipped')
@@ -84,9 +91,13 @@ jobs:
         with:
           fetch-depth: 0
 
+      - name: Checkout the temporary branch
+        if: needs.git-version.result == 'success'
+        run: git checkout ${{ needs.git-version.outputs.branch }}
+
       - uses: actions/setup-node@v3
         with:
-          node-version: 14
+          node-version: 16
           cache: "yarn"
 
       - uses: bahmutov/npm-install@4f2c2de39846f27e0034cb0f2485a8212ed1edfa
@@ -96,16 +107,16 @@ jobs:
 
       - run: yarn lint
       - run: yarn test
-      - run: npm run lerna:publish --yes
-        env:
-          YARN_NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+      # TODO: enable auto publish to npm again
+      # - run: yarn lerna:publish --yes
+      #   env:
+      #     YARN_NPM_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
 
   github-release:
     name: Create GitHub release draft
     runs-on: ubuntu-latest
-    needs:
-      git-version
-      # The default condition is success(), but this is false when one of the previous jobs is skipped
+    needs: [npm-release, git-version]
+    # The default condition is success(), but this is false when one of the previous jobs is skipped
     if: |
       always() &&
       (needs.git-version.result == 'success' || needs.git-version.result == 'skipped')
@@ -123,6 +134,10 @@ jobs:
         uses: babel/actions/ref-matches-branch@v2
         with:
           name: main
+
+      - name: Checkout the temporary branch
+        if: needs.git-version.result == 'success'
+        run: git checkout ${{ needs.git-version.outputs.branch }}
 
       - name: Get tag info
         id: tags
@@ -146,11 +161,12 @@ jobs:
           token: ${{ secrets.BOT_TOKEN }}
 
   github-push:
+    permissions:
+      contents: write # for Git to git push
     name: Push release commit to "main"
     runs-on: ubuntu-latest
-    needs:
-      [npm-release, github-release, git-version]
-      # The default condition is success(), but this is false when one of the previous jobs is skipped
+    needs: [npm-release, github-release, git-version]
+    # The default condition is success(), but this is false when one of the previous jobs is skipped
     if: |
       always() &&
       needs.npm-release.result == 'success' &&
@@ -161,19 +177,22 @@ jobs:
         with:
           fetch-depth: 0
 
-      - name: Update CHANGELOG.md
-        uses: babel/actions/update-changelog@v2
-        with:
-          changelog: ${{ needs.github-release.outputs.changelog }}
+      - name: Checkout the temporary branch
+        if: needs.git-version.result == 'success'
+        run: git checkout ${{ needs.git-version.outputs.branch }}
 
       - name: Set @natterstefan-bot as committer
         run: |
           git config user.name "natterstefan Bot"
           git config user.email "natterstefan-bot@users.noreply.github.com"
 
+      - name: Update CHANGELOG.md
+        uses: babel/actions/update-changelog@v2
+        with:
+          changelog: ${{ needs.github-release.outputs.changelog }}
+
       - name: Commit CHANGELOG.md
         run: |
-          git pull
           git add CHANGELOG.md
           git -c user.name="natterstefan Bot" -c user.email="natterstefan-bot@users.noreply.github.com" \
             commit -m "Add ${{ needs.github-release.outputs.version }} to CHANGELOG.md [skip ci]" --no-verify --quiet
@@ -181,3 +200,8 @@ jobs:
       - name: Push to GitHub
         run: |
           git push "https://natterstefan-bot:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" HEAD:main --follow-tags
+
+      - name: Delete temporary branch from GitHub
+        if: needs.git-version.result == 'success'
+        # prettier-ignore
+        run: git push "https://natterstefan-bot:${{ secrets.GITHUB_TOKEN }}@github.com/${GITHUB_REPOSITORY}.git" :${{ needs.git-version.outputs.branch }}
