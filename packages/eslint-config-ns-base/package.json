@@ -14,6 +14,7 @@
     "./jest": "./jest.js",
     "./rules/base": "./rules/base.js",
     "./rules/jest": "./rules/jest.js",
+    "./patch/modern-module-resolution": "./patch/modern-module-resolution.js",
     "./package.json": "./package.json",
     "./prettier.config": "./prettier.config.js"
   },
@@ -21,6 +22,7 @@
     "base.js",
     "index.js",
     "jest.js",
+    "patch",
     "prettier.config.js",
     "rules"
   ],
@@ -36,15 +38,16 @@
   },
   "dependencies": {
     "@babel/core": "^7.18.10",
-    "@babel/eslint-parser": "^7.18.9"
-  },
-  "peerDependencies": {
-    "eslint": "^8.22.0",
+    "@babel/eslint-parser": "^7.18.9",
+    "@rushstack/eslint-patch": "^1.1.4",
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-config-prettier": "^8.5.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jest": "^26.8.2",
-    "eslint-plugin-prettier": "^4.2.1",
+    "eslint-plugin-prettier": "^4.2.1"
+  },
+  "peerDependencies": {
+    "eslint": "^8.22.0",
     "prettier": "^2.7.1"
   },
   "bugs": {
