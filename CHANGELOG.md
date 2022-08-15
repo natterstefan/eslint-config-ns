@@ -6,15 +6,20 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- DO NOT CHANGE THESE COMMENTS - See .github/actions/release.yml -->
 <!-- insert-new-changelog-here -->
-## v3.1.0 (2022-08-15)
+
+## v3.2.0 (2022-08-15)
 
 #### :rocket: New Feature
-* `eslint-config-ns-base`, `eslint-config-ns-ts-base`, `eslint-config-ns-ts`, `eslint-config-ns`, `example-js-react`, `example-ts-react`, `example-ts`
-  * [#61](https://github.com/natterstefan/eslint-config-ns/pull/61) feat: updated (dev|peer)Dependencies ([@natterstefan](https://github.com/natterstefan))
 
-#### :bug: Bug Fix
-* `eslint-config-ns-base`, `eslint-config-ns-ts-base`, `eslint-config-ns-ts`, `eslint-config-ns`
-  * [#60](https://github.com/natterstefan/eslint-config-ns/pull/60) fix: eslint-config-ns-base extends eslint-config-airbnb-base (not eslint-config-airbnb) ([@natterstefan](https://github.com/natterstefan))
+- `eslint-config-ns-base`, `eslint-config-ns-ts-base`, `eslint-config-ns-ts`,
+  `eslint-config-ns`
+  - [#67](https://github.com/natterstefan/eslint-config-ns/pull/67) feat: ship
+    with dependencies (eslint config and plugins) included
+    ([@natterstefan](https://github.com/natterstefan))
+
+#### Committers: 1
+
+- Stefan Natter ([@natterstefan](https://github.com/natterstefan))
 
 ## v3.1.0 (2022-08-15)
 
