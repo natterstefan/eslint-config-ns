@@ -28,6 +28,7 @@ describe('Validate ESLint configs', () => {
     'eslint-config-ns-ts/base.js',
     'eslint-config-ns-ts/index.js',
     'eslint-config-ns-ts/jest.js',
+    'eslint-config-ns-ts/next.js',
     'eslint-config-ns-ts/react.js',
     // eslint-config-ns-ts-base configs
     'eslint-config-ns-ts-base/base.js',

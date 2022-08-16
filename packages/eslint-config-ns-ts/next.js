@@ -9,10 +9,15 @@ require('./patch/modern-module-resolution')
  */
 module.exports = {
   extends: [
-    // extend from the JavaScript base config
-    'eslint-config-ns-base/base',
-    './rules/base',
-  ].map(require.resolve),
+    /**
+     * @see https://nextjs.org/docs/basic-features/eslint
+     *
+     * Why using the plugin not the config?
+     * @see https://nextjs.org/docs/basic-features/eslint#recommended-plugin-ruleset
+     */
+    'plugin:@next/next/core-web-vitals',
+    'plugin:@next/next/recommended',
+  ],
   parser: '@typescript-eslint/parser',
   rules: {},
 }
