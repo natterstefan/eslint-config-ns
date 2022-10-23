@@ -2,7 +2,7 @@
  * @type {import('eslint').ESLint.Options}
  */
 module.exports = {
-  extends: 'eslint-config-ns',
+  extends: ['eslint-config-ns', 'eslint-config-ns/storybook'],
   /**
    * Overwrite or extend the default parserOptions
    */
