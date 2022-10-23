@@ -6,6 +6,14 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- DO NOT CHANGE THESE COMMENTS - See .github/actions/release.yml -->
 <!-- insert-new-changelog-here -->
+## v3.4.0 (2022-10-23)
+
+#### :rocket: New Feature
+* `eslint-config-ns-ts`, `eslint-config-ns`
+  * [#97](https://github.com/natterstefan/eslint-config-ns/pull/97) feat: added storybook ESLint config ([@natterstefan](https://github.com/natterstefan))
+* `eslint-config-ns-base`, `eslint-config-ns-ts-base`, `eslint-config-ns-ts`, `eslint-config-ns`
+  * [#96](https://github.com/natterstefan/eslint-config-ns/pull/96) feat: updated (dev|peer)Dependencies to latest supported version ([@natterstefan](https://github.com/natterstefan))
+  * [#70](https://github.com/natterstefan/eslint-config-ns/pull/70) feat: added next config to eslint-config-ns-ts with Next.js example ([@natterstefan](https://github.com/natterstefan))
 ## v3.3.0 (2022-08-15)
 
 #### :rocket: New Feature
