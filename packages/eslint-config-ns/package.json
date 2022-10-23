@@ -40,19 +40,18 @@
     "test": "echo \"OK\" && exit 0"
   },
   "dependencies": {
-    "@babel/core": "^7.18.10",
-    "@babel/eslint-parser": "^7.18.9",
+    "@babel/eslint-parser": "^7.19.1",
     "@babel/preset-react": "^7.18.6",
-    "@rushstack/eslint-patch": "^1.1.4",
+    "@rushstack/eslint-patch": "^1.2.0",
     "eslint-config-airbnb": "^19.0.4",
     "eslint-config-ns-base": "^3.3.0",
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.6.1",
-    "eslint-plugin-react": "^7.30.1",
+    "eslint-plugin-react": "^7.31.10",
     "eslint-plugin-react-hooks": "^4.6.0"
   },
   "peerDependencies": {
-    "eslint": "^8.22.0",
+    "eslint": "^8.26.0",
     "prettier": "^2.7.1"
   },
   "bugs": {

@@ -25,7 +25,6 @@ module.exports = {
     'jest/no-disabled-tests': 'warn',
     'jest/no-focused-tests': 'warn',
     'jest/no-identical-title': 'error',
-    'jest/no-jest-import': 'error',
     'jest/no-large-snapshots': ['warn', { maxSize: 300 }],
     'jest/prefer-strict-equal': 'error',
     'jest/prefer-to-have-length': 'error',
@@ -34,6 +33,15 @@ module.exports = {
     // deprecated rules
     'jest/prefer-to-be-null': 0,
     'jest/prefer-to-be-undefined': 0,
+  },
+  settings: {
+    jest: {
+      /**
+       * @see https://github.com/jest-community/eslint-plugin-jest#jest-version-setting
+       */
+      // eslint-disable-next-line import/no-extraneous-dependencies, global-require
+      version: require('jest/package.json').version,
+    },
   },
   // TODO: if necessary, add https://www.npmjs.com/package/eslint-import-resolver-jest
   // support as well
