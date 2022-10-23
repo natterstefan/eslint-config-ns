@@ -1,6 +1,5 @@
 .changelog
 .DS_Store
-.env
 .eslintcache
 .jest-cache
 .secrets
