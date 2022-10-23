@@ -34,6 +34,15 @@ module.exports = {
     'jest/prefer-to-be-null': 0,
     'jest/prefer-to-be-undefined': 0,
   },
+  settings: {
+    jest: {
+      /**
+       * @see https://github.com/jest-community/eslint-plugin-jest#jest-version-setting
+       */
+      // eslint-disable-next-line import/no-extraneous-dependencies, global-require
+      version: require('jest/package.json').version,
+    },
+  },
   // TODO: if necessary, add https://www.npmjs.com/package/eslint-import-resolver-jest
   // support as well
 }
