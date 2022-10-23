@@ -25,7 +25,6 @@ module.exports = {
     'jest/no-disabled-tests': 'warn',
     'jest/no-focused-tests': 'warn',
     'jest/no-identical-title': 'error',
-    'jest/no-jest-import': 'error',
     'jest/no-large-snapshots': ['warn', { maxSize: 300 }],
     'jest/prefer-strict-equal': 'error',
     'jest/prefer-to-have-length': 'error',
