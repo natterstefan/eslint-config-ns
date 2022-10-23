@@ -8,7 +8,7 @@
   },
   "main": "src/index.ts",
   "scripts": {
-    "lint": "eslint \"./**/*.{ts,tsx}\" && prettier \"./src/**/*.{ts,tsx}\" --check",
+    "lint": "tsc && eslint \"./**/*.{ts,tsx}\" && prettier \"./src/**/*.{ts,tsx}\" --check",
     "test": "jest ./src"
   },
   "author": "Stefan Natter",
