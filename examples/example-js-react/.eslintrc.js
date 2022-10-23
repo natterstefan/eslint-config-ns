@@ -19,5 +19,11 @@ module.exports = {
         'no-console': 0,
       },
     },
+    {
+      files: ['./src/**/stories/*.stories.jsx'],
+      rules: {
+        'import/no-extraneous-dependencies': 0,
+      },
+    },
   ],
 }
