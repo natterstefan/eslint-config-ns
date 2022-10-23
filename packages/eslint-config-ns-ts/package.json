@@ -12,6 +12,7 @@
     ".": "./index.js",
     "./base": "./base.js",
     "./jest": "./jest.js",
+    "./next": "./next.js",
     "./react": "./react.js",
     "./rules/react": "./rules/react.js",
     "./patch/modern-module-resolution": "./patch/modern-module-resolution.js",
@@ -19,12 +20,13 @@
     "./prettier.config": "./prettier.config.js"
   },
   "files": [
-    "index.js",
     "base.js",
+    "index.js",
     "jest.js",
-    "react.js",
+    "next.js",
     "patch",
     "prettier.config.js",
+    "react.js",
     "rules"
   ],
   "keywords": [
@@ -39,16 +41,17 @@
     "test": "echo \"OK\" && exit 0"
   },
   "dependencies": {
+    "@next/eslint-plugin-next": "^12.2.5",
     "@rushstack/eslint-patch": "^1.1.4",
     "@typescript-eslint/eslint-plugin": "^5.33.0",
     "@typescript-eslint/parser": "^5.33.0",
     "eslint-config-ns": "^3.3.0",
-    "eslint-config-ns-ts-base": "^3.3.0",
-    "typescript": "^4.7.4"
+    "eslint-config-ns-ts-base": "^3.3.0"
   },
   "peerDependencies": {
     "eslint": "^8.22.0",
-    "prettier": "^2.7.1"
+    "prettier": "^2.7.1",
+    "typescript": "^4.7.4"
   },
   "bugs": {
     "url": "https://github.com/natterstefan/eslint-config-ns/issues"
