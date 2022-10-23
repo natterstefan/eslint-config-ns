@@ -37,7 +37,6 @@
     "test": "echo \"OK\" && exit 0"
   },
   "dependencies": {
-    "@babel/core": "^7.18.10",
     "@babel/eslint-parser": "^7.18.9",
     "@rushstack/eslint-patch": "^1.1.4",
     "eslint-config-airbnb-base": "^15.0.0",

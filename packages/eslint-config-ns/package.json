@@ -40,7 +40,6 @@
     "test": "echo \"OK\" && exit 0"
   },
   "dependencies": {
-    "@babel/core": "^7.18.10",
     "@babel/eslint-parser": "^7.18.9",
     "@babel/preset-react": "^7.18.6",
     "@rushstack/eslint-patch": "^1.1.4",

@@ -37,8 +37,6 @@
     ]
   },
   "devDependencies": {
-    "@babel/core": "^7.18.10",
-    "@babel/eslint-parser": "^7.18.9",
     "commitizen": "^4.2.5",
     "copyfiles": "^2.4.1",
     "cz-conventional-changelog": "3.3.0",
