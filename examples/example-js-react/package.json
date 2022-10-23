@@ -8,7 +8,9 @@
   },
   "main": "src/index.js",
   "scripts": {
+    "build-storybook": "build-storybook",
     "lint": "eslint \"./**/*.{js,jsx}\" && prettier \"./src/**/*.{js,jsx}\" --check",
+    "storybook": "start-storybook -p 6006",
     "test": "jest ./src"
   },
   "author": "Stefan Natter",
@@ -19,6 +21,16 @@
     "react-dom": "^17.0.2"
   },
   "devDependencies": {
+    "@babel/core": "^7.19.6",
+    "@storybook/addon-actions": "^6.5.12",
+    "@storybook/addon-essentials": "^6.5.12",
+    "@storybook/addon-interactions": "^6.5.12",
+    "@storybook/addon-links": "^6.5.12",
+    "@storybook/builder-webpack5": "^6.5.12",
+    "@storybook/manager-webpack5": "^6.5.12",
+    "@storybook/react": "^6.5.12",
+    "@storybook/testing-library": "^0.0.13",
+    "babel-loader": "^8.2.5",
     "eslint-config-ns": "^3.3.0"
   }
 }

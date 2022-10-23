@@ -2,7 +2,7 @@
  * @type {import('eslint').ESLint.Options}
  */
 module.exports = {
-  extends: 'eslint-config-ns',
+  extends: ['eslint-config-ns', 'eslint-config-ns/storybook'],
   /**
    * Overwrite or extend the default parserOptions
    */
@@ -17,6 +17,12 @@ module.exports = {
         'import/no-extraneous-dependencies': 0,
         'max-classes-per-file': 0,
         'no-console': 0,
+      },
+    },
+    {
+      files: ['./src/**/stories/*.stories.jsx'],
+      rules: {
+        'import/no-extraneous-dependencies': 0,
       },
     },
   ],
