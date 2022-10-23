@@ -12,13 +12,14 @@
     ".": "./index.js",
     "./base": "./base.js",
     "./jest": "./jest.js",
+    "./package.json": "./package.json",
+    "./patch/modern-module-resolution": "./patch/modern-module-resolution.js",
+    "./prettier.config": "./prettier.config.js",
     "./react": "./react.js",
     "./rules/react": "./rules/react.js",
     "./rules/react-a11y": "./rules/react-a11y.js",
     "./rules/react-hooks": "./rules/react-hooks.js",
-    "./patch/modern-module-resolution": "./patch/modern-module-resolution.js",
-    "./package.json": "./package.json",
-    "./prettier.config": "./prettier.config.js"
+    "./storybook": "./storybook.js"
   },
   "files": [
     "base.js",
@@ -48,7 +49,8 @@
     "eslint-plugin-import": "^2.26.0",
     "eslint-plugin-jsx-a11y": "^6.6.1",
     "eslint-plugin-react": "^7.31.10",
-    "eslint-plugin-react-hooks": "^4.6.0"
+    "eslint-plugin-react-hooks": "^4.6.0",
+    "eslint-plugin-storybook": "^0.6.6"
   },
   "peerDependencies": {
     "eslint": "^8.26.0",

@@ -13,11 +13,12 @@
     "./base": "./base.js",
     "./jest": "./jest.js",
     "./next": "./next.js",
+    "./package.json": "./package.json",
+    "./patch/modern-module-resolution": "./patch/modern-module-resolution.js",
+    "./prettier.config": "./prettier.config.js",
     "./react": "./react.js",
     "./rules/react": "./rules/react.js",
-    "./patch/modern-module-resolution": "./patch/modern-module-resolution.js",
-    "./package.json": "./package.json",
-    "./prettier.config": "./prettier.config.js"
+    "./storybook": "./storybook.js"
   },
   "files": [
     "base.js",
