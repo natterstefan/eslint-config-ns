@@ -25,9 +25,10 @@ jobs:
     runs-on: ubuntu-latest
     steps:
       - name: Checkout the new tag
-        uses: actions/checkout@v3
+        uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8
         with:
           fetch-depth: 0
+
       - name: This release will publish the following packages
         run: |
           if [ "${{ github.event_name }}" = "workflow_dispatch" ]; then
@@ -46,7 +47,7 @@ jobs:
     outputs:
       branch: ${{ steps.push.outputs.branch }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8
         with:
           fetch-depth: 0
 
@@ -55,12 +56,12 @@ jobs:
           git config user.name "natterstefan Bot"
           git config user.email "natterstefan-bot@users.noreply.github.com"
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@16352bb09bc672a073e326c2cc1d3d7d2a3e577e
         with:
           node-version: 16
           cache: "yarn"
 
-      - uses: bahmutov/npm-install@4f2c2de39846f27e0034cb0f2485a8212ed1edfa
+      - uses: bahmutov/npm-install@4a274d026feb3c5c4273ac7bbe74c90a7e07cd08
         with:
           install-command:
             yarn --prefer-offline --frozen-lockfile --no-progress --silent
@@ -86,7 +87,7 @@ jobs:
       always() &&
       (needs.git-version.result == 'success' || needs.git-version.result == 'skipped')
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8
         with:
           fetch-depth: 0
 
@@ -94,12 +95,12 @@ jobs:
         if: needs.git-version.result == 'success'
         run: git checkout ${{ needs.git-version.outputs.branch }}
 
-      - uses: actions/setup-node@v3
+      - uses: actions/setup-node@16352bb09bc672a073e326c2cc1d3d7d2a3e577e
         with:
           node-version: 16
           cache: "yarn"
 
-      - uses: bahmutov/npm-install@4f2c2de39846f27e0034cb0f2485a8212ed1edfa
+      - uses: bahmutov/npm-install@4a274d026feb3c5c4273ac7bbe74c90a7e07cd08
         with:
           install-command:
             yarn --prefer-offline --frozen-lockfile --no-progress --silent
@@ -124,13 +125,13 @@ jobs:
       changelog: ${{ steps.changelog.outputs.changelog }}
       version: ${{ steps.tags.outputs.new }}
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8
         with:
           fetch-depth: 0
 
       - name: Check if releasing from main
         id: is-main
-        uses: babel/actions/ref-matches-branch@v2
+        uses: babel/actions/ref-matches-branch@03731d9c1d1b0d3e4609a78151679cf3de51f665
         with:
           name: main
 
@@ -140,12 +141,12 @@ jobs:
 
       - name: Get tag info
         id: tags
-        uses: babel/actions/get-release-tags@v2
+        uses: babel/actions/get-release-tags@03731d9c1d1b0d3e4609a78151679cf3de51f665
 
       - name: Generate the changelog
         id: changelog
         # alternative: https://github.com/riskledger/generate-changelog/blob/9708d3db7d3bb62ce90bff6352b32e3edbac59c7/main.js
-        uses: babel/actions/generate-lerna-changelog@v2
+        uses: babel/actions/generate-lerna-changelog@03731d9c1d1b0d3e4609a78151679cf3de51f665
         with:
           from: ${{ steps.tags.outputs.old }}
           to: ${{ steps.tags.outputs.new }}
@@ -153,7 +154,7 @@ jobs:
           GITHUB_AUTH: ${{ secrets.GITHUB_TOKEN }}
 
       - name: Create a draft GitHub release
-        uses: babel/actions/publish-github-release@v2
+        uses: babel/actions/publish-github-release@03731d9c1d1b0d3e4609a78151679cf3de51f665
         with:
           tag: ${{ steps.tags.outputs.new }}
           changelog: ${{ steps.changelog.outputs.changelog }}
@@ -172,7 +173,7 @@ jobs:
       needs.github-release.result == 'success' &&
       needs.github-release.outputs.is-main
     steps:
-      - uses: actions/checkout@v3
+      - uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8
         with:
           fetch-depth: 0
 
@@ -186,7 +187,7 @@ jobs:
           git config user.email "natterstefan-bot@users.noreply.github.com"
 
       - name: Update CHANGELOG.md
-        uses: babel/actions/update-changelog@v2
+        uses: babel/actions/update-changelog@03731d9c1d1b0d3e4609a78151679cf3de51f665
         with:
           changelog: ${{ needs.github-release.outputs.changelog }}
 
