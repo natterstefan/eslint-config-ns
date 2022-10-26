@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ns-ts-base",
-  "version": "3.4.0",
+  "version": "3.5.0",
   "description": "eslint typescript config ready to be used in multiple projects",
   "author": "Stefan Natter",
   "license": "MIT",
@@ -40,7 +40,7 @@
     "@rushstack/eslint-patch": "^1.2.0",
     "@typescript-eslint/eslint-plugin": "^5.40.1",
     "@typescript-eslint/parser": "^5.40.1",
-    "eslint-config-ns-base": "^3.4.0",
+    "eslint-config-ns-base": "^3.5.0",
     "eslint-import-resolver-typescript": "^3.5.2",
     "eslint-plugin-import": "^2.26.0"
   },

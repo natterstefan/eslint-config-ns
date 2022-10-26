@@ -1,7 +1,7 @@
 {
   "name": "example-js-react",
   "private": true,
-  "version": "3.4.0",
+  "version": "3.5.0",
   "description": "Example code for eslint-config-ns",
   "engines": {
     "node": "^14.17 || ^16.x || ^18.x"
@@ -31,6 +31,6 @@
     "@storybook/react": "^6.5.12",
     "@storybook/testing-library": "^0.0.13",
     "babel-loader": "^8.2.5",
-    "eslint-config-ns": "^3.4.0"
+    "eslint-config-ns": "^3.5.0"
   }
 }

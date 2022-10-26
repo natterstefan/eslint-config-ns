@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ns-base",
-  "version": "3.4.0",
+  "version": "3.5.0",
   "description": "eslint config ready to be used in multiple projects",
   "author": "Stefan Natter",
   "license": "MIT",
