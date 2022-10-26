@@ -36,6 +36,7 @@ jobs:
         with:
           install-command:
             yarn --prefer-offline --frozen-lockfile --no-progress --silent
+            --ignore-engines
 
       - run: yarn lint
       - run: yarn test
