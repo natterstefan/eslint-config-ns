@@ -27,7 +27,7 @@ jobs:
     steps:
       - uses: actions/checkout@93ea575cb5d8a053eaa0ac8fa3b40d7e05a33cc8
 
-      - uses: actions/setup-node@16352bb09bc672a073e326c2cc1d3d7d2a3e577e
+      - uses: actions/setup-node@3ae886ede4e5ed7ca0b68ff6124d681158afe891
         with:
           node-version: ${{ matrix.version }}
           cache: "yarn"
