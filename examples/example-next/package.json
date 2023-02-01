@@ -9,7 +9,7 @@
     "lint": "next lint && tsc && eslint \"./**/*.{ts,tsx}\""
   },
   "dependencies": {
-    "next": "^12.3.1",
+    "next": "^13.1.6",
     "react": "^17.0.2",
     "react-dom": "^17.0.2"
   },
