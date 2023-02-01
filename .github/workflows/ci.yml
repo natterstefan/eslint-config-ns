@@ -32,7 +32,7 @@ jobs:
           node-version: ${{ matrix.version }}
           cache: "yarn"
 
-      - uses: bahmutov/npm-install@4a274d026feb3c5c4273ac7bbe74c90a7e07cd08
+      - uses: bahmutov/npm-install@d00d9ee66d468eaeb4cdd369b5cf6452ac863625
         with:
           install-command:
             yarn --prefer-offline --frozen-lockfile --no-progress --silent
