@@ -61,7 +61,7 @@ jobs:
           node-version: 16
           cache: "yarn"
 
-      - uses: bahmutov/npm-install@4a274d026feb3c5c4273ac7bbe74c90a7e07cd08
+      - uses: bahmutov/npm-install@7b5291ae7bf768fecff627796beaf8a95c9c2bfd
         with:
           install-command:
             yarn --prefer-offline --frozen-lockfile --no-progress --silent
@@ -100,7 +100,7 @@ jobs:
           node-version: 16
           cache: "yarn"
 
-      - uses: bahmutov/npm-install@4a274d026feb3c5c4273ac7bbe74c90a7e07cd08
+      - uses: bahmutov/npm-install@7b5291ae7bf768fecff627796beaf8a95c9c2bfd
         with:
           install-command:
             yarn --prefer-offline --frozen-lockfile --no-progress --silent
