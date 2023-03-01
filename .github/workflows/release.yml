@@ -56,7 +56,7 @@ jobs:
           git config user.name "natterstefan Bot"
           git config user.email "natterstefan-bot@users.noreply.github.com"
 
-      - uses: actions/setup-node@16352bb09bc672a073e326c2cc1d3d7d2a3e577e
+      - uses: actions/setup-node@7c29869aec4da703a571b27bcd84d4f15af0b56e
         with:
           node-version: 16
           cache: "yarn"
@@ -95,7 +95,7 @@ jobs:
         if: needs.git-version.result == 'success'
         run: git checkout ${{ needs.git-version.outputs.branch }}
 
-      - uses: actions/setup-node@16352bb09bc672a073e326c2cc1d3d7d2a3e577e
+      - uses: actions/setup-node@7c29869aec4da703a571b27bcd84d4f15af0b56e
         with:
           node-version: 16
           cache: "yarn"
