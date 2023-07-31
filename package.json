@@ -37,19 +37,19 @@
     ]
   },
   "devDependencies": {
-    "commitizen": "^4.2.5",
+    "commitizen": "^4.3.0",
     "copyfiles": "^2.4.1",
     "cz-conventional-changelog": "3.3.0",
-    "eslint": "^8.26.0",
-    "husky": "^8.0.1",
+    "eslint": "^8.46.0",
+    "husky": "^8.0.3",
     "is-ci": "^3.0.1",
-    "jest": "^29.2.1",
-    "jest-preset-ns": "^2.1.1",
-    "lerna": "^6.0.1",
+    "jest": "^29.6.2",
+    "jest-preset-ns": "^3.0.0",
+    "lerna": "^6.6.2",
     "lerna-changelog": "^2.2.0",
-    "prettier": "^2.7.1",
-    "turbo": "^1.6.1",
-    "typescript": "^4.8.4"
+    "prettier": "^3.0.0",
+    "turbo": "^1.10.12",
+    "typescript": "^5.1.6"
   },
   "config": {
     "commitizen": {

@@ -1,0 +1,3 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`App renders 1`] = `"<h1>Hello eslint-config-ns-ts</h1><div>Hello World</div><p>State Counter: <span data-testid="counter">0</span></p>"`;
