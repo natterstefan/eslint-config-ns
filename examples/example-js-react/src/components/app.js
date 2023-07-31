@@ -14,7 +14,9 @@ export const App = () => {
     <>
       <h1>{headline}</h1>
       <Text text="Hello World" />
-      <p>State Counter: {counter}</p>
+      <p>
+        State Counter: <span data-testid="counter">{counter}</span>
+      </p>
     </>
   )
 }

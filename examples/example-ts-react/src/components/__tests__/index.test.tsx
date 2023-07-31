@@ -7,6 +7,11 @@ import { App } from '../app'
 jest.useFakeTimers()
 
 describe('App', () => {
+  it('renders', () => {
+    const { container } = render(<App />)
+    expect(container.innerHTML).toMatchSnapshot()
+  })
+
   it('increases counter every 1 second', () => {
     render(<App />)
     const elem = screen.getByTestId('counter')

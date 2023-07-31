@@ -61,10 +61,7 @@ jobs:
           node-version: 18
           cache: "yarn"
 
-      - uses: bahmutov/npm-install@4a274d026feb3c5c4273ac7bbe74c90a7e07cd08
-        with:
-          install-command:
-            yarn --prefer-offline --frozen-lockfile --no-progress --silent
+      - run: yarn --prefer-offline --frozen-lockfile --no-progress --silent
 
       # prettier-ignore
       - run: HUSKY_SKIP_HOOKS=1 yarn lerna version ${{ github.event.inputs.version }} --no-commit-hooks --no-changelog --yes --force-publish
@@ -100,10 +97,7 @@ jobs:
           node-version: 18
           cache: "yarn"
 
-      - uses: bahmutov/npm-install@4a274d026feb3c5c4273ac7bbe74c90a7e07cd08
-        with:
-          install-command:
-            yarn --prefer-offline --frozen-lockfile --no-progress --silent
+      - run: yarn --prefer-offline --frozen-lockfile --no-progress --silent
 
       - run: yarn lint
       - run: yarn test

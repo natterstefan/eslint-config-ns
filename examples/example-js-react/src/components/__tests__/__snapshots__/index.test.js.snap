@@ -1,16 +1,3 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
-exports[`App renders 1`] = `
-<Fragment>
-  <h1>
-    Hello eslint-config-ns
-  </h1>
-  <Text
-    text="Hello World"
-  />
-  <p>
-    State Counter: 
-    0
-  </p>
-</Fragment>
-`;
+exports[`App renders 1`] = `"<h1>Hello eslint-config-ns</h1><div>Hello World</div><p>State Counter: <span data-testid="counter">0</span></p>"`;
