@@ -58,7 +58,7 @@ jobs:
 
       - uses: actions/setup-node@16352bb09bc672a073e326c2cc1d3d7d2a3e577e
         with:
-          node-version: 16
+          node-version: 18
           cache: "yarn"
 
       - uses: bahmutov/npm-install@4a274d026feb3c5c4273ac7bbe74c90a7e07cd08
@@ -97,7 +97,7 @@ jobs:
 
       - uses: actions/setup-node@16352bb09bc672a073e326c2cc1d3d7d2a3e577e
         with:
-          node-version: 16
+          node-version: 18
           cache: "yarn"
 
       - uses: bahmutov/npm-install@4a274d026feb3c5c4273ac7bbe74c90a7e07cd08
