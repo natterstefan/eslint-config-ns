@@ -18,6 +18,7 @@
   "scripts": {
     "bootstrap": "yarn lerna clean -y && lerna bootstrap",
     "lint": "FORCE_COLOR=1 turbo run lint --parallel --no-cache",
+    "lint:root": "eslint . --ext .js,.ts,.tsx",
     "prelerna:publish": "node ./scripts/prepublish.js",
     "prepare": "is-ci || husky install",
     "test": "FORCE_COLOR=1 turbo run test --parallel --no-cache",

@@ -1,4 +1,5 @@
-var copyfiles = require('copyfiles')
+// eslint-disable-next-line import/no-extraneous-dependencies
+const copyfiles = require('copyfiles')
 
 const filesToCopy = ['LICENSE']
 
