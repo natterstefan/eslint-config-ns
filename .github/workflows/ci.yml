@@ -37,5 +37,6 @@ jobs:
           --ignore-engines
 
       - run: yarn lint
+      - run: yarn lint:root
       - run: yarn test
       - run: yarn test:root
