@@ -58,7 +58,7 @@ jobs:
 
       - uses: actions/setup-node@16352bb09bc672a073e326c2cc1d3d7d2a3e577e
         with:
-          node-version: 18
+          node-version: 20
           cache: "yarn"
 
       - run: yarn --prefer-offline --frozen-lockfile --no-progress --silent
@@ -94,7 +94,7 @@ jobs:
 
       - uses: actions/setup-node@16352bb09bc672a073e326c2cc1d3d7d2a3e577e
         with:
-          node-version: 18
+          node-version: 20
           cache: "yarn"
 
       - run: yarn --prefer-offline --frozen-lockfile --no-progress --silent

@@ -17,15 +17,15 @@
   },
   "scripts": {
     "bootstrap": "yarn lerna clean -y && yarn install",
-    "lint": "FORCE_COLOR=1 turbo run lint --parallel --no-cache",
+    "lerna:publish": "lerna publish from-package",
+    "lerna:version": "HUSKY_SKIP_HOOKS=1 lerna version --no-commit-hooks --no-changelog",
     "lint:root": "eslint . --ext .js,.ts,.tsx",
+    "lint": "FORCE_COLOR=1 turbo run lint --parallel --no-cache",
     "prelerna:publish": "node ./scripts/prepublish.js",
-    "prepare": "is-ci || husky install",
-    "test": "FORCE_COLOR=1 turbo run test --parallel --no-cache",
+    "prepare": "husky",
     "test:app": "FORCE_COLOR=1 turbo run test --parallel --no-cache --scope=example-app*",
     "test:root": "jest",
-    "lerna:version": "HUSKY_SKIP_HOOKS=1 lerna version --no-commit-hooks --no-changelog",
-    "lerna:publish": "lerna publish from-package"
+    "test": "FORCE_COLOR=1 turbo run test --parallel --no-cache"
   },
   "workspaces": {
     "nohoist": [
@@ -33,29 +33,28 @@
       "**/eslint-config-ns-*"
     ],
     "packages": [
-      "examples/*",
       "packages/*"
     ]
   },
   "devDependencies": {
-    "commitizen": "^4.3.0",
+    "commitizen": "^4.3.1",
     "copyfiles": "^2.4.1",
     "cz-conventional-changelog": "3.3.0",
-    "eslint": "^8.46.0",
-    "husky": "^8.0.3",
-    "is-ci": "^3.0.1",
-    "jest": "^29.6.2",
+    "eslint": "^8.57.1",
+    "husky": "^9.1.7",
+    "is-ci": "^4.1.0",
+    "jest": "^29.7.0",
     "jest-preset-ns": "^3.0.0",
-    "lerna": "^7.1.4",
+    "lerna": "^7.4.2",
     "lerna-changelog": "^2.2.0",
-    "prettier": "^3.0.0",
-    "turbo": "^1.10.12",
-    "typescript": "^5.1.6"
+    "prettier": "^3.5.3",
+    "turbo": "^1.13.4",
+    "typescript": "^5.8.2"
   },
   "config": {
     "commitizen": {
       "path": "./node_modules/cz-conventional-changelog"
     }
   },
-  "packageManager": "yarn@1.22.4"
+  "packageManager": "yarn@1.22.22"
 }
