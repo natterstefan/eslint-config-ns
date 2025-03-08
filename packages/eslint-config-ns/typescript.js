@@ -2,6 +2,7 @@
  * @type {import('eslint').ESLint.Options}
  */
 module.exports = {
-  extends: ['./base', './jest', './react'],
+  extends: ['eslint-config-ns-ts-base/base'],
+  parser: '@typescript-eslint/parser',
   rules: {},
 }
