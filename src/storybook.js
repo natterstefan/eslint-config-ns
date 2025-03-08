@@ -1,12 +1,13 @@
+// @ts-check
+
+import storybook from 'eslint-plugin-storybook'
+
 /**
- * @see https://github.com/storybookjs/eslint-plugin-storybook
- * @type {import('eslint').ESLint.Options}
+ * @type {Array<import('eslint').Linter.Config>}
  */
-module.exports = {
-  extends: ['./rules/storybook'],
-  parser: '@babel/eslint-parser',
-  parserOptions: {
-    requireConfigFile: false,
-  },
-  rules: {},
-}
+export default [
+  /**
+   * @see https://github.com/storybookjs/eslint-plugin-storybook
+   */
+  ...storybook.configs['flat/recommended'],
+]
