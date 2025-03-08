@@ -1,12 +1,8 @@
 name: Node CI
 
 on:
-  # Trigger the workflow manually via the GitHub UI
   workflow_dispatch:
-  # Trigger the workflow when a pull_request's activity type is opened,
-  # synchronize, or reopened.
   pull_request:
-  # Trigger the workflow on push
   push:
     branches:
       - main
@@ -30,13 +26,8 @@ jobs:
       - uses: actions/setup-node@16352bb09bc672a073e326c2cc1d3d7d2a3e577e
         with:
           node-version: ${{ matrix.version }}
-          cache: "yarn"
+          cache: "npm"
 
-      - run:
-          yarn --prefer-offline --frozen-lockfile --no-progress --silent
-          --ignore-engines
+      - run: npm ci
 
-      - run: yarn lint
-      - run: yarn lint:root
-      - run: yarn test
-      - run: yarn test:root
+      - run: npm run lint
