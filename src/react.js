@@ -6,6 +6,7 @@ import jsxA11y from 'eslint-plugin-jsx-a11y'
 import reactPlugin from 'eslint-plugin-react'
 // rules for https://www.npmjs.com/package/eslint-plugin-react-hooks
 import reactHooksPlugin from 'eslint-plugin-react-hooks'
+import { ERROR, OFF } from './config'
 
 /**
  * @type {Array<import('eslint').Linter.Config>}
@@ -31,9 +32,9 @@ export default [
         { props: 'never', children: 'never' },
       ],
       // jsx is also allowed in non .jsx files
-      'react/jsx-filename-extension': 0,
+      'react/jsx-filename-extension': OFF,
       // Allowed but we should be aware to not overuse this.
-      'react/jsx-props-no-spreading': 0,
+      'react/jsx-props-no-spreading': OFF,
       // Enforce component methods order
       'react/sort-comp': 2,
       // Enforce a specific function type for function components
@@ -48,12 +49,12 @@ export default [
 
       // https://www.npmjs.com/package/eslint-plugin-react
       // WHY? Because we focus on interfaces and types instead
-      'react/prop-types': 0,
-      'react/require-default-props': 0,
+      'react/prop-types': OFF,
+      'react/require-default-props': OFF,
 
       // rules for https://www.npmjs.com/package/eslint-plugin-react-hooks
-      'react-hooks/rules-of-hooks': 'error',
-      'react-hooks/exhaustive-deps': 'error',
+      'react-hooks/rules-of-hooks': ERROR,
+      'react-hooks/exhaustive-deps': ERROR,
     },
   },
 ]

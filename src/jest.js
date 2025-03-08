@@ -1,6 +1,7 @@
 // @ts-check
 
 import jest from 'eslint-plugin-jest'
+import { ERROR, OFF, WARN } from './config'
 
 /**
  * @type {Array<import('eslint').Linter.Config>}
@@ -12,19 +13,19 @@ export default [
     settings: { jest: { version: 'detect' } },
     rules: {
       // rules for https://www.npmjs.com/package/eslint-plugin-jest
-      'jest/consistent-test-it': ['error', { fn: 'it', withinDescribe: 'it' }],
-      'jest/expect-expect': 'error',
-      'jest/no-disabled-tests': 'warn',
-      'jest/no-focused-tests': 'warn',
-      'jest/no-identical-title': 'error',
-      'jest/no-large-snapshots': ['warn', { maxSize: 300 }],
-      'jest/prefer-strict-equal': 'error',
-      'jest/prefer-to-have-length': 'error',
-      'jest/valid-expect': 'error',
+      'jest/consistent-test-it': [ERROR, { fn: 'it', withinDescribe: 'it' }],
+      'jest/expect-expect': ERROR,
+      'jest/no-disabled-tests': WARN,
+      'jest/no-focused-tests': WARN,
+      'jest/no-identical-title': ERROR,
+      'jest/no-large-snapshots': [WARN, { maxSize: 300 }],
+      'jest/prefer-strict-equal': ERROR,
+      'jest/prefer-to-have-length': ERROR,
+      'jest/valid-expect': ERROR,
 
       // deprecated rules
-      'jest/prefer-to-be-null': 0,
-      'jest/prefer-to-be-undefined': 0,
+      'jest/prefer-to-be-null': OFF,
+      'jest/prefer-to-be-undefined': OFF,
     },
     ...jest.configs['flat/style'],
   },
