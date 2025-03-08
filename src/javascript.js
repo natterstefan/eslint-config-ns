@@ -4,7 +4,7 @@
 // import eslintConfigAirbnbBase from 'eslint-config-airbnb-base'
 // @ts-expect-error -- False positive
 import importPlugin from 'eslint-plugin-import'
-
+import { ERROR, OFF } from './config'
 /**
  * @type {Array<import('eslint').Linter.Config>}
  */
@@ -17,11 +17,11 @@ export default [
     },
     rules: {
       // general ESLint rules
-      'class-methods-use-this': 0,
-      'no-case-declarations': 0,
-      'no-confusing-arrow': ['error', { allowParens: false }],
-      'no-plusplus': 0,
-      'no-underscore-dangle': 0, // e.g. __DEV__
+      'class-methods-use-this': OFF,
+      'no-case-declarations': OFF,
+      'no-confusing-arrow': [ERROR, { allowParens: false }],
+      'no-plusplus': OFF,
+      'no-underscore-dangle': OFF, // e.g. __DEV__
       'no-unused-expressions': [
         2,
         {
@@ -29,13 +29,13 @@ export default [
           allowShortCircuit: true,
         },
       ],
-      'sort-imports': 'off',
-      'sort-keys': 0,
+      'sort-imports': OFF,
+      'sort-keys': OFF,
 
       // rules for https://github.com/benmosher/eslint-plugin-import
       'import/extensions': 0,
       'import/order': [
-        'error',
+        ERROR,
         {
           'newlines-between': 'always',
           pathGroups: [
@@ -51,7 +51,7 @@ export default [
           ],
         },
       ],
-      'import/prefer-default-export': 0,
+      'import/prefer-default-export': OFF,
     },
   },
 ]

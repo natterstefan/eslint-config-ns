@@ -6,6 +6,7 @@ import tseslint from 'typescript-eslint'
 import importPlugin from 'eslint-plugin-import'
 
 import javascript from './javascript.js'
+import { ERROR, OFF, typescriptFiles } from './config.js'
 
 /**
  * @type {Array<import('eslint').Linter.Config>}
@@ -15,6 +16,14 @@ export default [
   ...tseslint.configs.recommended,
   importPlugin.configs.typescript,
   {
+    files: typescriptFiles,
+    languageOptions: {
+      parserOptions: {
+        projectService: true,
+        tsconfigRootDir: import.meta.dirname,
+      },
+    },
+    settings: { 'import/resolver': 'typescript' },
     rules: {
       /**
        * Typescript Rules
@@ -25,24 +34,24 @@ export default [
        *
        * @see https://github.com/typescript-eslint/typescript-eslint/issues/2471#issuecomment-696609988
        */
-      'no-shadow': 'off', // replaced by ts-eslint rule below
-      '@typescript-eslint/no-shadow': 'error',
+      'no-shadow': OFF, // replaced by ts-eslint rule below
+      '@typescript-eslint/no-shadow': ERROR,
 
       // NOTE: disable the base rule as it can report incorrect errors
       // https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/no-use-before-define.md
-      'no-use-before-define': 'off',
-      '@typescript-eslint/no-use-before-define': ['error'],
+      'no-use-before-define': OFF,
+      '@typescript-eslint/no-use-before-define': ERROR,
 
       // allow to use _ as prefix for unused arguments to functions, in order to implement interfaces
       '@typescript-eslint/no-unused-vars': [
-        'error',
+        ERROR,
         { argsIgnorePattern: '^_', ignoreRestSiblings: true },
       ],
 
       // prefix interfaces with `I`, e.g. `IComponentProps`
       // @see https://github.com/typescript-eslint/typescript-eslint/blob/master/packages/eslint-plugin/docs/rules/naming-convention.md#enforce-that-interface-names-do-not-begin-with-an-i
       '@typescript-eslint/naming-convention': [
-        'error',
+        ERROR,
         {
           selector: 'interface',
           format: ['PascalCase'],
@@ -51,19 +60,19 @@ export default [
         },
       ],
       // disable old rule
-      '@typescript-eslint/interface-name-prefix': 0,
+      '@typescript-eslint/interface-name-prefix': OFF,
 
       /**
        * Can be configured in the tsconfig.json instead
        * @see https://github.com/typescript-eslint/typescript-eslint/blob/main/packages/eslint-plugin/docs/rules/explicit-module-boundary-types.md
        */
-      '@typescript-eslint/explicit-module-boundary-types': 0,
+      '@typescript-eslint/explicit-module-boundary-types': OFF,
 
       /**
        * e.g. allow extending DefaultRootState and other vendor interfaces
        */
       '@typescript-eslint/no-empty-interface': [
-        'error',
+        ERROR,
         { allowSingleExtends: true },
       ],
 
@@ -77,12 +86,12 @@ export default [
        *
        * TODO: enable again once this issue is fixed!
        */
-      'no-extra-semi': 0,
-      '@typescript-eslint/no-extra-semi': 0,
+      'no-extra-semi': OFF,
+      '@typescript-eslint/no-extra-semi': OFF,
 
-      // other typescript rules
-      '@typescript-eslint/no-explicit-any': 0, // will be checked by tsconfig.js
-      '@typescript-eslint/explicit-function-return-type': 0, // will be checked by tsconfig.js
+      // other typescript rules ideally checked by tsconfig.js
+      '@typescript-eslint/no-explicit-any': OFF,
+      '@typescript-eslint/explicit-function-return-type': OFF,
     },
   },
 ]
