@@ -1,7 +1,7 @@
 // @ts-check
 
 import jest from 'eslint-plugin-jest'
-import { ERROR, OFF, WARN } from './config'
+import { ERROR, OFF, WARN } from './config.js'
 
 /**
  * @type {Array<import('eslint').Linter.Config>}

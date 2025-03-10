@@ -4,7 +4,7 @@
 // import eslintConfigAirbnbBase from 'eslint-config-airbnb-base'
 // @ts-expect-error -- False positive
 import importPlugin from 'eslint-plugin-import'
-import { ERROR, OFF } from './config'
+import { ERROR, OFF } from './config.js'
 /**
  * @type {Array<import('eslint').Linter.Config>}
  */

@@ -6,7 +6,7 @@ import jsxA11y from 'eslint-plugin-jsx-a11y'
 import reactPlugin from 'eslint-plugin-react'
 // rules for https://www.npmjs.com/package/eslint-plugin-react-hooks
 import reactHooksPlugin from 'eslint-plugin-react-hooks'
-import { ERROR, OFF } from './config'
+import { ERROR, OFF } from './config.js'
 
 /**
  * @type {Array<import('eslint').Linter.Config>}
