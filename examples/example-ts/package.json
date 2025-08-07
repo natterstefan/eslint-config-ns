@@ -1,7 +1,7 @@
 {
   "name": "example-ts",
   "private": true,
-  "version": "4.0.0",
+  "version": "5.0.0",
   "description": "Example code for eslint-config-ns",
   "engines": {
     "node": "^22.x || ^24.x"
@@ -14,7 +14,7 @@
   "author": "Stefan Natter",
   "license": "MIT",
   "devDependencies": {
-    "eslint-config-ns-ts-base": "^4.0.0",
+    "eslint-config-ns-ts-base": "^5.0.0",
     "ts-jest": "^29.1.1",
     "typescript": "^5.1.6"
   }
