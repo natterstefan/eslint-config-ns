@@ -7,7 +7,16 @@ const compat = new FlatCompat({
   baseDirectory: import.meta.dirname,
 })
 
-/**
- * @type {Array<import('eslint').Linter.Config>}
- */
-export default [...compat.extends('next/core-web-vitals', 'next/typescript')]
+/** @type {Array<import('eslint').Linter.Config>} */
+let config
+
+try {
+  config = [...compat.extends('next/core-web-vitals', 'next/typescript')]
+} catch {
+  throw new Error(
+    'eslint-config-ns: The "next" preset requires the "next" package to be installed. ' +
+      'Please install it: npm install --save-dev next',
+  )
+}
+
+export default config
