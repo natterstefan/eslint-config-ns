@@ -6,6 +6,7 @@ import jsxA11y from 'eslint-plugin-jsx-a11y'
 import reactPlugin from 'eslint-plugin-react'
 // rules for https://www.npmjs.com/package/eslint-plugin-react-hooks
 import reactHooksPlugin from 'eslint-plugin-react-hooks'
+
 import { ERROR, OFF } from './config.js'
 
 /**
@@ -15,7 +16,6 @@ export default [
   /** @type {any} -- see https://github.com/jsx-eslint/eslint-plugin-jsx-a11y/issues/1047 */ (
     jsxA11y.flatConfigs.recommended
   ),
-  jsxA11y.flatConfigs.recommended,
   reactPlugin.configs.flat.recommended,
   {
     plugins: { react: reactPlugin, 'react-hooks': reactHooksPlugin },

@@ -67,6 +67,7 @@ export default await getPresets(
 // eslint.config.mjs
 // @ts-check
 
+import globals from 'globals'
 import { getPresets } from 'eslint-config-ns'
 
 /**

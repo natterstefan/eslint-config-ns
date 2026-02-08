@@ -8,7 +8,7 @@ import { getPresets } from './src/index.js'
 export default await getPresets(
   'javascript',
   'jest',
-  // 'next', TODO: fix and enable
+  // 'next', // requires the 'next' package to be installed
   'prettier',
   'react',
   'storybook',
