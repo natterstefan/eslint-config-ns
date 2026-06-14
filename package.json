@@ -1,6 +1,6 @@
 {
   "name": "eslint-config-ns",
-  "version": "5.0.0-alpha.1",
+  "version": "6.0.0",
   "description": "eslint config ready to be used in multiple projects",
   "author": "Stefan Natter",
   "license": "MIT",
@@ -18,7 +18,7 @@
   "scripts": {
     "lint": "eslint src && prettier src --check",
     "test": "node --test __tests__/presets.test.js",
-    "prepublish": "npm run lint"
+    "prepublishOnly": "npm run lint && npm test"
   },
   "files": [
     "src",
@@ -26,10 +26,10 @@
     "tsconfig.json"
   ],
   "devDependencies": {
-    "eslint": "^9.22.0",
-    "prettier": "^3.5.3",
-    "react": "^19.0.0",
-    "typescript": "5.7.3"
+    "eslint": "^9.39.4",
+    "prettier": "^3.8.4",
+    "react": "^19.2.7",
+    "typescript": "^5.9.3"
   },
   "peerDependencies": {
     "eslint": "^9.22.0",
@@ -45,17 +45,18 @@
     }
   },
   "dependencies": {
-    "@eslint/eslintrc": "^3.3.0",
-    "@eslint/js": "^9.22.0",
-    "eslint-config-prettier": "^10.1.1",
-    "eslint-plugin-import": "^2.31.0",
-    "eslint-plugin-jest": "^28.11.0",
+    "@eslint/eslintrc": "^3.3.5",
+    "@eslint/js": "^9.39.4",
+    "eslint-config-prettier": "^10.1.8",
+    "eslint-import-resolver-typescript": "^4.4.5",
+    "eslint-plugin-import": "^2.32.0",
+    "eslint-plugin-jest": "^28.14.0",
     "eslint-plugin-jsx-a11y": "^6.10.2",
-    "eslint-plugin-prettier": "^5.2.3",
-    "eslint-plugin-react": "^7.37.4",
+    "eslint-plugin-prettier": "^5.5.6",
+    "eslint-plugin-react": "^7.37.5",
     "eslint-plugin-react-hooks": "^5.2.0",
-    "eslint-plugin-storybook": "^0.11.4",
-    "typescript-eslint": "^8.26.0"
+    "eslint-plugin-storybook": "^0.11.6",
+    "typescript-eslint": "^8.61.0"
   },
   "bugs": {
     "url": "https://github.com/natterstefan/eslint-config-ns/issues"
