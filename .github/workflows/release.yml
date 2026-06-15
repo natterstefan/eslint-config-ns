@@ -1,0 +1,69 @@
+name: Release
+
+# Publishes eslint-config-ns to npm and creates a GitHub release.
+#
+# This runs only when a version tag (e.g. v6.0.0) is pushed, or when manually
+# dispatched. To cut a release:
+#   1. Bump "version" in package.json and update CHANGELOG.md
+#   2. git tag v6.0.0 && git push origin v6.0.0
+#
+# Requires the repository/organization secret NPM_TOKEN (an npm automation
+# token with publish access). Publishing also uses npm provenance, which needs
+# the id-token: write permission below.
+
+on:
+  push:
+    tags: ["v*"]
+  workflow_dispatch:
+
+concurrency:
+  group: ${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: false
+
+permissions:
+  contents: read
+
+jobs:
+  publish:
+    name: Publish to npm
+    runs-on: ubuntu-latest
+    environment: npm
+    permissions:
+      contents: write # create the GitHub release
+      id-token: write # npm provenance
+    steps:
+      - uses: actions/checkout@de0fac2e4500dabe0009e67214ff5f5447ce83dd # v6.0.2
+
+      - uses: actions/setup-node@6044e13b5dc448c55e2357c09f80417699197238 # v6.2.0
+        with:
+          node-version: 22
+          cache: "npm"
+          registry-url: "https://registry.npmjs.org"
+
+      - run: npm ci
+
+      - run: npm run lint
+
+      - run: npm test
+
+      # Fail early if the pushed tag does not match the package.json version,
+      # so a "v6.0.0" tag never publishes a different version by mistake.
+      - name: Verify tag matches package version
+        if: github.event_name == 'push'
+        run: |
+          PKG_VERSION="v$(node -p "require('./package.json').version")"
+          if [ "$PKG_VERSION" != "${GITHUB_REF_NAME}" ]; then
+            echo "Tag ${GITHUB_REF_NAME} does not match package.json version ${PKG_VERSION}"
+            exit 1
+          fi
+
+      - name: Publish to npm
+        run: npm publish --provenance --access public
+        env:
+          NODE_AUTH_TOKEN: ${{ secrets.NPM_TOKEN }}
+
+      - name: Create GitHub release
+        if: github.event_name == 'push'
+        env:
+          GH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+        run: gh release create "${GITHUB_REF_NAME}" --title "${GITHUB_REF_NAME}" --generate-notes

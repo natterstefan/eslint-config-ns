@@ -6,6 +6,43 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 <!-- DO NOT CHANGE THESE COMMENTS - See .github/actions/release.yml -->
 <!-- insert-new-changelog-here -->
+## v6.0.0 (2026-06-14)
+
+#### :boom: Breaking Change
+
+* The four previously published packages (`eslint-config-ns-base`,
+  `eslint-config-ns-ts-base`, `eslint-config-ns-ts`, `eslint-config-ns`) are
+  merged into a single `eslint-config-ns` package. The Lerna/yarn monorepo is
+  gone; the package is published from the repository root.
+* Migrated to the [ESLint flat config](https://eslint.org/docs/latest/use/configure/migration-guide)
+  format and a new `getPresets(...names)` API. Configure ESLint via an
+  `eslint.config.mjs` that imports `getPresets` instead of extending the old
+  `eslintrc` shareable configs. Available presets: `javascript`, `typescript`,
+  `react`, `jest`, `next`, `storybook`, `prettier`.
+* The package is now ESM-only (`"type": "module"`).
+* Requires **ESLint 9** (`eslint@^9`), **Prettier 3** (`prettier@>=3`) and
+  **Node.js >= 22** as peer/engine requirements.
+* `next` and `prettier` are now optional peer dependencies.
+
+#### :rocket: New Feature
+
+* Single, unified `eslint-config-ns` package with support for JavaScript,
+  TypeScript, React, Next.js, Jest and Storybook.
+* Shared `prettier.config.js` (`eslint-config-ns/prettier.config.js`) and
+  `tsconfig.json` (`eslint-config-ns/tsconfig.json`) shipped with the package.
+* Added a test suite (`__tests__/presets.test.js`) exercising every preset via
+  the Node.js test runner.
+
+#### :house: Internal
+
+* Updated all dependencies to their latest versions: ESLint 9.39, Prettier 3.8,
+  typescript-eslint 8.61, TypeScript 6.0, eslint-plugin-react-hooks 7 and
+  eslint-plugin-jest 29 (among others), and resolved all known `npm audit`
+  advisories. ESLint stays on the 9.x line because eslint-plugin-react,
+  eslint-plugin-import and eslint-plugin-jsx-a11y do not yet declare support for
+  ESLint 10.
+* Reworked CI to a Node 22/24 matrix.
+
 ## v5.0.0 (2023-08-07)
 
 #### :rocket: New Feature
