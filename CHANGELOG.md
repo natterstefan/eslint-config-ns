@@ -35,9 +35,12 @@ adheres to [Semantic Versioning](http://semver.org/spec/v2.0.0.html).
 
 #### :house: Internal
 
-* Refreshed all dependencies to their latest in-range versions (ESLint 9.39,
-  Prettier 3.8, typescript-eslint 8.61, TypeScript 5.9 and others) and resolved
-  all known `npm audit` advisories.
+* Updated all dependencies to their latest versions: ESLint 9.39, Prettier 3.8,
+  typescript-eslint 8.61, TypeScript 6.0, eslint-plugin-react-hooks 7 and
+  eslint-plugin-jest 29 (among others), and resolved all known `npm audit`
+  advisories. ESLint stays on the 9.x line because eslint-plugin-react,
+  eslint-plugin-import and eslint-plugin-jsx-a11y do not yet declare support for
+  ESLint 10.
 * Reworked CI to a Node 22/24 matrix.
 
 ## v5.0.0 (2023-08-07)
